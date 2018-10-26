@@ -1,0 +1,57 @@
+{
+  "date": "October 26, 2018",
+  "authors": [
+    {
+      "github": "johndoe",
+      "name": "John Doe",
+      "initials": "JD",
+      "orcid": "XXXX-XXXX-XXXX-XXXX",
+      "twitter": "johndoe",
+      "email": "john.doe@something.com",
+      "affiliations": [
+        "Department of Something, University of Whatever"
+      ],
+      "funders": "Grant XXXXXXXX",
+      "affiliation_numbers": [
+        1
+      ]
+    },
+    {
+      "github": "janeroe",
+      "name": "Jane Roe",
+      "initials": "JR",
+      "orcid": "XXXX-XXXX-XXXX-XXXX",
+      "email": "jane.roe@whatever.edu",
+      "affiliations": [
+        "Department of Something, University of Whatever",
+        "Department of Whatever, University of Something"
+      ],
+      "affiliation_numbers": [
+        1,
+        2
+      ]
+    }
+  ],
+  "affiliations": [
+    {
+      "affiliation": "Department of Something, University of Whatever",
+      "affiliation_number": 1
+    },
+    {
+      "affiliation": "Department of Whatever, University of Something",
+      "affiliation_number": 2
+    }
+  ],
+  "ci_source": {
+    "repo_slug": "trang1618/tpot-ds-ms",
+    "repo_owner": "trang1618",
+    "repo_name": "tpot-ds-ms",
+    "commit": "4309f4744d8f2f1c3706bc004715605e71745d5d"
+  },
+  "manuscript_stats": {
+    "reference_counts": {
+      "total": 0
+    },
+    "word_count": 216
+  }
+}
