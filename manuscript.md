@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/4bb748351618fc59164840224b779a6c57e90cea/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/8e80ffb0cae03e60aa7d6c15cf755fe275a5f279/))
 was automatically generated
-from [trang1618/tpot-ds-ms@4bb7483](https://github.com/trang1618/tpot-ds-ms/tree/4bb748351618fc59164840224b779a6c57e90cea)
+from [trang1618/tpot-ds-ms@8e80ffb](https://github.com/trang1618/tpot-ds-ms/tree/8e80ffb0cae03e60aa7d6c15cf755fe275a5f279)
 on November 2, 2018.
 </em></small>
 
@@ -115,17 +115,15 @@ In general, the DS operator allows for compartmentalization the feature space to
 From here, TPOT selects the most relevant group of features, which can be utilized to motivate further analysis on that small group of features in biomedical research.  
 
 ### Template
-Parallel with the establishment of the Dataset Selector operator, we now offer TPOT users the option to define a Template that provides a way to specify a desired structure for the resulting machine learning pipeline (*e.g.* Dataset selector &rarr; Feature transform &rarr; Decision Trees). 
-Specifying a Template will reduce TPOT computation time and potentially provide more interpretable results.
+Parallel with the establishment of the Dataset Selector operator, we now offer TPOT users the option to define a Template that provides a way to specify a desired structure for the resulting machine learning pipeline, which will reduce TPOT computation time and potentially provide more interpretable results.
 
 Current implementation of Template supports linear pipelines, or path graphs, which are trees with two nodes (operators) of vertex degree 1, and the other $n-2$ nodes of vertex degree 2.
-Further, Template takes advantage of the strongly typed genetic programming framework that enforces data-type constraints [@KgFuJ0Jv] and imposes type-based restrictions on which element (*i.e.*, operator) can be chosen at each node.
-In other words, with a Template defined, each node in the tree pipeline is assigned one of the major operator types: dataset selector, feature selection, feature transform, classifier or regressor.
-
-[]
+Further, Template takes advantage of the strongly typed genetic programming framework that enforces data-type constraints [@KgFuJ0Jv] and imposes type-based restrictions on which element (*i.e.*, operator) type can be chosen at each node.
+In strongly typed genetic programming, while the fitness function and parameters remain the same, the initialization procedure and genetic operators (*e.g.*, mutation, crossover) must respect the enhanced legality constraints [@KgFuJ0Jv].
+With a Template defined, each node in the tree pipeline is assigned one of the five major operator types: dataset selector, feature selection, feature transform, classifier or regressor. 
+Moreover, besides the major operator types, each node can also be assigned more specifically as a method of an operator, such as decision trees for classifier. Thus, an example Template is Dataset selector &rarr; Feature transform &rarr; Decision trees.
 
 ### Datasets
-				
 We apply TPOT with the new DS operator on both simulated datasets and a real world RNA-Seq gene expression dataset. With both real-world and simulated data, we hope to acquire a comprehensive view of the strengths and limitations of TPOT in the next generation sequencing domain.
 
 #### Real-world RNA-Seq expression data
@@ -135,14 +133,19 @@ Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and 
 We use the 23 subsets of interconnected genes called modules identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the DS operator.
 
 #### Simulation methods
-The simulated datasets were generated using the R package privateEC, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
-In the current study, to be consistent with the real expression dataset, we simulate interaction effect data with $m = 200$ individuals (100 cases and 100 controls) and $p=5,000$ real-valued features with 4% functional (true positive association with outcome). 
-Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
-Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. 
+The simulated datasets were generated using the R package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
+In the current study, to be consistent with the real expression dataset, we simulate interaction effect data with $m =$200 individuals (100 cases and 100 controls) and $p=$5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
+Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
 Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features. 
 
-### Evaluation metrics
-[…]
+To closely resemble the module size distribution in the RNA-Seq data, we first fit a $\Gamma$ distribution to the observed module sizes then sample from this distribution values for the simulated subset size, before the total number of features reaches 4,800 (number of background features). Then, the background features were randomly placed in each subset corresponding to its size. Also, for each subset $S_i, i = 1, \dots, n$, a functional feature $s_j$ belongs to the subset with the probability
+$P(s_j \in S_i) \sim 1.618^{-i}$
+where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. The proportions of functional features in all subsets are shown in Table []. 
+
+### Performance metrics
+We assess the performance of each method by quantifying TPOT's ability to select the *most important* subset (with the most functional features) in 100 replicates of TPOT runs on simulated data. We also examine the out-of-sample accuracy of TPOT's exported pipeline on the testing set.
+
+[]
 
 
 ## Results
