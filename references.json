@@ -1,1 +1,363 @@
-[]
+[
+  {
+    "number": "1607.08878v1",
+    "version": "1",
+    "URL": "https://arxiv.org/abs/1607.08878v1",
+    "title": "Identifying and Harnessing the Building Blocks of Machine Learning\n  Pipelines for Sensible Initialization of a Data Science Automation Tool",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          7,
+          29
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Randal S. Olson"
+      },
+      {
+        "literal": "Jason H. Moore"
+      }
+    ],
+    "container-title": "arXiv",
+    "publisher": "arXiv",
+    "abstract": "As data science continues to grow in popularity, there will be an increasing\nneed to make data science tools more scalable, flexible, and accessible. In\nparticular, automated machine learning (AutoML) systems seek to automate the\nprocess of designing and optimizing machine learning pipelines. In this\nchapter, we present a genetic programming-based AutoML system called TPOT that\noptimizes a series of feature preprocessors and machine learning models with\nthe goal of maximizing classification accuracy on a supervised classification\nproblem. Further, we analyze a large database of pipelines that were previously\nused to solve various supervised classification problems and identify 100 short\nseries of machine learning operations that appear the most frequently, which we\ncall the building blocks of machine learning pipelines. We harness these\nbuilding blocks to initialize TPOT with promising solutions, and find that this\nsensible initialization method significantly improves TPOT's performance on one\nbenchmark at no cost of significantly degrading performance on the others.\nThus, sensible initialization with machine learning pipeline building blocks\nshows promise for GP-based AutoML systems, and should be further refined in\nfuture work.",
+    "type": "report",
+    "id": "JEn7WIoN"
+  },
+  {
+    "number": "1803.04487v1",
+    "version": "1",
+    "URL": "https://arxiv.org/abs/1803.04487v1",
+    "title": "Integrated machine learning pipeline for aberrant biomarker enrichment\n  (i-mAB): characterizing clusters of differentiation within a compendium of\n  systemic lupus erythematosus patients",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          3,
+          8
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Trang T. Le"
+      },
+      {
+        "literal": "Nigel O. Blackwood"
+      },
+      {
+        "literal": "Jaclyn N. Taroni"
+      },
+      {
+        "literal": "Weixuan Fu"
+      },
+      {
+        "literal": "Matthew K. Breitenstein"
+      }
+    ],
+    "container-title": "arXiv",
+    "publisher": "arXiv",
+    "abstract": "Clusters of differentiation (CD) are cell surface biomarkers that denote key\nbiological differences between cell types and disease state. CD-targeting\ntherapeutic monoclonal antibodies (mAB) afford rich trans-disease repositioning\nopportunities. Within a compendium of systemic lupus erythematous (SLE)\npatients, we applied the Integrated machine learning pipeline for aberrant\nbiomarker enrichment (i-mAB) to profile de novo gene expression features\naffecting CD20, CD22 and CD30 gene aberrance. First, a novel relief-based\nalgorithm identified interdependent features(p=681) predicting\ntreatment-na\\\"ive SLE patients (balanced accuracy=0.822). We then compiled\nCD-associated expression profiles using regularized logistic regression and\npathway enrichment analyses. On an independent general cell line model system\ndata, we replicated associations (in silico) of BCL7A(padj=1.69e-9) and\nSTRBP(padj=4.63e-8) with CD22; NCOA2(padj=7.00e-4), ATN1(padj=1.71e-2), and\nHOXC4(padj=3.34e-2) with CD30; and PHOSPHO1, a phosphatase linked to bone\nmineralization, with both CD22(padj=4.37e-2) and CD30(padj=7.40e-3). Utilizing\ncarefully aggregated secondary data and leveraging a priori hypotheses, i-mAB\nfostered robust biomarker profiling among interdependent biological features.",
+    "type": "report",
+    "id": "3LGbkjqK"
+  },
+  {
+    "publisher": "Springer Nature America, Inc",
+    "issue": "1",
+    "DOI": "10.1038/s41398-018-0234-3",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Identification and replication of RNA-Seq gene network modules associated with depression severity",
+    "volume": "8",
+    "author": [
+      {
+        "given": "Trang T.",
+        "family": "Le"
+      },
+      {
+        "given": "Jonathan",
+        "family": "Savitz"
+      },
+      {
+        "given": "Hideo",
+        "family": "Suzuki"
+      },
+      {
+        "given": "Masaya",
+        "family": "Misaki"
+      },
+      {
+        "given": "T. Kent",
+        "family": "Teague"
+      },
+      {
+        "given": "Bill C.",
+        "family": "White"
+      },
+      {
+        "given": "Julie H.",
+        "family": "Marino"
+      },
+      {
+        "given": "Graham",
+        "family": "Wiley"
+      },
+      {
+        "given": "Patrick M.",
+        "family": "Gaffney"
+      },
+      {
+        "given": "Wayne C.",
+        "family": "Drevets"
+      },
+      {
+        "given": "Brett A.",
+        "family": "McKinney"
+      },
+      {
+        "given": "Jerzy",
+        "family": "Bodurka"
+      }
+    ],
+    "container-title": "Translational Psychiatry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          5
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gd7jx7",
+    "container-title-short": "Transl Psychiatry",
+    "PMCID": "PMC6125582",
+    "PMID": "30185774",
+    "id": "p7dAO241"
+  },
+  {
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "DOI": "10.1109/4235.996017",
+    "type": "article-journal",
+    "page": "182-197",
+    "source": "Crossref",
+    "title": "A fast and elitist multiobjective genetic algorithm: NSGA-II",
+    "volume": "6",
+    "author": [
+      {
+        "given": "K.",
+        "family": "Deb"
+      },
+      {
+        "given": "A.",
+        "family": "Pratap"
+      },
+      {
+        "given": "S.",
+        "family": "Agarwal"
+      },
+      {
+        "given": "T.",
+        "family": "Meyarivan"
+      }
+    ],
+    "container-title": "IEEE Transactions on Evolutionary Computation",
+    "issued": {
+      "date-parts": [
+        [
+          2002,
+          4
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bnw2vv",
+    "container-title-short": "IEEE Trans. Evol. Computat.",
+    "id": "iBP5Naag"
+  },
+  {
+    "publisher": "ACM Press",
+    "DOI": "10.1145/2908812.2908918",
+    "type": "paper-conference",
+    "source": "Crossref",
+    "title": "Evaluation of a Tree-based Pipeline Optimization Tool for Automating Data Science",
+    "author": [
+      {
+        "given": "Randal S.",
+        "family": "Olson"
+      },
+      {
+        "given": "Nathan",
+        "family": "Bartley"
+      },
+      {
+        "given": "Ryan J.",
+        "family": "Urbanowicz"
+      },
+      {
+        "given": "Jason H.",
+        "family": "Moore"
+      }
+    ],
+    "event": "the 2016",
+    "container-title": "Proceedings of the 2016 on Genetic and Evolutionary Computation Conference - GECCO '16",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfgqv2",
+    "id": "QkGSlAB3"
+  },
+  {
+    "publisher": "ACM Press",
+    "DOI": "10.1145/3071178.3071212",
+    "type": "paper-conference",
+    "source": "Crossref",
+    "title": "Toward the automated analysis of complex diseases in genome-wide association studies using genetic programming",
+    "author": [
+      {
+        "given": "Andrew",
+        "family": "Sohn"
+      },
+      {
+        "given": "Randal S.",
+        "family": "Olson"
+      },
+      {
+        "given": "Jason H.",
+        "family": "Moore"
+      }
+    ],
+    "event": "the Genetic and Evolutionary Computation Conference",
+    "container-title": "Proceedings of the Genetic and Evolutionary Computation Conference on   - GECCO '17",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfgqv3",
+    "id": "AvvI4W9K"
+  },
+  {
+    "publisher": "MIT Press - Journals",
+    "issue": "2",
+    "DOI": "10.1162/evco.1995.3.2.199",
+    "type": "article-journal",
+    "page": "199-230",
+    "source": "Crossref",
+    "title": "Strongly Typed Genetic Programming",
+    "volume": "3",
+    "author": [
+      {
+        "given": "David J.",
+        "family": "Montana"
+      }
+    ],
+    "container-title": "Evolutionary Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1995,
+          6
+        ]
+      ]
+    },
+    "URL": "https://doi.org/ct3mnb",
+    "container-title-short": "Evolutionary Computation",
+    "id": "KgFuJ0Jv"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1186/s13040-015-0040-x",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Differential co-expression network centrality and machine learning feature selection for identifying susceptibility hubs in networks with scale-free structure",
+    "volume": "8",
+    "author": [
+      {
+        "given": "Caleb A",
+        "family": "Lareau"
+      },
+      {
+        "given": "Bill C",
+        "family": "White"
+      },
+      {
+        "given": "Ann L",
+        "family": "Oberg"
+      },
+      {
+        "given": "Brett A",
+        "family": "McKinney"
+      }
+    ],
+    "container-title": "BioData Mining",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          2,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gb5fpr",
+    "container-title-short": "BioData Mining",
+    "PMCID": "PMC4326454",
+    "PMID": "25685197",
+    "id": "NKnMeQUs"
+  },
+  {
+    "URL": "http://www.jmlr.org/papers/v13/fortin12a.html",
+    "title": "DEAP: Evolutionary Algorithms Made Easy",
+    "container-title": "Journal of Machine Learning Research",
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Fortin",
+        "given": "Félix-Antoine"
+      },
+      {
+        "family": "De Rainville",
+        "given": "François-Michel"
+      },
+      {
+        "family": "Gardner",
+        "given": "Marc-André"
+      },
+      {
+        "family": "Parizeau",
+        "given": "Marc"
+      },
+      {
+        "family": "Gagné",
+        "given": "Christian"
+      }
+    ],
+    "type": "webpage",
+    "id": "Gcs0HrMy"
+  },
+  {
+    "URL": "https://dl.acm.org/citation.cfm?id=280485",
+    "type": "webpage",
+    "id": "tqgd3tsi"
+  }
+]
