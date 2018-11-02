@@ -15,6 +15,7 @@ author_info:
     email: ttle@pennmedicine.upenn.edu
     affiliations:
       - Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+    symbol_str: "†"
   -
     github: weixuanfu
     name: Weixuan Fu
@@ -24,6 +25,7 @@ author_info:
     email: weixuanf@pennmedicine.upenn.edu
     affiliations:
       - Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+    symbol_str: "†"
   -
     github: EpistasisLab
     name: Jason H. Moore
