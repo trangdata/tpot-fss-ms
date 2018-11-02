@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/5ae57823b24de26fa40c62659569731ffdb96f13/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/4bb748351618fc59164840224b779a6c57e90cea/))
 was automatically generated
-from [trang1618/tpot-ds-ms@5ae5782](https://github.com/trang1618/tpot-ds-ms/tree/5ae57823b24de26fa40c62659569731ffdb96f13)
+from [trang1618/tpot-ds-ms@4bb7483](https://github.com/trang1618/tpot-ds-ms/tree/4bb748351618fc59164840224b779a6c57e90cea)
 on November 2, 2018.
 </em></small>
 
@@ -29,39 +29,44 @@ on November 2, 2018.
 
 
 
-+ **Trang T. Le**<br>
++ **Trang T. Le**<sup>†</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0003-3737-6565](https://orcid.org/0000-0003-3737-6565)
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
     [trang1618](https://github.com/trang1618)
     · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
-    [trang1618](https://twitter.com/trang1618)<br>
+    [trang1618](https://twitter.com/trang1618)<br>  
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
 
-+ **Weixuan Fu**<br>
++ **Weixuan Fu**<sup>†</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0002-6434-5468](https://orcid.org/0000-0002-6434-5468)
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
     [weixuanfu](https://github.com/weixuanfu)
     · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
-    [weixuanfu](https://twitter.com/weixuanfu)<br>
+    [weixuanfu](https://twitter.com/weixuanfu)<br>  
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
 
-+ **Jason H. Moore**<br>
++ **Jason H. Moore**<sup></sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0002-5015-1099](https://orcid.org/0000-0002-5015-1099)
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
     [EpistasisLab](https://github.com/EpistasisLab)
     · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
-    [moorejh](https://twitter.com/moorejh)<br>
+    [moorejh](https://twitter.com/moorejh)<br>  
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
      · Funded by National Institute of Health Grant Nos. LM010098, LM012601
   </small>
+
+
+<sup>†</sup> --- These authors have contributed equally to this work.
+
+Direct correspondence to jhmoore@upenn.edu.
 
 
 
