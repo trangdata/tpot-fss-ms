@@ -1,4 +1,4 @@
-# Automated scholarly manuscripts on GitHub
+# Expanding TPOT to transcriptomics applications
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
@@ -10,8 +10,7 @@
 
 <!-- usage note: edit this section. -->
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+This repository is the manuscript for a current development of TPOT with two new features: Dataset Selector and Template. Analysis code is available in the repository https://github.com/trang1618/tpot-ds. The manuscript is collaboratively written on GitHub using [Manubot](https://github.com/greenelab/manubot-rootstock).
 
 ## Manubot
 
