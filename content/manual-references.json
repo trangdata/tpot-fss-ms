@@ -1,22 +1,38 @@
 [
-{
-  "type": "webpage",
-  "standard_citation": "url:https://github.com/greenelab/manubot-rootstock",
-  "URL": "https://github.com/greenelab/manubot-rootstock",
-  "title": "greenelab/manubot-rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2017
+  {
+    "publisher": "Morgan Kaufmann Publishers Inc.",
+    "standard_citation": "raw:GPbook",
+    "type": "book",
+    "title": "Genetic Programming: An Introduction: on the Automatic Evolution of Computer Programs and Its Applications",
+    "author": [
+      {
+        "given": "Wolfgang",
+        "family": "Banzhaf"
+      },
+      {
+        "given": "Frank D.",
+        "family": "Francone"
+      },
+      {
+        "given": "Robert E.",
+        "family": "Keller"
+      },
+      {
+        "given": "Nordin",
+        "family": "Peter"
+      }
+    ],
+    "isbn": "1-55860-510-X",
+    "address": "San Francisco, CA, USA",
+    "container-title": "ACM Digital Library",
+    "issued": {
+      "date-parts": [
+        [
+          1998
+        ]
       ]
-    ]
-  },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-}
+    },
+    "URL": "https://dl.acm.org/citation.cfm?id=280485",
+    "id": "GPbook"
+  }
 ]
