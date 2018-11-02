@@ -7,7 +7,7 @@
   <meta name="author" content="Trang T. Le" />
   <meta name="author" content="Weixuan Fu" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2018-11-01" />
+  <meta name="dcterms.date" content="2018-11-02" />
   <meta name="keywords" content="tpot, automl, machine learning" />
   <title>Working Title</title>
   <style type="text/css">
@@ -17,6 +17,7 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <link rel="stylesheet" href="github-pandoc.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -29,7 +30,7 @@
 <header id="title-block-header">
 <h1 class="title">Working Title</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/28098cb38b80422c1d995af08e7557be93db757e/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/28098cb38b80422c1d995af08e7557be93db757e">trang1618/tpot-ds-ms@28098cb</a> on November 1, 2018. </em></small></p>
+<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/97c34e55180adbfde2975242c718a674967ddff4/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/97c34e55180adbfde2975242c718a674967ddff4">trang1618/tpot-ds-ms@97c34e5</a> on November 2, 2018. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" width="13" height="13" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" width="13" height="13" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -37,10 +38,87 @@
 <li><p><strong>Jason H. Moore</strong><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0002-5015-1099">0000-0002-5015-1099</a> · <img src="images/github.svg" alt="GitHub icon" width="13" height="13" /> <a href="https://github.com/EpistasisLab">EpistasisLab</a> · <img src="images/twitter.svg" alt="Twitter icon" width="13" height="13" /> <a href="https://twitter.com/moorejh">moorejh</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 · Funded by National Institute of Health Grant Nos. LM010098, LM012601 </small></p></li>
 </ul>
 <h2 id="abstract" class="page_break_before">Abstract</h2>
+<h2 id="introduction">Introduction</h2>
+<p>For many bioinformatics problems of classifying individuals into clinical categories from high-dimensional biological data, choosing a classifier is merely one step of the arduous process that leads to predictions. To detect patterns among features (<em>e.g.</em>, clinical variables) and their associations with the outcome (<em>e.g.</em>, clinical diagnosis), a data scientist typically has to design and test different complex machine learning frameworks that consist of data exploration, feature engineering, model selection and prediction. Automated machine learning (AutoML) systems were developed to automate this challenging and time-consuming process. These intelligent systems increase the accessibility and scalability of various machine learning applications by efficiently solving an optimization problem to discover pipelines that yield satisfactory outcomes, such as prediction accuracy. Consequently, AutoML allows data scientists to focus their effort in applying their expertise in other important research components such as developing meaningful hypotheses or communicating the results.</p>
+<p>[other AutoML systems]</p>
+<p>Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a machine learning pipeline to solve a supervised learning problem. At its core, TPOT uses genetic programming (GP) <span class="citation" data-cites="tqgd3tsi">[<a href="#ref-tqgd3tsi">1</a>]</span> to optimize a series of feature preprocessors and machine learning models with the objective of maximizing classification accuracy. While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering in building a complete pipeline. Applying GP with the NSGA-II Pareto optimization <span class="citation" data-cites="iBP5Naag">[<a href="#ref-iBP5Naag">2</a>]</span>, TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity. Specifically, to automatically generate and optimize these machine learning pipelines, TPOT utilizes the Python package DEAP <span class="citation" data-cites="Gcs0HrMy">[<a href="#ref-Gcs0HrMy">3</a>]</span> to implement the GP algorithm.</p>
+<p>Given no a priori knowledge about the problem, TPOT has been showed to frequently outperform standard machine learning analyses <span class="citation" data-cites="QkGSlAB3 JEn7WIoN">[<a href="#ref-QkGSlAB3">4</a>,<a href="#ref-JEn7WIoN">5</a>]</span>. Effort has been made to specialize TPOT for human genetics research, which results in a useful extended version of TPOT, TPOT-MDR, that features Multifactor Dimensionality Reduction and an Expert Knowledge Filter <span class="citation" data-cites="AvvI4W9K">[<a href="#ref-AvvI4W9K">6</a>]</span>. However, at the current stage, TPOT still requires great computational expense to analyze large datasets such as in genome-wide association studies or gene expression analyses. Consequently, application of TPOT on real-world datasets has been limited to small sets of features <span class="citation" data-cites="3LGbkjqK">[<a href="#ref-3LGbkjqK">7</a>]</span>.</p>
+<p>In this work, we introduce two new features implemented in TPOT that helps increase the system’s scalability. First, the Dataset Selector (DS) allows the users to pass specific subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset. Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features (<em>e.g.</em> genes) and allowing genetic algorithm to select the best subset in the final pipeline. Second, Template enables the option for strongly typed GP, a method to enforce type constraints in genetic programming. By letting users specify a desired structure of the resulting machine learning pipeline, Template helps reduce TPOT computation time and potentially provide more interpretable results.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="dataset-selector">Dataset Selector</h3>
+<p>TPOT’s current operators include sets of feature pre-processors, feature transformers, feature selection techniques, and supervised classifiers and regressions. In this study, we introduce a new operator called Dataset Selector (DS) that enables biologically guided group-level feature selection. Specifically, taking place at the very first stage of the pipeline, DS passes only a specific subset of the features onwards. Hence, with DS, users can specify subsets of features of interest to reduce the feature space’s dimension at pipeline initialization. From predefined subsets of features, the DS operator allows TPOT to select the best subset that maximize average accuracy in k-fold cross validation (5-fold by default).</p>
+<p>For example, in a gene expression analysis of major depressive disorder, a neuroscientist can specify collections of genes in pathways of interest and identify the important collection that helps predict the depression severity. Similarly, in a genome-wide association study of breast cancer, an analyst may assign variants in the data to different subsets of potentially related variants and detect the subset associated with the breast cancer diagnosis. In general, the DS operator allows for compartmentalization the feature space to smaller subsets based on <em>a priori</em> expert knowledge about the biomedical dataset. From here, TPOT selects the most relevant group of features, which can be utilized to motivate further analysis on that small group of features in biomedical research.</p>
+<h3 id="template">Template</h3>
+<p>Parallel with the establishment of the Dataset Selector operator, we now offer TPOT users the option to define a Template that provides a way to specify a desired structure for the resulting machine learning pipeline (<em>e.g.</em> Dataset selector → Feature transform → Decision Trees). Specifying a Template will reduce TPOT computation time and potentially provide more interpretable results.</p>
+<p>Current implementation of Template supports linear pipelines, or path graphs, which are trees with two nodes (operators) of vertex degree 1, and the other <span class="math inline">\(n-2\)</span> nodes of vertex degree 2. Further, Template takes advantage of the strongly typed genetic programming framework that enforces data-type constraints <span class="citation" data-cites="KgFuJ0Jv">[<a href="#ref-KgFuJ0Jv">8</a>]</span> and imposes type-based restrictions on which element (<em>i.e.</em>, operator) can be chosen at each node. In other words, with a Template defined, each node in the tree pipeline is assigned one of the major operator types: dataset selector, feature selection, feature transform, classifier or regressor.</p>
+<p>[]</p>
+<h3 id="datasets">Datasets</h3>
+<p>We apply TPOT with the new DS operator on both simulated datasets and a real world RNA-Seq gene expression dataset. With both real-world and simulated data, we hope to acquire a comprehensive view of the strengths and limitations of TPOT in the next generation sequencing domain.</p>
+<h4 id="real-world-rna-seq-expression-data">Real-world RNA-Seq expression data</h4>
+<p>We employed TPOT-DS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. <span class="citation" data-cites="p7dAO241">[<a href="#ref-p7dAO241">9</a>]</span>. Gene expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering. Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and are now used in the current study to test for association with MDD status. We use the 23 subsets of interconnected genes called modules identified from the RNA-Seq gene network module analysis <span class="citation" data-cites="p7dAO241">[<a href="#ref-p7dAO241">9</a>]</span> as input for the DS operator.</p>
+<h4 id="simulation-methods">Simulation methods</h4>
+<p>The simulated datasets were generated using the R package privateEC, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. In the current study, to be consistent with the real expression dataset, we simulate interaction effect data with <span class="math inline">\(m = 200\)</span> individuals (100 cases and 100 controls) and <span class="math inline">\(p=5,000\)</span> real-valued features with 4% functional (true positive association with outcome). Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. Full details of the simulation approach can be found in Refs. <span class="citation" data-cites="p7dAO241 NKnMeQUs">[<a href="#ref-NKnMeQUs">10</a>,<a href="#ref-p7dAO241">9</a>]</span>. Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features.</p>
+<h3 id="evaluation-metrics">Evaluation metrics</h3>
+<p>[…]</p>
+<h2 id="results">Results</h2>
+<h2 id="discussion">Discussion</h2>
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs">
-
+<div id="ref-tqgd3tsi">
+<p>1. <a href="https://dl.acm.org/citation.cfm?id=280485">https://dl.acm.org/citation.cfm?id=280485</a></p>
+</div>
+<div id="ref-iBP5Naag">
+<p>2. <strong>A fast and elitist multiobjective genetic algorithm: NSGA-II</strong><br />
+K. Deb, A. Pratap, S. Agarwal, T. Meyarivan<br />
+<em>IEEE Transactions on Evolutionary Computation</em> (2002-04) <a href="https://doi.org/bnw2vv">https://doi.org/bnw2vv</a><br />
+DOI: <a href="https://doi.org/10.1109/4235.996017">10.1109/4235.996017</a></p>
+</div>
+<div id="ref-Gcs0HrMy">
+<p>3. <strong>DEAP: Evolutionary Algorithms Made Easy</strong><br />
+Félix-Antoine Fortin, François-Michel De Rainville, Marc-André Gardner, Marc Parizeau, Christian Gagné<br />
+<em>Journal of Machine Learning Research</em> (2012) <a href="http://www.jmlr.org/papers/v13/fortin12a.html">http://www.jmlr.org/papers/v13/fortin12a.html</a></p>
+</div>
+<div id="ref-QkGSlAB3">
+<p>4. <strong>Evaluation of a Tree-based Pipeline Optimization Tool for Automating Data Science</strong><br />
+Randal S. Olson, Nathan Bartley, Ryan J. Urbanowicz, Jason H. Moore<br />
+<em>Proceedings of the 2016 on Genetic and Evolutionary Computation Conference - GECCO ’16</em> (2016) <a href="https://doi.org/gfgqv2">https://doi.org/gfgqv2</a><br />
+DOI: <a href="https://doi.org/10.1145/2908812.2908918">10.1145/2908812.2908918</a></p>
+</div>
+<div id="ref-JEn7WIoN">
+<p>5. <strong>Identifying and Harnessing the Building Blocks of Machine Learning Pipelines for Sensible Initialization of a Data Science Automation Tool</strong><br />
+Randal S. Olson, Jason H. Moore<br />
+<em>arXiv</em> (2016-07-29) <a href="https://arxiv.org/abs/1607.08878v1">https://arxiv.org/abs/1607.08878v1</a></p>
+</div>
+<div id="ref-AvvI4W9K">
+<p>6. <strong>Toward the automated analysis of complex diseases in genome-wide association studies using genetic programming</strong><br />
+Andrew Sohn, Randal S. Olson, Jason H. Moore<br />
+<em>Proceedings of the Genetic and Evolutionary Computation Conference on - GECCO ’17</em> (2017) <a href="https://doi.org/gfgqv3">https://doi.org/gfgqv3</a><br />
+DOI: <a href="https://doi.org/10.1145/3071178.3071212">10.1145/3071178.3071212</a></p>
+</div>
+<div id="ref-3LGbkjqK">
+<p>7. <strong>Integrated machine learning pipeline for aberrant biomarker enrichment (i-mAB): characterizing clusters of differentiation within a compendium of systemic lupus erythematosus patients</strong><br />
+Trang T. Le, Nigel O. Blackwood, Jaclyn N. Taroni, Weixuan Fu, Matthew K. Breitenstein<br />
+<em>arXiv</em> (2018-03-08) <a href="https://arxiv.org/abs/1803.04487v1">https://arxiv.org/abs/1803.04487v1</a></p>
+</div>
+<div id="ref-KgFuJ0Jv">
+<p>8. <strong>Strongly Typed Genetic Programming</strong><br />
+David J. Montana<br />
+<em>Evolutionary Computation</em> (1995-06) <a href="https://doi.org/ct3mnb">https://doi.org/ct3mnb</a><br />
+DOI: <a href="https://doi.org/10.1162/evco.1995.3.2.199">10.1162/evco.1995.3.2.199</a></p>
+</div>
+<div id="ref-p7dAO241">
+<p>9. <strong>Identification and replication of RNA-Seq gene network modules associated with depression severity</strong><br />
+Trang T. Le, Jonathan Savitz, Hideo Suzuki, Masaya Misaki, T. Kent Teague, Bill C. White, Julie H. Marino, Graham Wiley, Patrick M. Gaffney, Wayne C. Drevets, … Jerzy Bodurka<br />
+<em>Translational Psychiatry</em> (2018-09-05) <a href="https://doi.org/gd7jx7">https://doi.org/gd7jx7</a><br />
+DOI: <a href="https://doi.org/10.1038/s41398-018-0234-3">10.1038/s41398-018-0234-3</a> · PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/30185774">30185774</a> · PMCID: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC6125582">PMC6125582</a></p>
+</div>
+<div id="ref-NKnMeQUs">
+<p>10. <strong>Differential co-expression network centrality and machine learning feature selection for identifying susceptibility hubs in networks with scale-free structure</strong><br />
+Caleb A Lareau, Bill C White, Ann L Oberg, Brett A McKinney<br />
+<em>BioData Mining</em> (2015-02-03) <a href="https://doi.org/gb5fpr">https://doi.org/gb5fpr</a><br />
+DOI: <a href="https://doi.org/10.1186/s13040-015-0040-x">10.1186/s13040-015-0040-x</a> · PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/25685197">25685197</a> · PMCID: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4326454">PMC4326454</a></p>
+</div>
 </div>
 <script>
 // AnchorJS minified version below.

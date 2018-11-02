@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/trang1618/tpot-ds-ms/tree/gh-pages) branch hosts the contents of this directory at https://trang1618.github.io/tpot-ds-ms/.
-The permalink for this webpage version is https://trang1618.github.io/tpot-ds-ms/v/28098cb38b80422c1d995af08e7557be93db757e/.
+The permalink for this webpage version is https://trang1618.github.io/tpot-ds-ms/v/97c34e55180adbfde2975242c718a674967ddff4/.
 To redirect to the permalink for the latest manuscript version at anytime, use the link https://trang1618.github.io/tpot-ds-ms/v/freeze/.
 
 ## Files
@@ -32,4 +32,4 @@ git add v/*/*.ots
 ## Source
 
 The manuscripts in this directory were built from
-[`28098cb38b80422c1d995af08e7557be93db757e`](https://github.com/trang1618/tpot-ds-ms/commit/28098cb38b80422c1d995af08e7557be93db757e).
+[`97c34e55180adbfde2975242c718a674967ddff4`](https://github.com/trang1618/tpot-ds-ms/commit/97c34e55180adbfde2975242c718a674967ddff4).
