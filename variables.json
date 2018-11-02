@@ -11,6 +11,7 @@
       "affiliations": [
         "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
       ],
+      "symbol_str": "\u2020",
       "affiliation_numbers": [
         1
       ]
@@ -25,6 +26,7 @@
       "affiliations": [
         "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
       ],
+      "symbol_str": "\u2020",
       "affiliation_numbers": [
         1
       ]
@@ -55,7 +57,7 @@
     "repo_slug": "trang1618/tpot-ds-ms",
     "repo_owner": "trang1618",
     "repo_name": "tpot-ds-ms",
-    "commit": "a12a60b32db9a9263f4320465a2f5ace7dd2407c"
+    "commit": "5ae57823b24de26fa40c62659569731ffdb96f13"
   },
   "manuscript_stats": {
     "reference_counts": {
