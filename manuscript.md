@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-02'
+date-meta: '2018-11-03'
 keywords:
 - tpot
 - automl
@@ -19,10 +19,10 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/8e80ffb0cae03e60aa7d6c15cf755fe275a5f279/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/f0d2e9b50fe37febdb4e02c7c05db6f7478eab04/))
 was automatically generated
-from [trang1618/tpot-ds-ms@8e80ffb](https://github.com/trang1618/tpot-ds-ms/tree/8e80ffb0cae03e60aa7d6c15cf755fe275a5f279)
-on November 2, 2018.
+from [trang1618/tpot-ds-ms@f0d2e9b](https://github.com/trang1618/tpot-ds-ms/tree/f0d2e9b50fe37febdb4e02c7c05db6f7478eab04)
+on November 3, 2018.
 </em></small>
 
 ## Authors
@@ -35,7 +35,7 @@ on November 2, 2018.
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
     [trang1618](https://github.com/trang1618)
     · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
-    [trang1618](https://twitter.com/trang1618)<br>  
+    [trang1618](https://twitter.com/trang1618)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
@@ -46,7 +46,7 @@ on November 2, 2018.
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
     [weixuanfu](https://github.com/weixuanfu)
     · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
-    [weixuanfu](https://twitter.com/weixuanfu)<br>  
+    [weixuanfu](https://twitter.com/weixuanfu)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
@@ -57,7 +57,7 @@ on November 2, 2018.
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
     [EpistasisLab](https://github.com/EpistasisLab)
     · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
-    [moorejh](https://twitter.com/moorejh)<br>  
+    [moorejh](https://twitter.com/moorejh)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
      · Funded by National Institute of Health Grant Nos. LM010098, LM012601
