@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/f0d2e9b50fe37febdb4e02c7c05db6f7478eab04/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/e39b327750f0c09c986e6f5879bb6dba88b55366/))
 was automatically generated
-from [trang1618/tpot-ds-ms@f0d2e9b](https://github.com/trang1618/tpot-ds-ms/tree/f0d2e9b50fe37febdb4e02c7c05db6f7478eab04)
+from [trang1618/tpot-ds-ms@e39b327](https://github.com/trang1618/tpot-ds-ms/tree/e39b327750f0c09c986e6f5879bb6dba88b55366)
 on November 3, 2018.
 </em></small>
 
@@ -29,7 +29,7 @@ on November 3, 2018.
 
 
 
-+ **Trang T. Le**<sup>†</sup><br>
++ **Trang T. Le**<sup>☯</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0003-3737-6565](https://orcid.org/0000-0003-3737-6565)
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
@@ -40,7 +40,7 @@ on November 3, 2018.
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
 
-+ **Weixuan Fu**<sup>†</sup><br>
++ **Weixuan Fu**<sup>☯</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0002-6434-5468](https://orcid.org/0000-0002-6434-5468)
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
@@ -51,7 +51,7 @@ on November 3, 2018.
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
 
-+ **Jason H. Moore**<sup></sup><br>
++ **Jason H. Moore**<sup>†</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0002-5015-1099](https://orcid.org/0000-0002-5015-1099)
     · ![GitHub icon](images/github.svg){height="13px" width="13px"}
@@ -64,9 +64,9 @@ on November 3, 2018.
   </small>
 
 
-<sup>†</sup> --- These authors have contributed equally to this work.
+<sup>☯</sup> --- These authors contributed equally to this work.
 
-Direct correspondence to jhmoore@upenn.edu.
+<sup>†</sup> --- Direct correspondence to jhmoore@upenn.edu.
 
 
 
