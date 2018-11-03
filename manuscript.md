@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/e39b327750f0c09c986e6f5879bb6dba88b55366/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/ccf4ffe52fe36989112073a0bcf0b5a9e53e128f/))
 was automatically generated
-from [trang1618/tpot-ds-ms@e39b327](https://github.com/trang1618/tpot-ds-ms/tree/e39b327750f0c09c986e6f5879bb6dba88b55366)
+from [trang1618/tpot-ds-ms@ccf4ffe](https://github.com/trang1618/tpot-ds-ms/tree/ccf4ffe52fe36989112073a0bcf0b5a9e53e128f)
 on November 3, 2018.
 </em></small>
 
