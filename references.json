@@ -65,6 +65,46 @@
     "id": "3LGbkjqK"
   },
   {
+    "publisher": "Springer International Publishing",
+    "DOI": "10.1007/978-3-319-64185-0_28",
+    "type": "chapter",
+    "page": "378-390",
+    "source": "Crossref",
+    "title": "A Novel Image Classification Method with CNN-XGBoost Model",
+    "author": [
+      {
+        "given": "Xudie",
+        "family": "Ren"
+      },
+      {
+        "given": "Haonan",
+        "family": "Guo"
+      },
+      {
+        "given": "Shenghong",
+        "family": "Li"
+      },
+      {
+        "given": "Shilin",
+        "family": "Wang"
+      },
+      {
+        "given": "Jianhua",
+        "family": "Li"
+      }
+    ],
+    "container-title": "Digital Forensics and Watermarking",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfgvf3",
+    "id": "13as7dipI"
+  },
+  {
     "publisher": "Springer Nature America, Inc",
     "issue": "1",
     "DOI": "10.1038/s41398-018-0234-3",
@@ -217,6 +257,34 @@
   },
   {
     "publisher": "ACM Press",
+    "DOI": "10.1145/2939672.2939785",
+    "type": "paper-conference",
+    "source": "Crossref",
+    "title": "XGBoost",
+    "author": [
+      {
+        "given": "Tianqi",
+        "family": "Chen"
+      },
+      {
+        "given": "Carlos",
+        "family": "Guestrin"
+      }
+    ],
+    "event": "the 22nd ACM SIGKDD International Conference",
+    "container-title": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining - KDD '16",
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gdp84q",
+    "id": "8w9fI63O"
+  },
+  {
+    "publisher": "ACM Press",
     "DOI": "10.1145/3071178.3071212",
     "type": "paper-conference",
     "source": "Crossref",
@@ -320,6 +388,71 @@
     "id": "NKnMeQUs"
   },
   {
+    "publisher": "Foundation for Open Access Statistic",
+    "issue": "5",
+    "DOI": "10.18637/jss.v028.i05",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Building Predictive Models inRUsing thecaretPackage",
+    "volume": "28",
+    "author": [
+      {
+        "given": "Max",
+        "family": "Kuhn"
+      }
+    ],
+    "container-title": "Journal of Statistical Software",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gdgzwf",
+    "container-title-short": "J. Stat. Soft.",
+    "id": "6MvKCe21"
+  },
+  {
+    "publisher": "MDPI AG",
+    "issue": "8",
+    "DOI": "10.3390/en10081168",
+    "type": "article-journal",
+    "page": "1168",
+    "source": "Crossref",
+    "title": "Short-Term Load Forecasting Using EMD-LSTM Neural Networks with a Xgboost Algorithm for Feature Importance Evaluation",
+    "volume": "10",
+    "author": [
+      {
+        "given": "Huiting",
+        "family": "Zheng"
+      },
+      {
+        "given": "Jiabin",
+        "family": "Yuan"
+      },
+      {
+        "given": "Long",
+        "family": "Chen"
+      }
+    ],
+    "container-title": "Energies",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          8,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gbtqbr",
+    "container-title-short": "Energies",
+    "id": "19eUrsX1M"
+  },
+  {
     "URL": "http://www.jmlr.org/papers/v13/fortin12a.html",
     "title": "DEAP: Evolutionary Algorithms Made Easy",
     "container-title": "Journal of Machine Learning Research",
@@ -359,5 +492,11 @@
     "URL": "https://dl.acm.org/citation.cfm?id=280485",
     "type": "webpage",
     "id": "tqgd3tsi"
+  },
+  {
+    "URL": "https://www.kaggle.com/",
+    "title": "Kaggle: Your Home for Data Science",
+    "type": "webpage",
+    "id": "1MHQyfXY"
   }
 ]

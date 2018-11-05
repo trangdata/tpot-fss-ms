@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-03'
+date-meta: '2018-11-05'
 keywords:
 - tpot
 - automl
@@ -19,10 +19,10 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/ccf4ffe52fe36989112073a0bcf0b5a9e53e128f/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/270b3792b4eaa462bbd09728f356e98579ba639c/))
 was automatically generated
-from [trang1618/tpot-ds-ms@ccf4ffe](https://github.com/trang1618/tpot-ds-ms/tree/ccf4ffe52fe36989112073a0bcf0b5a9e53e128f)
-on November 3, 2018.
+from [trang1618/tpot-ds-ms@270b379](https://github.com/trang1618/tpot-ds-ms/tree/270b3792b4eaa462bbd09728f356e98579ba639c)
+on November 5, 2018.
 </em></small>
 
 ## Authors
@@ -121,16 +121,18 @@ Current implementation of Template supports linear pipelines, or path graphs, wh
 Further, Template takes advantage of the strongly typed genetic programming framework that enforces data-type constraints [@KgFuJ0Jv] and imposes type-based restrictions on which element (*i.e.*, operator) type can be chosen at each node.
 In strongly typed genetic programming, while the fitness function and parameters remain the same, the initialization procedure and genetic operators (*e.g.*, mutation, crossover) must respect the enhanced legality constraints [@KgFuJ0Jv].
 With a Template defined, each node in the tree pipeline is assigned one of the five major operator types: dataset selector, feature selection, feature transform, classifier or regressor. 
-Moreover, besides the major operator types, each node can also be assigned more specifically as a method of an operator, such as decision trees for classifier. Thus, an example Template is Dataset selector &rarr; Feature transform &rarr; Decision trees.
+Moreover, besides the major operator types, each node can also be assigned more specifically as a method of an operator, such as decision trees for classifier. 
+An example Template is Dataset selector &rarr; Feature transform &rarr; Decision trees.
 
 ### Datasets
-We apply TPOT with the new DS operator on both simulated datasets and a real world RNA-Seq gene expression dataset. With both real-world and simulated data, we hope to acquire a comprehensive view of the strengths and limitations of TPOT in the next generation sequencing domain.
+We apply TPOT with the new DS operator on both simulated datasets and a real world RNA-Seq gene expression dataset. 
+With both real-world and simulated data, we hope to acquire a comprehensive view of the strengths and limitations of TPOT in the next generation sequencing domain.
 
 #### Real-world RNA-Seq expression data
 We employed TPOT-DS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. [@p7dAO241]. 
 Gene expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering. 
 Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and are now used in the current study to test for association with MDD status. 
-We use the 23 subsets of interconnected genes called modules identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the DS operator.
+We use the 23 subsets of interconnected genes called depression gene modules (DGMs) identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the DS operator.
 
 #### Simulation methods
 The simulated datasets were generated using the R package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
@@ -139,14 +141,15 @@ Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMe
 Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features. 
 
 To closely resemble the module size distribution in the RNA-Seq data, we first fit a $\Gamma$ distribution to the observed module sizes then sample from this distribution values for the simulated subset size, before the total number of features reaches 4,800 (number of background features). Then, the background features were randomly placed in each subset corresponding to its size. Also, for each subset $S_i, i = 1, \dots, n$, a functional feature $s_j$ belongs to the subset with the probability
-$P(s_j \in S_i) \sim 1.618^{-i}$
-where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. The proportions of functional features in all subsets are shown in Table []. 
+$$P(s_j \in S_i) \sim 1.618^{-i}$$ {#eq:p_subset}
+where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. 
 
-### Performance metrics
-We assess the performance of each method by quantifying TPOT's ability to select the *most important* subset (with the most functional features) in 100 replicates of TPOT runs on simulated data. We also examine the out-of-sample accuracy of TPOT's exported pipeline on the testing set.
-
-[]
-
+### Performance assessment
+For each simulated and real-world dataset, after randomly splitting the entire data in half (training and holdout), we trained TPOT-DS on training data to predict class (e.g., diagnostic phenotype in real-world data) in the holdout set.
+We assess the performance of TPOT-DS by quantifying its ability to correctly select the most important subset (containing most functional features) in 100 replicates of TPOT runs on simulated data with known underlying truth. 
+We also compare the out-of-sample accuracy of TPOT's exported pipeline on the holdout set with that of XGBoost [@8w9fI63O], a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
+In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
+To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters with the `R` package `caret` [@6MvKCe21] version 6.0-80 with the adaptive cross-validation algorithm. 
 
 ## Results
 
