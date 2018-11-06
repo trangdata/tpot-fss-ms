@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-05'
+date-meta: '2018-11-06'
 keywords:
 - tpot
 - automl
@@ -19,10 +19,10 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/270b3792b4eaa462bbd09728f356e98579ba639c/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/d5eb9768fd536fa390fed2df0c5cc0573293e2f4/))
 was automatically generated
-from [trang1618/tpot-ds-ms@270b379](https://github.com/trang1618/tpot-ds-ms/tree/270b3792b4eaa462bbd09728f356e98579ba639c)
-on November 5, 2018.
+from [trang1618/tpot-ds-ms@d5eb976](https://github.com/trang1618/tpot-ds-ms/tree/d5eb9768fd536fa390fed2df0c5cc0573293e2f4)
+on November 6, 2018.
 </em></small>
 
 ## Authors
@@ -135,8 +135,8 @@ Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and 
 We use the 23 subsets of interconnected genes called depression gene modules (DGMs) identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the DS operator.
 
 #### Simulation methods
-The simulated datasets were generated using the R package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
-In the current study, to be consistent with the real expression dataset, we simulate interaction effect data with $m =$200 individuals (100 cases and 100 controls) and $p=$5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
+The simulated datasets were generated using the `R` package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
+In the current study, to be consistent with the real expression dataset, we simulate interaction effect data with *m* = 200 individuals (100 cases and 100 controls) and *p*= 5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
 Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
 Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features. 
 
@@ -145,15 +145,50 @@ $$P(s_j \in S_i) \sim 1.618^{-i}$$ {#eq:p_subset}
 where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. 
 
 ### Performance assessment
-For each simulated and real-world dataset, after randomly splitting the entire data in half (training and holdout), we trained TPOT-DS on training data to predict class (e.g., diagnostic phenotype in real-world data) in the holdout set.
+For each simulated and real-world dataset, after randomly splitting the entire data in two balanced smaller sets (75% training and 25% holdout), we trained TPOT-DS with the Template `Dataset Selector-Transformer-Classifier` on training data to predict class (e.g., diagnostic phenotype in real-world data) in the holdout set.
 We assess the performance of TPOT-DS by quantifying its ability to correctly select the most important subset (containing most functional features) in 100 replicates of TPOT runs on simulated data with known underlying truth. 
-We also compare the out-of-sample accuracy of TPOT's exported pipeline on the holdout set with that of XGBoost [@8w9fI63O], a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
+We also compare the out-of-sample accuracy of TPOT-DS's exported pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and XGBoost [@8w9fI63O], a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters with the `R` package `caret` [@6MvKCe21] version 6.0-80 with the adaptive cross-validation algorithm. 
 
 ## Results
+Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
+
+### Simulated data
+We compare the accuracy of each method for *r* = 100 replicate simulated data sets with moderate interaction effect where *bias* = 0.4. 
+These values of the effect size in the simulations generate adequately challenging data sets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1. 
+Each replicate data set is split into training and holdout. 
+The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, and the trained model is then applied to the independent holdout data to obtain the generalization accuracy.
+
+Our simulation design produces a reasonable distribution of the functional features, of which proportions in all subsets are shown in Table [S1].
+According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
+Therefore, our first aim is to determine how well TPOT-DS can identify subset 1, which contains the largest number of informative features. 
+With the specified template `Dataset Selector-Transformer-Classifier`, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline [] times, with an average cross-validated accuracy on the training set of [] and out-of-sample accuracy of [] (Fig. [1]). 
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and [], and out-of-sample accuracy of [] and [0.565].
+
+### RNA-Seq expression data
+We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls described in [@p7dAO241].
+The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
+In 100 replications, TPOT-DS selects DGM-4 (282 genes) [] times to be the subset most predictive of the diagnosis status. 
+
+
+
+
+
 
 ## Discussion
+
+While the module scores of DGM-5 and DGM-17 were significantly associated with depressions severity measured by MADRS score [@p7dAO241], we find with TPOT-DS that DGM-4 is largely predictive of the clinical diagnosis (MDD/HC) of each individual.
+
+chalenging enough...
+
+### Limitations
+[]
+
+### Future works
+Extensions of TPOT-DS will involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline.
+Also, a future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome.
+
 
 
 ## References {.page_break_before}
