@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/778f844403281f9ac705e5bffde5b4f99de35b26/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/8b471ec84df54a9409ff57f2a66287b36b66aa5f/))
 was automatically generated
-from [trang1618/tpot-ds-ms@778f844](https://github.com/trang1618/tpot-ds-ms/tree/778f844403281f9ac705e5bffde5b4f99de35b26)
+from [trang1618/tpot-ds-ms@8b471ec](https://github.com/trang1618/tpot-ds-ms/tree/8b471ec84df54a9409ff57f2a66287b36b66aa5f)
 on November 8, 2018.
 </em></small>
 
@@ -155,7 +155,7 @@ To obtain the optimal performance for this baseline model, we tune XGBoost hyper
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
 
 ### Simulated data
-We compare the accuracy of each method for *r* = 100 replicate simulated data sets with moderate interaction effect where *bias* = 0.4. 
+We compare the accuracy of each method for *r* = 100 replicate simulated data sets with moderate interaction effect. 
 These values of the effect size in the simulations generate adequately challenging data sets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1. 
 Each replicate data set is split into training and holdout. 
 The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, and the trained model is then applied to the independent holdout data to obtain the generalization accuracy.
@@ -171,6 +171,7 @@ We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major dep
 The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
 In 100 replications, TPOT-DS selects DGM-4 (282 genes) [] times to be the subset most predictive of the diagnosis status. 
 
+![Early results: TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_43.svg){height="4in" "width="5in"}
 
 
 
