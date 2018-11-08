@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-06'
+date-meta: '2018-11-08'
 keywords:
 - tpot
 - automl
@@ -19,10 +19,10 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/d5eb9768fd536fa390fed2df0c5cc0573293e2f4/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/cfd67d37d0d2989c8c0616e828cb9db30dde7d41/))
 was automatically generated
-from [trang1618/tpot-ds-ms@d5eb976](https://github.com/trang1618/tpot-ds-ms/tree/d5eb9768fd536fa390fed2df0c5cc0573293e2f4)
-on November 6, 2018.
+from [trang1618/tpot-ds-ms@cfd67d3](https://github.com/trang1618/tpot-ds-ms/tree/cfd67d37d0d2989c8c0616e828cb9db30dde7d41)
+on November 8, 2018.
 </em></small>
 
 ## Authors
