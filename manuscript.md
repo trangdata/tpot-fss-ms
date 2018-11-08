@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/7507e59557a87f270fee40ee46a06ff40562406e/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/778f844403281f9ac705e5bffde5b4f99de35b26/))
 was automatically generated
-from [trang1618/tpot-ds-ms@7507e59](https://github.com/trang1618/tpot-ds-ms/tree/7507e59557a87f270fee40ee46a06ff40562406e)
+from [trang1618/tpot-ds-ms@778f844](https://github.com/trang1618/tpot-ds-ms/tree/778f844403281f9ac705e5bffde5b4f99de35b26)
 on November 8, 2018.
 </em></small>
 
@@ -86,7 +86,7 @@ Consequently, AutoML allows data scientists to focus their effort in applying th
 [other AutoML systems]
 
 Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a machine learning pipeline to solve a supervised learning problem. 
-At its core, TPOT uses genetic programming (GP) [@tqgd3tsi] to optimize a series of feature preprocessors and machine learning models with the objective of maximizing classification accuracy. 
+At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature preprocessors and machine learning models with the objective of maximizing classification accuracy. 
 While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering in building a complete pipeline. Applying GP with the NSGA-II Pareto optimization [@iBP5Naag], TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity. 
 Specifically, to automatically generate and optimize these machine learning pipelines, TPOT utilizes the Python package DEAP [@Gcs0HrMy] to implement the GP algorithm.		
 

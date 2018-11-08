@@ -453,6 +453,39 @@
     "id": "19eUrsX1M"
   },
   {
+    "publisher": "Morgan Kaufmann Publishers Inc.",
+    "type": "book",
+    "title": "Genetic Programming: An Introduction: on the Automatic Evolution of Computer Programs and Its Applications",
+    "author": [
+      {
+        "given": "Wolfgang",
+        "family": "Banzhaf"
+      },
+      {
+        "given": "Frank D.",
+        "family": "Francone"
+      },
+      {
+        "given": "Robert E.",
+        "family": "Keller"
+      },
+      {
+        "given": "Nordin",
+        "family": "Peter"
+      }
+    ],
+    "container-title": "ACM Digital Library",
+    "issued": {
+      "date-parts": [
+        [
+          1998
+        ]
+      ]
+    },
+    "URL": "https://dl.acm.org/citation.cfm?id=280485",
+    "id": "NopW1Vw3"
+  },
+  {
     "URL": "http://www.jmlr.org/papers/v13/fortin12a.html",
     "title": "DEAP: Evolutionary Algorithms Made Easy",
     "container-title": "Journal of Machine Learning Research",
@@ -487,11 +520,6 @@
     ],
     "type": "webpage",
     "id": "Gcs0HrMy"
-  },
-  {
-    "URL": "https://dl.acm.org/citation.cfm?id=280485",
-    "type": "webpage",
-    "id": "tqgd3tsi"
   },
   {
     "URL": "https://www.kaggle.com/",
