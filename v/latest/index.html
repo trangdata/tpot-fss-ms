@@ -30,7 +30,7 @@
 <header id="title-block-header">
 <h1 class="title">Working Title</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/79912315ce4a2171bc9624c8d56a3d8b66d39d01/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/79912315ce4a2171bc9624c8d56a3d8b66d39d01">trang1618/tpot-ds-ms@7991231</a> on November 9, 2018. </em></small></p>
+<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/0dc12ca38f7a360a68e40fcc94f56459ddff0e48/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/0dc12ca38f7a360a68e40fcc94f56459ddff0e48">trang1618/tpot-ds-ms@0dc12ca</a> on November 9, 2018. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" width="13" height="13" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" width="13" height="13" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -69,7 +69,9 @@
 <p>Our simulation design produces a reasonable distribution of the functional features, of which proportions in all subsets are shown in Table [S1]. According to Eq. <a href="#eq:p_subset">1</a>, the earlier the subset, the more functional features it has. Therefore, our first aim is to determine how well TPOT-DS can identify subset 1, which contains the largest number of informative features. With the specified template <code>Dataset Selector-Transformer-Classifier</code>, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline [] times, with an average cross-validated accuracy on the training set of [] and out-of-sample accuracy of [] (Fig. [1]). Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and [], and out-of-sample accuracy of [] and [0.565].</p>
 <h3 id="rna-seq-expression-data">RNA-Seq expression data</h3>
 <p>We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls described in <span class="citation" data-cites="p7dAO241">[<a href="#ref-p7dAO241">9</a>]</span>. The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail). In 100 replications, TPOT-DS selects DGM-4 (282 genes) [] times to be the subset most predictive of the diagnosis status.</p>
-<p><img src="images/real_75.svg" alt="Early results: TPOT-DS’s out-of-sample accuracy in RNA-Seq expression data with selected subset" />{height=“4in” “width=”5in&quot;}</p>
+<figure>
+<img src="images/real_75.svg" alt="Early results: TPOT-DS’s out-of-sample accuracy in RNA-Seq expression data with selected subset" style="width:5in;height:4in" /><figcaption>Early results: TPOT-DS’s out-of-sample accuracy in RNA-Seq expression data with selected subset</figcaption>
+</figure>
 <h2 id="discussion">Discussion</h2>
 <p>While the module scores of DGM-5 and DGM-17 were significantly associated with depressions severity measured by MADRS score <span class="citation" data-cites="p7dAO241">[<a href="#ref-p7dAO241">9</a>]</span>, we find with TPOT-DS that DGM-4 is largely predictive of the clinical diagnosis (MDD/HC) of each individual.</p>
 <p>chalenging enough…</p>
