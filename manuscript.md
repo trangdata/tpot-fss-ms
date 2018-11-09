@@ -19,9 +19,9 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/79912315ce4a2171bc9624c8d56a3d8b66d39d01/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/0dc12ca38f7a360a68e40fcc94f56459ddff0e48/))
 was automatically generated
-from [trang1618/tpot-ds-ms@7991231](https://github.com/trang1618/tpot-ds-ms/tree/79912315ce4a2171bc9624c8d56a3d8b66d39d01)
+from [trang1618/tpot-ds-ms@0dc12ca](https://github.com/trang1618/tpot-ds-ms/tree/0dc12ca38f7a360a68e40fcc94f56459ddff0e48)
 on November 9, 2018.
 </em></small>
 
@@ -171,7 +171,7 @@ We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major dep
 The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
 In 100 replications, TPOT-DS selects DGM-4 (282 genes) [] times to be the subset most predictive of the diagnosis status. 
 
-![Early results: TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_75.svg){height="4in" "width="5in"}
+![Early results: TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_75.svg){height="4in" width="5in"}
 
 
 
