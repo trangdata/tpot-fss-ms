@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-08'
+date-meta: '2018-11-09'
 keywords:
 - tpot
 - automl
@@ -19,10 +19,10 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/8b471ec84df54a9409ff57f2a66287b36b66aa5f/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/79912315ce4a2171bc9624c8d56a3d8b66d39d01/))
 was automatically generated
-from [trang1618/tpot-ds-ms@8b471ec](https://github.com/trang1618/tpot-ds-ms/tree/8b471ec84df54a9409ff57f2a66287b36b66aa5f)
-on November 8, 2018.
+from [trang1618/tpot-ds-ms@7991231](https://github.com/trang1618/tpot-ds-ms/tree/79912315ce4a2171bc9624c8d56a3d8b66d39d01)
+on November 9, 2018.
 </em></small>
 
 ## Authors
@@ -171,7 +171,7 @@ We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major dep
 The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
 In 100 replications, TPOT-DS selects DGM-4 (282 genes) [] times to be the subset most predictive of the diagnosis status. 
 
-![Early results: TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_43.svg){height="4in" "width="5in"}
+![Early results: TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_75.svg){height="4in" "width="5in"}
 
 
 
