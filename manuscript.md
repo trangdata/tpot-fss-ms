@@ -3,13 +3,14 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-09'
+date-meta: '2018-11-13'
 keywords:
 - tpot
 - automl
 - machine learning
 lang: en-US
-title: Working Title
+title: Scaling tree-based automated machine learning to biomedical big data with a
+  dataset selector
 ...
 
 
@@ -19,10 +20,10 @@ title: Working Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/0dc12ca38f7a360a68e40fcc94f56459ddff0e48/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/0b108bafdf72fa242f48aaf296c7a86efd738e02/))
 was automatically generated
-from [trang1618/tpot-ds-ms@0dc12ca](https://github.com/trang1618/tpot-ds-ms/tree/0dc12ca38f7a360a68e40fcc94f56459ddff0e48)
-on November 9, 2018.
+from [trang1618/tpot-ds-ms@0b108ba](https://github.com/trang1618/tpot-ds-ms/tree/0b108bafdf72fa242f48aaf296c7a86efd738e02)
+on November 13, 2018.
 </em></small>
 
 ## Authors
@@ -72,7 +73,12 @@ on November 9, 2018.
 
 ## Abstract {.page_break_before}
 
-
+[Background, gap in field]
+We introduce two new features implemented in TPOT that helps increase the system’s scalability: dataset selector (DS) and Template. Dataset selector provides the option to specify subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset. 
+Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline. 
+Template enforces type constraints with strongly typed genetic programming. 
+We show that DS and Template help reduce TPOT computation time and potentially provide more interpretable results.
+Independent of a previous study that identified significant association with depressions severity of the enrichment scores of two modules, we find with TPOT-DS that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
 
 ## Introduction
@@ -158,38 +164,68 @@ Our main goal is to test the performance of methods to identify features that di
 We compare the accuracy of each method for *r* = 100 replicate simulated data sets with moderate interaction effect. 
 These values of the effect size in the simulations generate adequately challenging data sets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1. 
 Each replicate data set is split into training and holdout. 
-The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, and the trained model is then applied to the independent holdout data to obtain the generalization accuracy.
+The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy.
 
-Our simulation design produces a reasonable distribution of the functional features, of which proportions in all subsets are shown in Table [S1].
+Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
-Therefore, our first aim is to determine how well TPOT-DS can identify subset 1, which contains the largest number of informative features. 
-With the specified template `Dataset Selector-Transformer-Classifier`, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline [] times, with an average cross-validated accuracy on the training set of [] and out-of-sample accuracy of [] (Fig. [1]). 
-Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and [], and out-of-sample accuracy of [] and [0.565].
+Therefore, our first aim is to determine how well TPOT-DS can identify the first subset 1 that contains the largest number of informative features. 
+With the specified template `Dataset Selector-Transformer-Classifier`, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline 75 times (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and out-of-sample accuracy of 0.69. 
+
+![TPOT-DS's out-of-sample accuracy in simulated data with selected subset](images/sim_100.svg){#fig:simDS height="4in" width="7in"}
+
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and [0.533], and out-of-sample accuracy of [0.565] and [0.575].
 
 ### RNA-Seq expression data
-We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls described in [@p7dAO241].
+We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls (HC) described in [@p7dAO241].
 The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
-In 100 replications, TPOT-DS selects DGM-4 (282 genes) [] times to be the subset most predictive of the diagnosis status. 
+We excluded 277 genes that did not belong to 23 subsets of interconnected genes (DGMs) so that the dataset remains the same across the three methods.
+As with simulated data, all models are built from the training dataset (61 HC, 56 MDD), then the trained model is applied to the independent holdout data (18 HC, 22 MDD) to obtain the generalization accuracy.
 
-![Early results: TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_75.svg){height="4in" width="5in"}
+In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636. 
+In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
+Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
+
+![TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_100.svg){#fig:realDS height="4in" width="5in"}
+
+AFter DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
+Previously, this module's enrichment score did not show statistically significant association with the MADRS. 
+
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and [], and out-of-sample accuracy of [] and [].
 
 
 
 
 
 ## Discussion
+To our knowledge, TPOT-DS is the first AutoML tool to offer the option of feature selection at the group level.
+Previously, it was computationally expensive for any AutoML program to process biomedical big data.
+TPOT-DS is able to identify the most meaningful group of features to include in the prediction pipeline. 
+We assessed TPOT-DS's out-of-sample prediction accuracy compared to standard TPOT and XGBoost, another state-of-the-art machine learning method.
+We applied TPOT-DS to real-world expression data to demonstrate the identification of biologically relevant groups of genes.
 
-While the module scores of DGM-5 and DGM-17 were significantly associated with depressions severity measured by MADRS score [@p7dAO241], we find with TPOT-DS that DGM-4 is largely predictive of the clinical diagnosis (MDD/HC) of each individual.
+Implemented with a strongly typed GP, Template allows users to pre-specify a particular pipeline structure, which speeds up the automation computation time and provides potentially more interpretable results.
+Hence, Template enables the comparison between the two TPOT implementations, with and without DS.
 
-chalenging enough...
+We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
+TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
+When another subset is chosen in the final pipeline, this method still produces holdout accuracy comparable to that of standard TPOT and XGBoost (0.565 - 0.575).
 
-### Limitations
-[]
+Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
+We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
-### Future works
+TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller out-of-sample accuracy compared to DGM-5 (0.563 $<$ 0.636). []
+
+It is important to discuss the complexity - interpretability trade-off in the context of AutoML.
+While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. 
+Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but not yield the optimal accuracy.
+Finding the optimal pipeline complexity that yields reasonable model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
+
+Another limitation of this analysis is that subsets have to be predefined prior to executing TPOT-DS.
+While this option is desirable when *a prior* knowledge on the biological data is available, it might pose as a challenge when this is not the case, such as when analyzing data of a brand-new disease.
+Nevertheless, one can perform a clustering method such as *k*-means to group features prior to performing TPOT-DS on the data.
+
 Extensions of TPOT-DS will involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline.
 Also, a future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome.
-
 
 
 ## References {.page_break_before}

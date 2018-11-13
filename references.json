@@ -105,6 +105,126 @@
     "id": "13as7dipI"
   },
   {
+    "publisher": "Springer Nature",
+    "issue": "12",
+    "DOI": "10.1038/mp.2013.161",
+    "type": "article-journal",
+    "page": "1267-1274",
+    "source": "Crossref",
+    "title": "Type I interferon signaling genes in recurrent major depression: increased expression detected by whole-blood RNA sequencing",
+    "volume": "19",
+    "author": [
+      {
+        "given": "S",
+        "family": "Mostafavi"
+      },
+      {
+        "given": "A",
+        "family": "Battle"
+      },
+      {
+        "given": "X",
+        "family": "Zhu"
+      },
+      {
+        "given": "J B",
+        "family": "Potash"
+      },
+      {
+        "given": "M M",
+        "family": "Weissman"
+      },
+      {
+        "given": "J",
+        "family": "Shi"
+      },
+      {
+        "given": "K",
+        "family": "Beckman"
+      },
+      {
+        "given": "C",
+        "family": "Haudenschild"
+      },
+      {
+        "given": "C",
+        "family": "McCormick"
+      },
+      {
+        "given": "R",
+        "family": "Mei"
+      },
+      {
+        "given": "M J",
+        "family": "Gameroff"
+      },
+      {
+        "given": "H",
+        "family": "Gindes"
+      },
+      {
+        "given": "P",
+        "family": "Adams"
+      },
+      {
+        "given": "F S",
+        "family": "Goes"
+      },
+      {
+        "given": "F M",
+        "family": "Mondimore"
+      },
+      {
+        "given": "D F",
+        "family": "MacKinnon"
+      },
+      {
+        "given": "L",
+        "family": "Notes"
+      },
+      {
+        "given": "B",
+        "family": "Schweizer"
+      },
+      {
+        "given": "D",
+        "family": "Furman"
+      },
+      {
+        "given": "S B",
+        "family": "Montgomery"
+      },
+      {
+        "given": "A E",
+        "family": "Urban"
+      },
+      {
+        "given": "D",
+        "family": "Koller"
+      },
+      {
+        "given": "D F",
+        "family": "Levinson"
+      }
+    ],
+    "container-title": "Molecular Psychiatry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          12,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f6qdpr",
+    "container-title-short": "Mol Psychiatry",
+    "PMCID": "PMC5404932",
+    "PMID": "24296977",
+    "id": "g454CrrS"
+  },
+  {
     "publisher": "Springer Nature America, Inc",
     "issue": "1",
     "DOI": "10.1038/s41398-018-0234-3",
@@ -451,6 +571,92 @@
     "URL": "https://doi.org/gbtqbr",
     "container-title-short": "Energies",
     "id": "19eUrsX1M"
+  },
+  {
+    "title": "Increased apoptosis in patients with major depression: A preliminary study.",
+    "volume": "163",
+    "issue": "1",
+    "page": "533-4",
+    "container-title": "Journal of immunology (Baltimore, Md. : 1950)",
+    "container-title-short": "J. Immunol.",
+    "ISSN": "0022-1767",
+    "issued": {
+      "date-parts": [
+        [
+          1999,
+          7,
+          1
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "E",
+        "family": "Eilat"
+      },
+      {
+        "given": "S",
+        "family": "Mendlovic"
+      },
+      {
+        "given": "A",
+        "family": "Doron"
+      },
+      {
+        "given": "V",
+        "family": "Zakuth"
+      },
+      {
+        "given": "Z",
+        "family": "Spirer"
+      }
+    ],
+    "PMID": "10384158",
+    "abstract": "Apoptosis is a programmed cell death that can be observed in normal cells. Major depression poses a combination of a depressed and destructive autoimmune reaction. We measured apoptosis in the PBLs of seven patients with major depression and in age- and sex-matched controls. We observed significantly increased apoptosis in the PBLs of depressive patients (p < 0.05). These preliminary results could contribute to an understanding of the interactions of the CNS with the immune system, which could lead to the increased vulnerability of the CNS in depressive disorders. Further studies are needed to establish these results.",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/10384158",
+    "type": "article-journal",
+    "id": "Okd6uiRx"
+  },
+  {
+    "title": "A meta-analysis examining clinical predictors of hippocampal volume in patients with major depressive disorder.",
+    "volume": "34",
+    "issue": "1",
+    "page": "41-54",
+    "container-title": "Journal of psychiatry & neuroscience : JPN",
+    "container-title-short": "J Psychiatry Neurosci",
+    "ISSN": "1488-2434",
+    "issued": {
+      "date-parts": [
+        [
+          2009,
+          1
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "Margaret C",
+        "family": "McKinnon"
+      },
+      {
+        "given": "Kaan",
+        "family": "Yucel"
+      },
+      {
+        "given": "Anthony",
+        "family": "Nazarov"
+      },
+      {
+        "given": "Glenda M",
+        "family": "MacQueen"
+      }
+    ],
+    "PMID": "19125212",
+    "PMCID": "PMC2612082",
+    "abstract": "Some, although not all, studies report small hippocampal volume in patients with major depressive disorder (MDD) relative to healthy controls. Here, we explore the contribution of key demographic and clinical variables to this difference.",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/19125212",
+    "type": "article-journal",
+    "id": "19yG9lS3X"
   },
   {
     "publisher": "Morgan Kaufmann Publishers Inc.",
