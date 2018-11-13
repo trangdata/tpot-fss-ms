@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/0b108bafdf72fa242f48aaf296c7a86efd738e02/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/7dac4e6e698e7b0f07990e9e1c1db3f7b58b4865/))
 was automatically generated
-from [trang1618/tpot-ds-ms@0b108ba](https://github.com/trang1618/tpot-ds-ms/tree/0b108bafdf72fa242f48aaf296c7a86efd738e02)
+from [trang1618/tpot-ds-ms@7dac4e6](https://github.com/trang1618/tpot-ds-ms/tree/7dac4e6e698e7b0f07990e9e1c1db3f7b58b4865)
 on November 13, 2018.
 </em></small>
 
@@ -108,6 +108,11 @@ By letting users specify a desired structure of the resulting machine learning p
 
 
 ## Methods
+We begin with description of the two novel additiona to TPOT, Dataset Selector and Template.
+Then, we provide detail of a real-world RNA-Seq expression dataset and describe a simulation approach to generate data comparable with the expression data.
+Finally, we discuss other methods and performance metrics for comparison.
+The `R` and `Python` scripts for simulation and analysis are publicly available on the GitHub repository https://github.com/lelaboratoire/tpot-ds.
+
 ### Dataset Selector 
 TPOT's current operators include sets of feature pre-processors, feature transformers, feature selection techniques, and supervised classifiers and regressions. 
 In this study, we introduce a new operator called Dataset Selector (DS) that enables biologically guided group-level feature selection. 
@@ -155,7 +160,7 @@ For each simulated and real-world dataset, after randomly splitting the entire d
 We assess the performance of TPOT-DS by quantifying its ability to correctly select the most important subset (containing most functional features) in 100 replicates of TPOT runs on simulated data with known underlying truth. 
 We also compare the out-of-sample accuracy of TPOT-DS's exported pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and XGBoost [@8w9fI63O], a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
-To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters with the `R` package `caret` [@6MvKCe21] version 6.0-80 with the adaptive cross-validation algorithm. 
+To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using the `R` package `caret` [@6MvKCe21] version 6.0-80 with the repeated cross-validation algorithm and random search method. 
 
 ## Results
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
@@ -173,7 +178,7 @@ With the specified template `Dataset Selector-Transformer-Classifier`, in 100 re
 
 ![TPOT-DS's out-of-sample accuracy in simulated data with selected subset](images/sim_100.svg){#fig:simDS height="4in" width="7in"}
 
-Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and [0.533], and out-of-sample accuracy of [0.565] and [0.575].
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.533, and out-of-sample accuracy of [0.565] and 0.575.
 
 ### RNA-Seq expression data
 We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls (HC) described in [@p7dAO241].
@@ -181,16 +186,16 @@ The dataset contains 5,912 genes after preprocessing and filtering (see Methods 
 We excluded 277 genes that did not belong to 23 subsets of interconnected genes (DGMs) so that the dataset remains the same across the three methods.
 As with simulated data, all models are built from the training dataset (61 HC, 56 MDD), then the trained model is applied to the independent holdout data (18 HC, 22 MDD) to obtain the generalization accuracy.
 
-In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636. 
+In 100 replications, TPOT-DS selects DGM-5 (291 g enes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636. 
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
 ![TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_100.svg){#fig:realDS height="4in" width="5in"}
 
-AFter DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
+After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
 Previously, this module's enrichment score did not show statistically significant association with the MADRS. 
 
-Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and [], and out-of-sample accuracy of [] and [].
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and out-of-sample accuracy of [] and 0.525.
 
 
 
