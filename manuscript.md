@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/7c93340e548c6a1436b27754e7a594d6cbea9fe9/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/010bd410754ed576c85a5196aaccd1f3fb8e4d15/))
 was automatically generated
-from [trang1618/tpot-ds-ms@7c93340](https://github.com/trang1618/tpot-ds-ms/tree/7c93340e548c6a1436b27754e7a594d6cbea9fe9)
+from [trang1618/tpot-ds-ms@010bd41](https://github.com/trang1618/tpot-ds-ms/tree/010bd410754ed576c85a5196aaccd1f3fb8e4d15)
 on November 15, 2018.
 </em></small>
 
@@ -184,9 +184,9 @@ The TPOT-DS, standard TPOT and XGBoost models are built from the training datase
 Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
 Therefore, our first aim is to determine how well TPOT-DS can identify the first subset 1 that contains the largest number of informative features.
-With the specified template `Dataset Selector-Transformer-Classifier`, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline 75 times (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and out-of-sample accuracy of 0.69. 
+With the specified template `Dataset Selector-Transformer-Classifier`, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline 75 times (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and holdout accuracy of 0.69. 
 
-![TPOT-DS's out-of-sample accuracy in simulated data with selected subset](images/sim_100.svg){#fig:simDS height="4in" width="7in"}
+![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset *s1* is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS height="4in" width="7in"}
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.533, and out-of-sample accuracy of [0.565] and 0.575.
 
@@ -200,7 +200,7 @@ In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
-![TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_100.svg){#fig:realDS height="4in" width="5in"}
+![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS height="4in" width="5in"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
 Previously, this module's enrichment score did not show statistically significant association with the MADRS.
