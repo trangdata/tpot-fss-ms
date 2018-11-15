@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/32d59513031e267ae88841a22391fa4c1b09e3d4/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/7c93340e548c6a1436b27754e7a594d6cbea9fe9/))
 was automatically generated
-from [trang1618/tpot-ds-ms@32d5951](https://github.com/trang1618/tpot-ds-ms/tree/32d59513031e267ae88841a22391fa4c1b09e3d4)
+from [trang1618/tpot-ds-ms@7c93340](https://github.com/trang1618/tpot-ds-ms/tree/7c93340e548c6a1436b27754e7a594d6cbea9fe9)
 on November 15, 2018.
 </em></small>
 
@@ -73,33 +73,36 @@ on November 15, 2018.
 
 ## Abstract {.page_break_before}
 
-Automated machine learning (AutoML) systems were considered as good data science assistant for automating time-consuming processes, like feature engineering, model selection and parameter optimization.
-For this purpose, TPOT was developed for optimizing machine learning pipelines using strongly typed genetic programming and it keeps helping data scientists to search optimized analysis pipeline on their specific datasets.
-But TPOT may suffer computational resource limits when working on big data, such as whole-genome expression data.
-We introduce two new features implemented in TPOT that helps increase the system’s scalability: dataset selector (DS) and Template. Dataset selector provides the option to specify subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset. 
-Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline.
-Template enforces type constraints with strongly typed genetic programming.
+Automated machine learning (AutoML) systems are helpful data science assistants designed to scan the data for novel features, select an appropriate supervised learning model and optimize its parameters.
+For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist's prediction problem.
+However, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
+We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector (DS) and Template. 
+Dataset selector provides the option to specify subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
+Consequently, DS makes TPOT applicable on big data by slicing the dataset into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline.
+Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline.
 We show that DS and Template help reduce TPOT computation time and potentially provide more interpretable results.
-Independent of a previous study that identified significant association with depressions severity of the enrichment scores of two modules, we find with TPOT-DS that one of the modules is largely predictive of the clinical diagnosis of each individual.
-
+Our simulations show TPOT-DS's outperformance compared to the a tuned XGBoost model and standard TPOT implementation.
+We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
+Independent of this previous study that identified significant association with depressions severity of the enrichment scores of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
 ## Introduction
 
 For many bioinformatics problems of classifying individuals into clinical categories from high-dimensional biological data, choosing a classifier is merely one step of the arduous process that leads to predictions.
-To detect patterns among features (*e.g.*, clinical variables) and their associations with the outcome (*e.g.*, clinical diagnosis), a data scientist typically has to design and test different complex machine learning frameworks that consist of data exploration, feature engineering, model selection and prediction.
+To detect patterns among features (*e.g.*, clinical variables) and their associations with the outcome (*e.g.*, clinical diagnosis), a data scientist typically has to design and test different complex machine learning (ML) frameworks that consist of data exploration, feature engineering, model selection and prediction.
 Automated machine learning (AutoML) systems were developed to automate this challenging and time-consuming process.
 These intelligent systems increase the accessibility and scalability of various machine learning applications by efficiently solving an optimization problem to discover pipelines that yield satisfactory outcomes, such as prediction accuracy.
 Consequently, AutoML allows data scientists to focus their effort in applying their expertise in other important research components such as developing meaningful hypotheses or communicating the results.
 
-To our knowledge, there are several AutoML systems. Both auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] uses Bayesian optimization for machine learning model/pipeline selection and hyperparameter optimization.
-Both Recipe [@6ChydIkb] and Autostacker [@RiocGZOq] automate hyperparameter tuning and model selection using evaluation algorithm.
-Recipe is pipeline optimization through grammar-based genetic programming using grammars to define pipeline structure, while autostacker automates stacked ensembling.
-And DEvol [@1CQSBxFFr] automates deep neural network design specifically via genetic programming.
+Various approaches have been employed to build AutoML systems for diverse applications.
+Auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] use Bayesian optimization for model selection and hyperparameter optimization.
+Meanwhile, Recipe [@6ChydIkb] optimizes the ML pipeline through grammar-based genetic programming and Autostacker [@RiocGZOq] automates stacked ensembling.
+Both methods automate hyperparameter tuning and model selection using evaluation algorithm.
+DEvol [@1CQSBxFFr] designs deep neural network specifically via genetic programming.
 H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
 Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
 
-Tree-based Pipeline Optimization Tool (TPOT) is AutoML system using strongly typed genetic programming and it automates the laborious process of designing a machine learning pipeline to solve a supervised learning problem.
-At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and machine learning models with the objective of maximizing classification accuracy.
+Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a ML pipeline to solve a supervised learning problem.
+At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
 While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering in building a complete pipeline. Applying GP with the NSGA-II Pareto optimization [@iBP5Naag], TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity.
 Specifically, to automatically generate and optimize these machine learning pipelines, TPOT utilizes the Python package DEAP [@Gcs0HrMy] to implement the GP algorithm.		
 
