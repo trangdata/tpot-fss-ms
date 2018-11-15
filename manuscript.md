@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-13'
+date-meta: '2018-11-15'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/7dac4e6e698e7b0f07990e9e1c1db3f7b58b4865/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/32d59513031e267ae88841a22391fa4c1b09e3d4/))
 was automatically generated
-from [trang1618/tpot-ds-ms@7dac4e6](https://github.com/trang1618/tpot-ds-ms/tree/7dac4e6e698e7b0f07990e9e1c1db3f7b58b4865)
-on November 13, 2018.
+from [trang1618/tpot-ds-ms@32d5951](https://github.com/trang1618/tpot-ds-ms/tree/32d59513031e267ae88841a22391fa4c1b09e3d4)
+on November 15, 2018.
 </em></small>
 
 ## Authors
@@ -73,37 +73,44 @@ on November 13, 2018.
 
 ## Abstract {.page_break_before}
 
-[Background, gap in field]
+Automated machine learning (AutoML) systems were considered as good data science assistant for automating time-consuming processes, like feature engineering, model selection and parameter optimization.
+For this purpose, TPOT was developed for optimizing machine learning pipelines using strongly typed genetic programming and it keeps helping data scientists to search optimized analysis pipeline on their specific datasets.
+But TPOT may suffer computational resource limits when working on big data, such as whole-genome expression data.
 We introduce two new features implemented in TPOT that helps increase the system’s scalability: dataset selector (DS) and Template. Dataset selector provides the option to specify subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset. 
-Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline. 
-Template enforces type constraints with strongly typed genetic programming. 
+Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline.
+Template enforces type constraints with strongly typed genetic programming.
 We show that DS and Template help reduce TPOT computation time and potentially provide more interpretable results.
 Independent of a previous study that identified significant association with depressions severity of the enrichment scores of two modules, we find with TPOT-DS that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
 
 ## Introduction
 
-For many bioinformatics problems of classifying individuals into clinical categories from high-dimensional biological data, choosing a classifier is merely one step of the arduous process that leads to predictions. 
-To detect patterns among features (*e.g.*, clinical variables) and their associations with the outcome (*e.g.*, clinical diagnosis), a data scientist typically has to design and test different complex machine learning frameworks that consist of data exploration, feature engineering, model selection and prediction. 
-Automated machine learning (AutoML) systems were developed to automate this challenging and time-consuming process. 
-These intelligent systems increase the accessibility and scalability of various machine learning applications by efficiently solving an optimization problem to discover pipelines that yield satisfactory outcomes, such as prediction accuracy. 
+For many bioinformatics problems of classifying individuals into clinical categories from high-dimensional biological data, choosing a classifier is merely one step of the arduous process that leads to predictions.
+To detect patterns among features (*e.g.*, clinical variables) and their associations with the outcome (*e.g.*, clinical diagnosis), a data scientist typically has to design and test different complex machine learning frameworks that consist of data exploration, feature engineering, model selection and prediction.
+Automated machine learning (AutoML) systems were developed to automate this challenging and time-consuming process.
+These intelligent systems increase the accessibility and scalability of various machine learning applications by efficiently solving an optimization problem to discover pipelines that yield satisfactory outcomes, such as prediction accuracy.
 Consequently, AutoML allows data scientists to focus their effort in applying their expertise in other important research components such as developing meaningful hypotheses or communicating the results.
 
-[other AutoML systems]
+To our knowledge, there are several AutoML systems. Both auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] uses Bayesian optimization for machine learning model/pipeline selection and hyperparameter optimization.
+Both Recipe [@6ChydIkb] and Autostacker [@RiocGZOq] automate hyperparameter tuning and model selection using evaluation algorithm.
+Recipe is pipeline optimization through grammar-based genetic programming using grammars to define pipeline structure, while autostacker automates stacked ensembling.
+And DEvol [@1CQSBxFFr] automates deep neural network design specifically via genetic programming.
+H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
+Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
 
-Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a machine learning pipeline to solve a supervised learning problem. 
-At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature preprocessors and machine learning models with the objective of maximizing classification accuracy. 
-While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering in building a complete pipeline. Applying GP with the NSGA-II Pareto optimization [@iBP5Naag], TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity. 
+Tree-based Pipeline Optimization Tool (TPOT) is AutoML system using strongly typed genetic programming and it automates the laborious process of designing a machine learning pipeline to solve a supervised learning problem.
+At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and machine learning models with the objective of maximizing classification accuracy.
+While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering in building a complete pipeline. Applying GP with the NSGA-II Pareto optimization [@iBP5Naag], TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity.
 Specifically, to automatically generate and optimize these machine learning pipelines, TPOT utilizes the Python package DEAP [@Gcs0HrMy] to implement the GP algorithm.		
 
-Given no a priori knowledge about the problem, TPOT has been showed to frequently outperform standard machine learning analyses [@QkGSlAB3; @JEn7WIoN]. 
-Effort has been made to specialize TPOT for human genetics research, which results in a useful extended version of TPOT, TPOT-MDR, that features Multifactor Dimensionality Reduction and an Expert Knowledge Filter [@AvvI4W9K]. 
-However, at the current stage, TPOT still requires great computational expense to analyze large datasets such as in genome-wide association studies or gene expression analyses. Consequently, application of TPOT on real-world datasets has been limited to small sets of features [@3LGbkjqK]. 
+Given no a priori knowledge about the problem, TPOT has been showed to frequently outperform standard machine learning analyses [@QkGSlAB3; @JEn7WIoN].
+Effort has been made to specialize TPOT for human genetics research, which results in a useful extended version of TPOT, TPOT-MDR, that features Multifactor Dimensionality Reduction and an Expert Knowledge Filter [@AvvI4W9K].
+However, at the current stage, TPOT still requires great computational expense to analyze large datasets such as in genome-wide association studies or gene expression analyses. Consequently, application of TPOT on real-world datasets has been limited to small sets of features [@3LGbkjqK].
 
-In this work, we introduce two new features implemented in TPOT that helps increase the system’s scalability. 
-First, the Dataset Selector (DS) allows the users to pass specific subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset. 
-Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features (*e.g.* genes) and allowing genetic algorithm to select the best subset in the final pipeline. 
-Second, Template enables the option for strongly typed GP, a method to enforce type constraints in genetic programming. 
+In this work, we introduce two new features implemented in TPOT that helps increase the system’s scalability.
+First, the Dataset Selector (DS) allows the users to pass specific subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
+Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features (*e.g.* genes) and allowing genetic algorithm to select the best subset in the final pipeline.
+Second, Template enables the option for strongly typed GP, a method to enforce type constraints in genetic programming.
 By letting users specify a desired structure of the resulting machine learning pipeline, Template helps reduce TPOT computation time and potentially provide more interpretable results.
 
 
@@ -166,14 +173,14 @@ To obtain the optimal performance for this baseline model, we tune XGBoost hyper
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
 
 ### Simulated data
-We compare the accuracy of each method for *r* = 100 replicate simulated data sets with moderate interaction effect. 
-These values of the effect size in the simulations generate adequately challenging data sets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1. 
-Each replicate data set is split into training and holdout. 
+We compare the accuracy of each method for *r* = 100 replicate simulated data sets with moderate interaction effect.
+These values of the effect size in the simulations generate adequately challenging data sets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1.
+Each replicate data set is split into training and holdout.
 The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy.
 
 Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
-Therefore, our first aim is to determine how well TPOT-DS can identify the first subset 1 that contains the largest number of informative features. 
+Therefore, our first aim is to determine how well TPOT-DS can identify the first subset 1 that contains the largest number of informative features.
 With the specified template `Dataset Selector-Transformer-Classifier`, in 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline 75 times (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and out-of-sample accuracy of 0.69. 
 
 ![TPOT-DS's out-of-sample accuracy in simulated data with selected subset](images/sim_100.svg){#fig:simDS height="4in" width="7in"}
@@ -186,19 +193,16 @@ The dataset contains 5,912 genes after preprocessing and filtering (see Methods 
 We excluded 277 genes that did not belong to 23 subsets of interconnected genes (DGMs) so that the dataset remains the same across the three methods.
 As with simulated data, all models are built from the training dataset (61 HC, 56 MDD), then the trained model is applied to the independent holdout data (18 HC, 22 MDD) to obtain the generalization accuracy.
 
-In 100 replications, TPOT-DS selects DGM-5 (291 g enes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636. 
+In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636.
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
 ![TPOT-DS's out-of-sample accuracy in RNA-Seq expression data with selected subset](images/real_100.svg){#fig:realDS height="4in" width="5in"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
-Previously, this module's enrichment score did not show statistically significant association with the MADRS. 
+Previously, this module's enrichment score did not show statistically significant association with the MADRS.
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and out-of-sample accuracy of [] and 0.525.
-
-
-
 
 
 ## Discussion

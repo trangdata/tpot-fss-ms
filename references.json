@@ -1,5 +1,39 @@
 [
   {
+    "number": "1208.3719v2",
+    "version": "2",
+    "URL": "https://arxiv.org/abs/1208.3719v2",
+    "title": "Auto-WEKA: Combined Selection and Hyperparameter Optimization of\n  Classification Algorithms",
+    "issued": {
+      "date-parts": [
+        [
+          2012,
+          8,
+          18
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Chris Thornton"
+      },
+      {
+        "literal": "Frank Hutter"
+      },
+      {
+        "literal": "Holger H. Hoos"
+      },
+      {
+        "literal": "Kevin Leyton-Brown"
+      }
+    ],
+    "container-title": "arXiv",
+    "publisher": "arXiv",
+    "abstract": "Many different machine learning algorithms exist; taking into account each\nalgorithm's hyperparameters, there is a staggeringly large number of possible\nalternatives overall. We consider the problem of simultaneously selecting a\nlearning algorithm and setting its hyperparameters, going beyond previous work\nthat addresses these issues in isolation. We show that this problem can be\naddressed by a fully automated approach, leveraging recent innovations in\nBayesian optimization. Specifically, we consider a wide range of feature\nselection techniques (combining 3 search and 8 evaluator methods) and all\nclassification approaches implemented in WEKA, spanning 2 ensemble methods, 10\nmeta-methods, 27 base classifiers, and hyperparameter settings for each\nclassifier. On each of 21 popular datasets from the UCI repository, the KDD Cup\n09, variants of the MNIST dataset and CIFAR-10, we show classification\nperformance often much better than using standard selection/hyperparameter\noptimization methods. We hope that our approach will help non-expert users to\nmore effectively identify machine learning algorithms and hyperparameter\nsettings appropriate to their applications, and hence to achieve improved\nperformance.",
+    "type": "report",
+    "id": "S6aZVb3n"
+  },
+  {
     "number": "1607.08878v1",
     "version": "1",
     "URL": "https://arxiv.org/abs/1607.08878v1",
@@ -26,6 +60,43 @@
     "abstract": "As data science continues to grow in popularity, there will be an increasing\nneed to make data science tools more scalable, flexible, and accessible. In\nparticular, automated machine learning (AutoML) systems seek to automate the\nprocess of designing and optimizing machine learning pipelines. In this\nchapter, we present a genetic programming-based AutoML system called TPOT that\noptimizes a series of feature preprocessors and machine learning models with\nthe goal of maximizing classification accuracy on a supervised classification\nproblem. Further, we analyze a large database of pipelines that were previously\nused to solve various supervised classification problems and identify 100 short\nseries of machine learning operations that appear the most frequently, which we\ncall the building blocks of machine learning pipelines. We harness these\nbuilding blocks to initialize TPOT with promising solutions, and find that this\nsensible initialization method significantly improves TPOT's performance on one\nbenchmark at no cost of significantly degrading performance on the others.\nThus, sensible initialization with machine learning pipeline building blocks\nshows promise for GP-based AutoML systems, and should be further refined in\nfuture work.",
     "type": "report",
     "id": "JEn7WIoN"
+  },
+  {
+    "number": "1803.00684v1",
+    "version": "1",
+    "URL": "https://arxiv.org/abs/1803.00684v1",
+    "title": "Autostacker: A Compositional Evolutionary Learning System",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          3,
+          2
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Boyuan Chen"
+      },
+      {
+        "literal": "Harvey Wu"
+      },
+      {
+        "literal": "Warren Mo"
+      },
+      {
+        "literal": "Ishanu Chattopadhyay"
+      },
+      {
+        "literal": "Hod Lipson"
+      }
+    ],
+    "container-title": "arXiv",
+    "publisher": "arXiv",
+    "abstract": "We introduce an automatic machine learning (AutoML) modeling architecture\ncalled Autostacker, which combines an innovative hierarchical stacking\narchitecture and an Evolutionary Algorithm (EA) to perform efficient parameter\nsearch. Neither prior domain knowledge about the data nor feature preprocessing\nis needed. Using EA, Autostacker quickly evolves candidate pipelines with high\npredictive accuracy. These pipelines can be used as is or as a starting point\nfor human experts to build on. Autostacker finds innovative combinations and\nstructures of machine learning models, rather than selecting a single model and\noptimizing its hyperparameters. Compared with other AutoML systems on fifteen\ndatasets, Autostacker achieves state-of-art or competitive performance both in\nterms of test accuracy and time cost.",
+    "type": "report",
+    "id": "RiocGZOq"
   },
   {
     "number": "1803.04487v1",
@@ -63,6 +134,42 @@
     "abstract": "Clusters of differentiation (CD) are cell surface biomarkers that denote key\nbiological differences between cell types and disease state. CD-targeting\ntherapeutic monoclonal antibodies (mAB) afford rich trans-disease repositioning\nopportunities. Within a compendium of systemic lupus erythematous (SLE)\npatients, we applied the Integrated machine learning pipeline for aberrant\nbiomarker enrichment (i-mAB) to profile de novo gene expression features\naffecting CD20, CD22 and CD30 gene aberrance. First, a novel relief-based\nalgorithm identified interdependent features(p=681) predicting\ntreatment-na\\\"ive SLE patients (balanced accuracy=0.822). We then compiled\nCD-associated expression profiles using regularized logistic regression and\npathway enrichment analyses. On an independent general cell line model system\ndata, we replicated associations (in silico) of BCL7A(padj=1.69e-9) and\nSTRBP(padj=4.63e-8) with CD22; NCOA2(padj=7.00e-4), ATN1(padj=1.71e-2), and\nHOXC4(padj=3.34e-2) with CD30; and PHOSPHO1, a phosphatase linked to bone\nmineralization, with both CD22(padj=4.37e-2) and CD30(padj=7.40e-3). Utilizing\ncarefully aggregated secondary data and leveraging a priori hypotheses, i-mAB\nfostered robust biomarker profiling among interdependent biological features.",
     "type": "report",
     "id": "3LGbkjqK"
+  },
+  {
+    "publisher": "Springer International Publishing",
+    "DOI": "10.1007/978-3-319-55696-3_16",
+    "type": "chapter",
+    "page": "246-261",
+    "source": "Crossref",
+    "title": "RECIPE: A Grammar-Based Framework for Automatically Evolving Classification Pipelines",
+    "author": [
+      {
+        "given": "Alex G. C.",
+        "family": "de Sá"
+      },
+      {
+        "given": "Walter José G. S.",
+        "family": "Pinto"
+      },
+      {
+        "given": "Luiz Otavio V. B.",
+        "family": "Oliveira"
+      },
+      {
+        "given": "Gisele L.",
+        "family": "Pappa"
+      }
+    ],
+    "container-title": "Lecture Notes in Computer Science",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfjzg2",
+    "id": "6ChydIkb"
   },
   {
     "publisher": "Springer International Publishing",
@@ -692,6 +799,21 @@
     "id": "NopW1Vw3"
   },
   {
+    "URL": "http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+    "title": "AutoML: Automatic Machine Learning — H2O 3.22.0.1 documentation",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "type": "webpage",
+    "id": "sOdEzGT3"
+  },
+  {
     "URL": "http://www.jmlr.org/papers/v13/fortin12a.html",
     "title": "DEAP: Evolutionary Algorithms Made Easy",
     "container-title": "Journal of Machine Learning Research",
@@ -726,6 +848,107 @@
     ],
     "type": "webpage",
     "id": "Gcs0HrMy"
+  },
+  {
+    "URL": "http://www.jmlr.org/papers/v18/16-261.html",
+    "title": "Auto-WEKA 2.0: Automatic model selection and hyperparameter optimization in WEKA",
+    "container-title": "Journal of Machine Learning Research",
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Kotthoff",
+        "given": "Lars"
+      },
+      {
+        "family": "Thornton",
+        "given": "Chris"
+      },
+      {
+        "family": "Hoos",
+        "given": "Holger H."
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      },
+      {
+        "family": "Leyton-Brown",
+        "given": "Kevin"
+      }
+    ],
+    "type": "webpage",
+    "id": "ai67wdhp"
+  },
+  {
+    "URL": "https://github.com/joeddav/devol",
+    "title": "joeddav/devol",
+    "container-title": "GitHub",
+    "author": [
+      {
+        "family": "joeddav",
+        "given": ""
+      }
+    ],
+    "type": "webpage",
+    "id": "1CQSBxFFr"
+  },
+  {
+    "URL": "https://github.com/reiinakano/xcessiv",
+    "title": "reiinakano/xcessiv",
+    "container-title": "GitHub",
+    "author": [
+      {
+        "family": "reiinakano",
+        "given": ""
+      }
+    ],
+    "type": "webpage",
+    "id": "HA8l3lpi"
+  },
+  {
+    "URL": "https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning",
+    "title": "Efficient and Robust Automated Machine Learning",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Feurer",
+        "given": "Matthias"
+      },
+      {
+        "family": "Klein",
+        "given": "Aaron"
+      },
+      {
+        "family": "Eggensperger",
+        "given": "Katharina"
+      },
+      {
+        "family": "Springenberg",
+        "given": "Jost"
+      },
+      {
+        "family": "Blum",
+        "given": "Manuel"
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      }
+    ],
+    "type": "webpage",
+    "id": "8JQDv397"
   },
   {
     "URL": "https://www.kaggle.com/",
