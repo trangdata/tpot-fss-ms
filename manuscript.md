@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/9049e9799bbe31ff35649dade50d513834f4bfe4/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/3696bcb1c929fbdce0131d9e9550183eda4278ef/))
 was automatically generated
-from [trang1618/tpot-ds-ms@9049e97](https://github.com/trang1618/tpot-ds-ms/tree/9049e9799bbe31ff35649dade50d513834f4bfe4)
+from [trang1618/tpot-ds-ms@3696bcb](https://github.com/trang1618/tpot-ds-ms/tree/3696bcb1c929fbdce0131d9e9550183eda4278ef)
 on November 16, 2018.
 </em></small>
 
@@ -190,6 +190,8 @@ With the specified template `Dataset Selector-Transformer-Classifier`, in 100 re
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.533, and out-of-sample accuracy of [0.565] and 0.575.
 
+For a dataset of the size simulated in our study (*m*=200 samples and *p* = 5000 attributes), TPOT-DS has a 65-minute runtime on a low performance computing machine [computation nodes here], whereas standard TPOT has a 18.5-hour runtime, approximately 17 times slower.
+
 ### RNA-Seq expression data
 We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls (HC) described in [@p7dAO241].
 The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
@@ -200,12 +202,14 @@ In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
-![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS width="100%"}
+![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS width="80%"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
 Previously, this module's enrichment score did not show statistically significant association with the MADRS.
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and out-of-sample accuracy of [] and 0.525.
+
+On a low performance computing machine [specs here], each replication of TPOT-DS on the expression data takes on average  minutes, whereas standard TPOT takes [] hours, approximately 17 times slower.
 
 
 ## Discussion
@@ -236,7 +240,7 @@ Finding the balance between pipeline complexity model interpretation and general
 [Computation time]
 With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to lower dimension of a selected  subset.
 Therefore, TPOT-DS is more computationally efficient than standard TPOT.
-On a low performance computing machine, each replication of TPOT-DS on simulated data takes [] seconds, whereas standard TPOT takes [] seconds.
+
 
 A limitation of the DS analysis is the required predefition of subsets prior to executing TPOT-DS.
 While this characteristic of an intelligent system is desirable when *a prior* knowledge on the biomedical data is available, it might pose as a challenge when this knowledge is inadequate, such as when analyzing data of a brand-new disease.
