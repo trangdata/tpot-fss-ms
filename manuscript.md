@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-15'
+date-meta: '2018-11-16'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/010bd410754ed576c85a5196aaccd1f3fb8e4d15/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/03c2880bae8dbc6163a4fa18133ce4d7db26fb05/))
 was automatically generated
-from [trang1618/tpot-ds-ms@010bd41](https://github.com/trang1618/tpot-ds-ms/tree/010bd410754ed576c85a5196aaccd1f3fb8e4d15)
-on November 15, 2018.
+from [trang1618/tpot-ds-ms@03c2880](https://github.com/trang1618/tpot-ds-ms/tree/03c2880bae8dbc6163a4fa18133ce4d7db26fb05)
+on November 16, 2018.
 </em></small>
 
 ## Authors
@@ -225,19 +225,29 @@ When another subset is chosen in the final pipeline, this method still produces 
 Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
-TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller out-of-sample accuracy compared to DGM-5 (0.563 $<$ 0.636). []
+TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
+Although DGM-13 did not show with the previous modular network approach, 
 
 It is important to discuss the complexity - interpretability trade-off in the context of AutoML.
 While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. 
-Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but not yield the optimal accuracy.
-Finding the optimal pipeline complexity that yields reasonable model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
+Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but  yield suboptimal prediction accuracy.
+Finding the balance between pipeline complexity model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
 
-Another limitation of this analysis is that subsets have to be predefined prior to executing TPOT-DS.
-While this option is desirable when *a prior* knowledge on the biological data is available, it might pose as a challenge when this is not the case, such as when analyzing data of a brand-new disease.
-Nevertheless, one can perform a clustering method such as *k*-means to group features prior to performing TPOT-DS on the data.
+[Computation time]
+With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to lower dimension of a selected  subset.
+Therefore, TPOT-DS is more computationally efficient than standard TPOT.
+On a low performance computing machine, each replication of TPOT-DS on simulated data takes [] seconds, whereas standard TPOT takes [] seconds.
 
-Extensions of TPOT-DS will involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline.
-Also, a future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome.
+A limitation of the DS analysis is the required predefition of subsets prior to executing TPOT-DS.
+While this characteristic of an intelligent system is desirable when *a prior* knowledge on the biomedical data is available, it might pose as a challenge when this knowledge is inadequate, such as when analyzing data of a brand-new disease.
+Nevertheless, one can perform a clustering method such as *k*-means to group features prior to performing TPOT-DS on the data. 
+Another limitation of the current implementation of TPOT-DS is its restricted ability to select only one subset. 
+A future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome.
+Extensions of TPOT-DS will also involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline.
+Specifically, in the case of overlapping subsets, the number of features in the selected subset(s) is expected to be an element of the complexity calculation.
+[Extension of TPOT-DS to GWAS]
+
+
 
 
 ## References {.page_break_before}
