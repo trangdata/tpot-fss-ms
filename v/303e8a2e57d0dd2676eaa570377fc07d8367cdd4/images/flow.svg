@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
+<!-- Page 1 -->
+<svg x="0" y="0" width="1466" height="825" viewBox="0 0 1466 825" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+style="display: block;margin-left: auto;margin-right: auto;">
+<defs>
+
+<style type="text/css"><![CDATA[
+text { white-space: pre; }
+path, image { pointer-events: none; }
+
+.s1_1{
+font-size: 55.00px;
+font-family: Helvetica_8;
+fill: #000000;
+}
+.s2_1{
+font-size: 45.83px;
+font-family: Helvetica_8;
+fill: #000000;
+}
+.s3_1{
+font-size: 42.78px;
+font-family: Helvetica_8;
+fill: #000000;
+}
+.s4_1{
+font-size: 29.03px;
+font-family: Helvetica_8;
+fill: #000000;
+}
+.s5_1{
+font-size: 30.56px;
+font-family: Helvetica_8;
+fill: #000000;
+}
+.s6_1{
+font-size: 38.19px;
+font-family: Helvetica_8;
+fill: #000000;
+}
+.s7_1{
+font-size: 30.56px;
+font-family: Helvetica_9;
+fill: #000000;
+}
+.s8_1{
+font-size: 30.56px;
+font-family: Helvetica-Oblique_a;
+fill: #000000;
+}
+.s9_1{
+font-size: 35.14px;
+font-family: Helvetica-Oblique_a;
+fill: #000000;
+}
+.s10_1{
+font-size: 35.14px;
+font-family: HelveticaNeue_b;
+fill: #BE548F;
+}
+.s11_1{
+font-size: 35.14px;
+font-family: HelveticaNeue_b;
+fill: #0072B2;
+}
+
+.g0_1{
+fill: #FFFFFF;
+}
+.g1_1{
+fill: none;
+stroke: #000000;
+stroke-width: 4.5833335;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+stroke-miterlimit: 8;
+}
+.g2_1{
+fill: none;
+stroke: #BE548F;
+stroke-width: 4.5833335;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+stroke-miterlimit: 8;
+stroke-dasharray: 14,5;
+}
+.g3_1{
+fill: none;
+stroke: #000000;
+stroke-width: 4.5833335;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+stroke-miterlimit: 8;
+stroke-dasharray: 5,5;
+}
+.g4_1{
+fill: none;
+stroke: #0072B2;
+stroke-width: 4.5833335;
+stroke-linecap: butt;
+stroke-linejoin: miter;
+stroke-miterlimit: 8;
+stroke-dasharray: 14,5;
+}
+.g5_1{
+}
+
+]]></style>
+
+</defs>
+<path d="M0,0
+L0,825
+L1466,825
+L1466,0 Z " 
+fill="#FFFFFF" stroke="none" />
+<path d="M0,825H1466.7V0H0V825Z" class="g0_1" />
+<path d="M37.9,703.5c-6.1,0,-11.2,-5,-11.2,-11.2V138.8c0,-6.2,5.1,-11.2,11.2,-11.2H82.8c6.1,0,11.2,5,11.2,11.2V692.3c0,6.2,-5.1,11.2,-11.2,11.2Z" class="g1_1" />
+<text transform="matrix(0, -1, 1, 0, 80, 609)" class="s1_1">Biomedical data</text>
+<path d="M369,375.3c0,-10.2,8.3,-18.6,18.5,-18.6H555.1c10.3,0,18.6,8.4,18.6,18.6v74.4c0,10.2,-8.3,18.6,-18.6,18.6H387.5c-10.2,0,-18.5,-8.4,-18.5,-18.6Z" class="g1_1" />
+<text x="391" y="401" dx="0,0.5,0.5,-0.5,0.5,0,0.5,-0.5" class="s2_1">Dataset </text>
+<text x="385" y="456" dx="0,0,0.5,0.5,0.5,0,-0.5,0.5" class="s2_1">Selector</text>
+<path d="M657.7,386.8c0,-7.3,5.9,-13.3,13.2,-13.3H937.8c7.3,0,13.2,6,13.2,13.3v52.9c0,7.4,-5.9,13.3,-13.2,13.3H670.9c-7.3,0,-13.2,-5.9,-13.2,-13.3Z" class="g1_1" />
+<text x="679" y="428" dx="0,-2,0,0.5,0.5,0,-0.5,0.5,0,0,0.5" class="s2_1">Transformer</text>
+<path d="M1036.6,384.7c0,-7,5.7,-12.7,12.7,-12.7h367.2c7,0,12.7,5.7,12.7,12.7v51c0,7,-5.7,12.7,-12.7,12.7H1049.3c-7,0,-12.7,-5.7,-12.7,-12.7Z" class="g1_1" />
+<text x="1135" y="426" dx="0,0.5,0.5,0.5,0,0,0.5,-0.5,0.5,0.5" class="s2_1">Classifier</text>
+<path d="M431.6,281.4c0,-6.5,5.2,-11.7,11.7,-11.7h56c6.5,0,11.7,5.2,11.7,11.7v46.8c0,6.5,-5.2,11.7,-11.7,11.7h-56c-6.5,0,-11.7,-5.2,-11.7,-11.7Z" class="g2_1" />
+<text x="447" y="319" class="s3_1">S</text>
+<text x="476" y="328" class="s4_1">1</text>
+<path d="M190.2,146.2c0,-7.8,6.3,-14,14,-14h60.6c7.7,0,14,6.2,14,14v56c0,7.7,-6.3,14,-14,14H204.2c-7.7,0,-14,-6.3,-14,-14Z" class="g3_1" />
+<text x="209" y="190" class="s2_1">S</text>
+<text x="240" y="200" class="s5_1">1</text>
+<path d="M379.7,495.8c0,-5.9,4.7,-10.7,10.6,-10.7h162c5.9,0,10.7,4.8,10.7,10.7v42.7c0,5.9,-4.8,10.7,-10.7,10.7h-162c-5.9,0,-10.6,-4.8,-10.6,-10.7Z" class="g4_1" />
+<text x="408" y="530" dx="0,-0.1,-0.7,0.3,-0.5" class="s6_1">DGM-5</text>
+<path d="M654.7,185.9c0,-17,13.7,-30.8,30.8,-30.8H920.2c17,0,30.8,13.8,30.8,30.8V309.1c0,17,-13.8,30.8,-30.8,30.8H685.5c-17.1,0,-30.8,-13.8,-30.8,-30.8Z" class="g2_1" />
+<text x="719" y="196" dx="0,-0.1,0.8,0.8,0.1,-0.5,0.2,0.2" class="s6_1">Nystroem</text>
+<text x="766" y="253" class="s7_1">γ</text>
+<text x="783" y="253" dx="0,0.5,-0.2,0.7" class="s5_1">=1.0</text>
+<text x="704" y="289" dx="0,0,-0.2,0.5,-0.2,-0.2,-0.7,0.5,-0.2,-0.7,-0.7,-0.2,-0.2,-0.2,0.5" class="s5_1">kernel="linear"</text>
+<text x="684" y="326" dx="0,-0.2,-0.2,0,-0.2,0.5,-0.2,-0.2,-0.2,-0.2,-0.2,0.7,0,0.5" class="s5_1">n_components=8</text>
+<path d="M657.7,495.8c0,-5.9,4.8,-10.7,10.7,-10.7H940.3c6,0,10.7,4.8,10.7,10.7v42.7c0,5.9,-4.7,10.7,-10.7,10.7H668.4c-5.9,0,-10.7,-4.8,-10.7,-10.7Z" class="g4_1" />
+<text x="679" y="530" dx="0,0.3,0.2,0.8,0.5,0.2,0.8,0.5,0.8,0.2,0.7,0.2" class="s6_1">MaxAbsScaler</text>
+<path d="M1036.6,67.4c0,-18.3,14.8,-33,33,-33h326.7c18.2,0,32.9,14.7,32.9,33V307c0,18.2,-14.7,32.9,-32.9,32.9H1069.6c-18.2,0,-33,-14.7,-33,-32.9Z" class="g2_1" />
+<text x="1057" y="80" dx="0,0.5,0.8,0.1,-0.5,0.2,-1.9,-0.5,0.2,0.2,0.8,-0.1,0.7,0.2,0.8,0.8,0.7,0.1,0.7,0.2" class="s6_1">ExtraTreesClassifier</text>
+<text x="1149" y="137" dx="0,-0.2,-0.2,-0.2,0.7,0,0.7,0.5,-0.2,-0.2,0.5" class="s5_1">bootstrap=F</text>
+<text x="1144" y="173" dx="0,0,0.5,-0.7,0.7,-0.2,0.5,-0.7,-0.2,-0.2" class="s5_1">criterion=</text>
+<text x="1271" y="173" dx="0,-0.2,-0.7,-0.2" class="s8_1">gini</text>
+<text x="1108" y="210" dx="0,0.5,-0.2,0,-0.2,0.7,-0.2,-0.2,0.7,-0.2,0.5,-0.2,0,0.5,-0.2,0.7" class="s5_1">max_features=0.9</text>
+<text x="1091" y="247" dx="0,0.5,-0.7,-0.2,-0.2,0,-0.2,0.5,-0.2,-0.7,-0.2,0,-0.2,-0.7,-0.2,-0.2,0.7,0.5" class="s5_1">min_samples_leaf=3</text>
+<text x="1089" y="283" dx="0,0.5,-0.7,-0.2,-0.2,0,-0.2,0.5,-0.2,-0.7,-0.2,0,-0.2,0,-0.2,-0.7,-0.7,0.7,0.5" class="s5_1">min_samples_split=3</text>
+<text x="1109" y="320" dx="0,-0.2,-0.2,-0.2,0,0.7,-0.7,0.5,-0.2,0.7,-0.2,0.5,0,0.5,-0.2,-0.2" class="s5_1">n_estimators=100</text>
+<text x="169" y="107" dx="0,-0.5,0.3,0.3,0.8,0.3,-0.6" class="s9_1">Subsets</text>
+<path d="M174.3,169.6l13.7,6.9l-13.7,6.8v-4.5H94v-4.6h80.3Z" class="g5_1" />
+<path d="M177.3,270.4l13.8,6.9l-13.8,6.9v-4.6H97V275h80.3Z" class="g5_1" />
+<path d="M193.3,250c0,-7.7,6.2,-14,14,-14h59c7.8,0,14,6.3,14,14v56.1c0,7.7,-6.2,14,-14,14h-59c-7.8,0,-14,-6.3,-14,-14Z" class="g3_1" />
+<text x="211" y="294" class="s2_1">S</text>
+<text x="242" y="304" class="s5_1">2</text>
+<path d="M174.3,374.3l13.7,6.9l-13.7,6.9v-4.6H94v-4.6h80.3Z" class="g5_1" />
+<path d="M190.2,353.9c0,-7.7,6.3,-14,14,-14h60.6c7.7,0,14,6.3,14,14V410c0,7.7,-6.3,14,-14,14H204.2c-7.7,0,-14,-6.3,-14,-14Z" class="g3_1" />
+<text x="209" y="397" class="s2_1">S</text>
+<text x="240" y="408" class="s5_1">3</text>
+<path d="M174.3,646.3l13.7,6.8L174.3,660v-4.6H94v-4.6h80.3Z" class="g5_1" />
+<path d="M190.2,624.4c0,-7.8,6.3,-14.1,14,-14.1h60.6c7.7,0,14,6.3,14,14.1v56c0,7.7,-6.3,14,-14,14H204.2c-7.7,0,-14,-6.3,-14,-14Z" class="g3_1" />
+<text x="209" y="668" class="s2_1">S</text>
+<text x="240" y="679" class="s5_1">n</text>
+<path d="M314,132.2c10.1,0,18.3,18.6,18.3,41.7V371.5c0,23.1,8.2,41.8,18.3,41.8c-10.1,0,-18.3,18.6,-18.3,41.7V652.7c0,23,-8.2,41.7,-18.3,41.7" class="g1_1" />
+<path d="M644.6,406.4l13.8,6.9l-13.8,6.8v-4.5H573.7V411h70.9Z" class="g5_1" />
+<path d="M1022,403.3l13.7,6.9l-13.7,6.9v-4.6H951v-4.6h71Z" class="g5_1" />
+<path d="M1036.6,514.5c0,-16.2,13.2,-29.4,29.5,-29.4h333.7c16.2,0,29.4,13.2,29.4,29.4v239c0,16.3,-13.2,29.5,-29.4,29.5H1066.1c-16.3,0,-29.5,-13.2,-29.5,-29.5Z" class="g4_1" />
+<text x="1058" y="527" dx="0,0.5,0.8,0.1,-0.5,0.2,-1.9,-0.5,0.2,0.2,0.8,-0.1,0.7,0.2,0.8,0.8,0.7,0.1,0.7,0.2" class="s6_1">ExtraTreesClassifier</text>
+<text x="1148" y="584" dx="0,-0.2,-0.2,-0.2,0.7,0,0.7,0.5,-0.2,-0.2,0.5" class="s5_1">bootstrap=T</text>
+<text x="1116" y="621" dx="0,0,0.5,-0.7,0.7,-0.2,0.5,-0.7,-0.2,-0.2" class="s5_1">criterion=</text>
+<text x="1243" y="621" dx="0,-0.2,-0.2,0.7,0.5,-0.2,-0.2" class="s8_1">entropy</text>
+<text x="1107" y="657" dx="0,0.5,-0.2,0,-0.2,0.7,-0.2,-0.2,0.7,-0.2,0.5,-0.2,0,0.5,-0.2,0.7" class="s5_1">max_features=0.4</text>
+<text x="1091" y="694" dx="0,0.5,-0.7,-0.2,-0.2,0,-0.2,0.5,-0.2,-0.7,-0.2,0,-0.2,-0.7,-0.2,-0.2,0.7,0.5" class="s5_1">min_samples_leaf=3</text>
+<text x="1088" y="731" dx="0,0.5,-0.7,-0.2,-0.2,0,-0.2,0.5,-0.2,-0.7,-0.2,0,-0.2,0,-0.2,-0.7,-0.7,0.7,0.5" class="s5_1">min_samples_split=3</text>
+<text x="1108" y="767" dx="0,-0.2,-0.2,-0.2,0,0.7,-0.7,0.5,-0.2,0.7,-0.2,0.5,0,0.5,-0.2,-0.2" class="s5_1">n_estimators=100</text>
+<text x="484" y="86" dx="0,0.4,-0.5,0.8,-0.4,-0.6,0.6,-0.2,0.6,-0.5,-0.2,-0.2,0.3,-0.5,0.9,0.3,-0.3,0.5,-0.6,0.8,-0.2,0.6,0.3,-0.2,-0.5,-0.4,-0.5,0.6,-0.6,0.6,-0.5,-0.4" class="s10_1">Best pipeline for simulated data</text>
+<text x="398" y="733" dx="0,0.4,-0.5,0.8,-0.4,-0.6,0.6,-0.2,0.6,-0.5,-0.2,-0.2,0.3,-0.5,0.9,0.3,-0.3,0.5,-0.6,0.5,-0.5,-0.5,-0.1,-0.6,-0.5,0.1,0.6,0.5,-0.5,0.8,0.8,-0.1,-0.3,0.3,-2.1,0.6,-0.5,-0.4" class="s11_1">Best pipeline for real expression data</text>
+
+
+<!-- Any embedded fonts defined here -->
+<style type="text/css" ><![CDATA[
+
+@font-face {
+	font-family: Helvetica_9;
+	src: url("fonts/Helvetica_9.woff") format("woff");
+}
+
+@font-face {
+	font-family: Helvetica-Oblique_a;
+	src: url("fonts/Helvetica-Oblique_a.woff") format("woff");
+}
+
+@font-face {
+	font-family: HelveticaNeue_b;
+	src: url("fonts/HelveticaNeue_b.woff") format("woff");
+}
+
+@font-face {
+	font-family: Helvetica_8;
+	src: url("fonts/Helvetica_8.woff") format("woff");
+}
+
+]]></style>
+
+</svg>
