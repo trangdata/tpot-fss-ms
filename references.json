@@ -212,6 +212,90 @@
     "id": "13as7dipI"
   },
   {
+    "publisher": "Elsevier BV",
+    "DOI": "10.1016/j.brainres.2009.06.036",
+    "type": "article-journal",
+    "page": "1-12",
+    "source": "Crossref",
+    "title": "Modulation of glucocorticoid receptor nuclear translocation in neurons by immunophilins FKBP51 and FKBP52: Implications for major depressive disorder",
+    "volume": "1286",
+    "author": [
+      {
+        "given": "Erick T.",
+        "family": "Tatro"
+      },
+      {
+        "given": "Ian P.",
+        "family": "Everall"
+      },
+      {
+        "given": "Marcus",
+        "family": "Kaul"
+      },
+      {
+        "given": "Cristian L.",
+        "family": "Achim"
+      }
+    ],
+    "container-title": "Brain Research",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2009,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/b9cn9m",
+    "container-title-short": "Brain Research",
+    "PMCID": "PMC2724600",
+    "PMID": "19545546",
+    "id": "sxkRCGzQ"
+  },
+  {
+    "publisher": "Elsevier BV",
+    "issue": "1-3",
+    "DOI": "10.1016/j.jad.2010.02.113",
+    "type": "article-journal",
+    "page": "249-255",
+    "source": "Crossref",
+    "title": "Variations in FKBP5 and BDNF genes are suggestively associated with depression in a Swedish population-based cohort",
+    "volume": "125",
+    "author": [
+      {
+        "given": "Catharina",
+        "family": "Lavebratt"
+      },
+      {
+        "given": "Elin",
+        "family": "Åberg"
+      },
+      {
+        "given": "Louise K.",
+        "family": "Sjöholm"
+      },
+      {
+        "given": "Yvonne",
+        "family": "Forsell"
+      }
+    ],
+    "container-title": "Journal of Affective Disorders",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          9
+        ]
+      ]
+    },
+    "URL": "https://doi.org/b726hn",
+    "container-title-short": "Journal of Affective Disorders",
+    "PMID": "20226536",
+    "id": "KXwvC8hd"
+  },
+  {
     "publisher": "Springer Nature",
     "issue": "12",
     "DOI": "10.1038/mp.2013.161",
@@ -330,6 +414,189 @@
     "PMCID": "PMC5404932",
     "PMID": "24296977",
     "id": "g454CrrS"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "12",
+    "DOI": "10.1038/ng1479",
+    "type": "article-journal",
+    "page": "1319-1325",
+    "source": "Crossref",
+    "title": "Polymorphisms in FKBP5 are associated with increased recurrence of depressive episodes and rapid response to antidepressant treatment",
+    "volume": "36",
+    "author": [
+      {
+        "given": "Elisabeth B",
+        "family": "Binder"
+      },
+      {
+        "given": "Daria",
+        "family": "Salyakina"
+      },
+      {
+        "given": "Peter",
+        "family": "Lichtner"
+      },
+      {
+        "given": "Gabriele M",
+        "family": "Wochnik"
+      },
+      {
+        "given": "Marcus",
+        "family": "Ising"
+      },
+      {
+        "given": "Benno",
+        "family": "Pütz"
+      },
+      {
+        "given": "Sergi",
+        "family": "Papiol"
+      },
+      {
+        "given": "Shaun",
+        "family": "Seaman"
+      },
+      {
+        "given": "Susanne",
+        "family": "Lucae"
+      },
+      {
+        "given": "Martin A",
+        "family": "Kohli"
+      },
+      {
+        "given": "Thomas",
+        "family": "Nickel"
+      },
+      {
+        "given": "Heike E",
+        "family": "Künzel"
+      },
+      {
+        "given": "Brigitte",
+        "family": "Fuchs"
+      },
+      {
+        "given": "Matthias",
+        "family": "Majer"
+      },
+      {
+        "given": "Andrea",
+        "family": "Pfennig"
+      },
+      {
+        "given": "Nikola",
+        "family": "Kern"
+      },
+      {
+        "given": "Jürgen",
+        "family": "Brunner"
+      },
+      {
+        "given": "Sieglinde",
+        "family": "Modell"
+      },
+      {
+        "given": "Thomas",
+        "family": "Baghai"
+      },
+      {
+        "given": "Tobias",
+        "family": "Deiml"
+      },
+      {
+        "given": "Peter",
+        "family": "Zill"
+      },
+      {
+        "given": "Brigitta",
+        "family": "Bondy"
+      },
+      {
+        "given": "Rainer",
+        "family": "Rupprecht"
+      },
+      {
+        "given": "Thomas",
+        "family": "Messer"
+      },
+      {
+        "given": "Oliver",
+        "family": "Köhnlein"
+      },
+      {
+        "given": "Heike",
+        "family": "Dabitz"
+      },
+      {
+        "given": "Tanja",
+        "family": "Brückl"
+      },
+      {
+        "given": "Nina",
+        "family": "Müller"
+      },
+      {
+        "given": "Hildegard",
+        "family": "Pfister"
+      },
+      {
+        "given": "Roselind",
+        "family": "Lieb"
+      },
+      {
+        "given": "Jakob C",
+        "family": "Mueller"
+      },
+      {
+        "given": "Elin",
+        "family": "Lõhmussaar"
+      },
+      {
+        "given": "Tim M",
+        "family": "Strom"
+      },
+      {
+        "given": "Thomas",
+        "family": "Bettecken"
+      },
+      {
+        "given": "Thomas",
+        "family": "Meitinger"
+      },
+      {
+        "given": "Manfred",
+        "family": "Uhr"
+      },
+      {
+        "given": "Theo",
+        "family": "Rein"
+      },
+      {
+        "given": "Florian",
+        "family": "Holsboer"
+      },
+      {
+        "given": "Bertram",
+        "family": "Muller-Myhsok"
+      }
+    ],
+    "container-title": "Nature Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2004,
+          11,
+          21
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bh28xx",
+    "container-title-short": "Nat Genet",
+    "PMID": "15565110",
+    "id": "rqdZ0HWl"
   },
   {
     "publisher": "Springer Nature America, Inc",
