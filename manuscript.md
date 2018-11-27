@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-26'
+date-meta: '2018-11-27'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/bfc52d6ba19027c45109fd3eb1f269b9647ec4fe/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/b9d5dd713a8811f9dd16a628f8fe86c691a33738/))
 was automatically generated
-from [trang1618/tpot-ds-ms@bfc52d6](https://github.com/trang1618/tpot-ds-ms/tree/bfc52d6ba19027c45109fd3eb1f269b9647ec4fe)
-on November 26, 2018.
+from [trang1618/tpot-ds-ms@b9d5dd7](https://github.com/trang1618/tpot-ds-ms/tree/b9d5dd713a8811f9dd16a628f8fe86c691a33738)
+on November 27, 2018.
 </em></small>
 
 ## Authors
@@ -182,7 +182,7 @@ Each replicate data set is split into training and holdout.
 The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy. 
 The general workflow of TPOT-DS is shown in Figure {@fig:flow} along with the best pipeline found with the specified template `Dataset Selector-Transformer-Classifier` in simulated data (top) and real-world expression data (bottom).
 
-![TPOT-DS's workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)](images/flow.svg){#fig:flow width="100%"}
+![TPOT-DS's workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)](images/flow.png){#fig:flow width="100%"}
 
 For simulated dataset, the best pipeline selects subset $S_1$ then constructs an approximate feature map for a linear kernel with Nystroem, which uses a subset of the data as basis for the approximation.
 The final prediction is made with an extra-trees classifier that fits a number of randomized decision trees on various sub-samples of the dataset with the presented optimized parameters (Fig. {@fig:flow}).

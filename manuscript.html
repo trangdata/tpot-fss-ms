@@ -7,7 +7,7 @@
   <meta name="author" content="Trang T. Le" />
   <meta name="author" content="Weixuan Fu" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2018-11-26" />
+  <meta name="dcterms.date" content="2018-11-27" />
   <meta name="keywords" content="tpot, automl, machine learning" />
   <title>Scaling tree-based automated machine learning to biomedical big data with a dataset selector</title>
   <style type="text/css">
@@ -30,7 +30,7 @@
 <header id="title-block-header">
 <h1 class="title">Scaling tree-based automated machine learning to biomedical big data with a dataset selector</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/bfc52d6ba19027c45109fd3eb1f269b9647ec4fe/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/bfc52d6ba19027c45109fd3eb1f269b9647ec4fe">trang1618/tpot-ds-ms@bfc52d6</a> on November 26, 2018. </em></small></p>
+<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/b9d5dd713a8811f9dd16a628f8fe86c691a33738/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/b9d5dd713a8811f9dd16a628f8fe86c691a33738">trang1618/tpot-ds-ms@b9d5dd7</a> on November 27, 2018. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" width="13" height="13" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" width="13" height="13" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -69,7 +69,7 @@
 <h3 id="simulated-data">Simulated data</h3>
 <p>We compare the accuracy of each method for <em>r</em> = 100 replicate simulated datasets with moderate interaction effect. These values of the effect size in the simulations generate adequately challenging datasets so that the methods’ accuracies stay moderate and do not cluster around 0.5 or 1. Each replicate data set is split into training and holdout. The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy. The general workflow of TPOT-DS is shown in Figure <a href="#fig:flow">1</a> along with the best pipeline found with the specified template <code>Dataset Selector-Transformer-Classifier</code> in simulated data (top) and real-world expression data (bottom).</p>
 <figure>
-<img src="images/flow.svg" alt="Figure 1: TPOT-DS’s workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)" id="fig:flow" style="width:100.0%" /><figcaption><span>Figure 1:</span> TPOT-DS’s workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)</figcaption>
+<img src="images/flow.png" alt="Figure 1: TPOT-DS’s workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)" id="fig:flow" style="width:100.0%" /><figcaption><span>Figure 1:</span> TPOT-DS’s workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)</figcaption>
 </figure>
 <p>For simulated dataset, the best pipeline selects subset <span class="math inline">\(S_1\)</span> then constructs an approximate feature map for a linear kernel with Nystroem, which uses a subset of the data as basis for the approximation. The final prediction is made with an extra-trees classifier that fits a number of randomized decision trees on various sub-samples of the dataset with the presented optimized parameters (Fig. <a href="#fig:flow">1</a>). This pipeline yields the highest holdout prediction accuracy of 0.84.</p>
 <p>Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1]. According to Eq. <a href="#eq:p_subset">1</a>, the earlier the subset, the more functional features it has. Therefore, our first aim is to determine how well TPOT-DS can identify the first subset 1 that contains the largest number of informative features. In 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline 75 times (Fig. <a href="#fig:simDS">2</a>), with an average cross-validated accuracy on the training set of 0.73 and holdout accuracy of 0.69. Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.533, and holdout accuracy of [0.565] and 0.575.</p>
