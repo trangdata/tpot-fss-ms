@@ -58,7 +58,7 @@
     "repo_slug": "trang1618/tpot-ds-ms",
     "repo_owner": "trang1618",
     "repo_name": "tpot-ds-ms",
-    "commit": "b9d5dd713a8811f9dd16a628f8fe86c691a33738"
+    "commit": "706e6e80e378698a752bcf4dd672ac035f74d609"
   },
   "manuscript_stats": {
     "reference_counts": {
@@ -69,6 +69,6 @@
       "url": 7,
       "total": 29
     },
-    "word_count": 3793
+    "word_count": 3801
   }
 }

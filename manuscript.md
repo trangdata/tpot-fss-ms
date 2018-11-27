@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/b9d5dd713a8811f9dd16a628f8fe86c691a33738/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/706e6e80e378698a752bcf4dd672ac035f74d609/))
 was automatically generated
-from [trang1618/tpot-ds-ms@b9d5dd7](https://github.com/trang1618/tpot-ds-ms/tree/b9d5dd713a8811f9dd16a628f8fe86c691a33738)
+from [trang1618/tpot-ds-ms@706e6e8](https://github.com/trang1618/tpot-ds-ms/tree/706e6e80e378698a752bcf4dd672ac035f74d609)
 on November 27, 2018.
 </em></small>
 
@@ -76,14 +76,15 @@ on November 27, 2018.
 Automated machine learning (AutoML) systems are helpful data science assistants designed to scan the data for novel features, select an appropriate supervised learning model and optimize its parameters.
 For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist's prediction problem.
 However, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
-We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector (DS) and Template. 
-Dataset selector provides the option to specify subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
+We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. 
+Dataset selector (DS) provides the option to specify subsets of the features, assuming the signals come from specific subsets.
+DS reduces the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
 Consequently, DS makes TPOT applicable on big data by slicing the dataset into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline.
 Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline.
 We show that DS and Template help reduce TPOT computation time and potentially provide more interpretable results.
 Our simulations show TPOT-DS's outperformance compared to the a tuned XGBoost model and standard TPOT implementation.
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
-Independent of this previous study that identified significant association with depressions severity of the enrichment scores of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
+Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
 ## Introduction
 
@@ -149,17 +150,16 @@ An example Template is Dataset selector &rarr; Feature transform &rarr; Decision
 We apply TPOT with the new DS operator on both simulated datasets and a real world RNA-Seq gene expression dataset. 
 With both real-world and simulated data, we hope to acquire a comprehensive view of the strengths and limitations of TPOT in the next generation sequencing domain.
 
+#### Simulation methods
+The simulated datasets were generated using the `R` package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
+In the current study, to be consistent with the real expression dataset (described below), we simulate interaction effect data with *m* = 200 individuals (100 cases and 100 controls) and *p* = 5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
+Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
+Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features. 
 #### Real-world RNA-Seq expression data
 We employed TPOT-DS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. [@p7dAO241]. 
 Gene expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering. 
 Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and are now used in the current study to test for association with MDD status. 
 We use the 23 subsets of interconnected genes called depression gene modules (DGMs) identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the DS operator.
-
-#### Simulation methods
-The simulated datasets were generated using the `R` package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
-In the current study, to be consistent with the real expression dataset, we simulate interaction effect data with *m* = 200 individuals (100 cases and 100 controls) and *p*= 5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
-Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
-Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features. 
 
 To closely resemble the module size distribution in the RNA-Seq data, we first fit a $\Gamma$ distribution to the observed module sizes then sample from this distribution values for the simulated subset size, before the total number of features reaches 4,800 (number of background features). Then, the background features were randomly placed in each subset corresponding to its size. Also, for each subset $S_i, i = 1, \dots, n$, a functional feature $s_j$ belongs to the subset with the probability
 $$P(s_j \in S_i) \sim 1.618^{-i}$$ {#eq:p_subset}
@@ -182,7 +182,7 @@ Each replicate data set is split into training and holdout.
 The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy. 
 The general workflow of TPOT-DS is shown in Figure {@fig:flow} along with the best pipeline found with the specified template `Dataset Selector-Transformer-Classifier` in simulated data (top) and real-world expression data (bottom).
 
-![TPOT-DS's workflow and example pipelines. Best pipeline with optimized paramters are shown for simulated data (top) and real-world data (bottom)](images/flow.png){#fig:flow width="100%"}
+![TPOT-DS's workflow and example pipelines. Best pipeline with optimized parameters are shown for simulated data (top) and real-world data (bottom).](images/flow.png){#fig:flow width="100%"}
 
 For simulated dataset, the best pipeline selects subset $S_1$ then constructs an approximate feature map for a linear kernel with Nystroem, which uses a subset of the data as basis for the approximation.
 The final prediction is made with an extra-trees classifier that fits a number of randomized decision trees on various sub-samples of the dataset with the presented optimized parameters (Fig. {@fig:flow}).
@@ -190,8 +190,8 @@ This pipeline yields the highest holdout prediction accuracy of 0.84.
 
 Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
-Therefore, our first aim is to determine how well TPOT-DS can identify the first subset 1 that contains the largest number of informative features.
-In 100 replications, TPOT-DS correctly selects subset 1 in the resulting pipeline 75 times (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and holdout accuracy of 0.69.
+Therefore, our first aim is to determine how well TPOT-DS can identify the first subset ($S_1$) that contains the largest number of informative features.
+In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and holdout accuracy of 0.69.
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.533, and holdout accuracy of [0.565] and 0.575.
 
 ![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset *s1* is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS width="100%"}
@@ -223,7 +223,7 @@ For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MD
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and holdout accuracy of [] and 0.525.
 
-On a low performance computing machine with an Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB of RAM, each replication of TPOT-DS on the expression data takes on average  minutes, whereas standard TPOT takes [] hours, approximately 17 times slower.
+On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average [] minutes, whereas standard TPOT takes [] hours, approximately [] times slower.
 
 
 ## Discussion
@@ -240,7 +240,8 @@ We simulated data of the similar scale and chalenging enough for the models to h
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
 When another subset is chosen in the final pipeline, this method still produces holdout accuracy comparable to that of standard TPOT and XGBoost (0.565 - 0.575).
 
-Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
+Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. 
+In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
 TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
