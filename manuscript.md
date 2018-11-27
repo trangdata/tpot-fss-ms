@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/f1d44d7532223f4bd950dfdf445484aecbf8e768/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/a2ff54efd025b218b3fafc9020a34c889e82c672/))
 was automatically generated
-from [trang1618/tpot-ds-ms@f1d44d7](https://github.com/trang1618/tpot-ds-ms/tree/f1d44d7532223f4bd950dfdf445484aecbf8e768)
+from [trang1618/tpot-ds-ms@a2ff54e](https://github.com/trang1618/tpot-ds-ms/tree/a2ff54efd025b218b3fafc9020a34c889e82c672)
 on November 27, 2018.
 </em></small>
 
@@ -187,7 +187,7 @@ Each replicate data set is split into training and holdout.
 The TPOT-DS, standard TPOT and XGBoost models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy. 
 The general workflow of TPOT-DS is shown in Figure {@fig:flow} along with the best pipeline found with the specified template `Dataset Selector-Transformer-Classifier` in simulated data (top) and real-world expression data (bottom).
 
-![TPOT-DS's workflow and example pipelines. Best pipeline with optimized parameters are shown for simulated data (top) and real-world data (bottom).](images/flow.png){#fig:flow width="100%"}
+![TPOT-DS's workflow and example pipelines. Best pipeline with optimized parameters are shown for simulated data (top) and real-world data (bottom).](images/flow.png){#fig:flow width="90%"}
 
 For simulated dataset, the best pipeline selects subset $S_1$ then constructs an approximate feature map for a linear kernel with Nystroem, which uses a subset of the data as basis for the approximation.
 The final prediction is made with an extra-trees classifier that fits a number of randomized decision trees on various sub-samples of the dataset with the presented optimized parameters (Fig. {@fig:flow}).
@@ -213,18 +213,20 @@ The best pipeline selects subset DGM-5 then scales each expression feature by it
 Similar to the best pipeline for simulated data, the final prediction is made with an extra-trees classifier with a different set of optimized parameters (Fig. {@fig:flow}).
 This pipeline yields the highest holdout prediction accuracy of 0.75.
 
+![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS width="80%"}
+
 In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636.
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
+Although there is no direct link between the top ten genes of the module (Fig. {@fig:featImp}A) and MDD in the literature, many of these genes interact with other MDD-related genes.
+For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl]. []
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
-![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS width="80%"}
+![Importance scores of the top ten expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2](images/importanceFeatures.svg){#fig:featImp width="100%"}
+
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
 Previously, this module's enrichment score did not show statistically significant association with the MADRS.
-Although there is no direct link between the top ten genes of the modules (Fig. {@fig:featImp}) and MDD in the literature, many of these genes interact with other MDD-related genes.
-For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl]. []
 
-![Importance scores of the top ten expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2](images/importanceFeatures.svg){#fig:featImp width="100%"}
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and holdout accuracy of [] and 0.525.
 
