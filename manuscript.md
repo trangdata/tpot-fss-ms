@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/706e6e80e378698a752bcf4dd672ac035f74d609/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/f1d44d7532223f4bd950dfdf445484aecbf8e768/))
 was automatically generated
-from [trang1618/tpot-ds-ms@706e6e8](https://github.com/trang1618/tpot-ds-ms/tree/706e6e80e378698a752bcf4dd672ac035f74d609)
+from [trang1618/tpot-ds-ms@f1d44d7](https://github.com/trang1618/tpot-ds-ms/tree/f1d44d7532223f4bd950dfdf445484aecbf8e768)
 on November 27, 2018.
 </em></small>
 
@@ -171,6 +171,11 @@ We assess the performance of TPOT-DS by quantifying its ability to correctly sel
 We also compare the out-of-sample accuracy of TPOT-DS's exported pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and XGBoost [@8w9fI63O], a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using the `R` package `caret` [@6MvKCe21] version 6.0-80 with the repeated cross-validation algorithm and random search method. 
+
+## Manuscript drafting
+The manuscript is written using Manubot [@1GGGHdsew], a software that supports open paper writing collaboration via GitHub using the Markdown language.
+Manubot uses continuous integration to monitor changes and automatically update the manuscript.
+Consequently, the latest version of this manuscript is always available at https://lelaboratoire.github.io/tpot-ds-ms/.
 
 ## Results
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
