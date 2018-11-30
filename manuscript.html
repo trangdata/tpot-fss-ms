@@ -7,7 +7,7 @@
   <meta name="author" content="Trang T. Le" />
   <meta name="author" content="Weixuan Fu" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2018-11-27" />
+  <meta name="dcterms.date" content="2018-11-30" />
   <meta name="keywords" content="tpot, automl, machine learning" />
   <title>Scaling tree-based automated machine learning to biomedical big data with a dataset selector</title>
   <style type="text/css">
@@ -30,7 +30,7 @@
 <header id="title-block-header">
 <h1 class="title">Scaling tree-based automated machine learning to biomedical big data with a dataset selector</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/a2ff54efd025b218b3fafc9020a34c889e82c672/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/a2ff54efd025b218b3fafc9020a34c889e82c672">trang1618/tpot-ds-ms@a2ff54e</a> on November 27, 2018. </em></small></p>
+<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/b12c7b1ec186adea94aa7cf5ed6c50fc06821640/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/b12c7b1ec186adea94aa7cf5ed6c50fc06821640">trang1618/tpot-ds-ms@b12c7b1</a> on November 30, 2018. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" width="13" height="13" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" width="13" height="13" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -87,7 +87,7 @@
 <figure>
 <img src="images/importanceFeatures.svg" alt="Figure 4: Importance scores of the top ten expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2" id="fig:featImp" style="width:100.0%" /><figcaption><span>Figure 4:</span> Importance scores of the top ten expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2</figcaption>
 </figure>
-<p>After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. <a href="#fig:realDS">3</a>), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563. Previously, this module’s enrichment score did not show statistically significant association with the MADRS.</p>
+<p>After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. <a href="#fig:realDS">3</a>), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563. Previous network approach did not find statistically significant association between this module’s enrichment score and the MADRS. Gene set enrichment analysis reported DGM-13’s involvement in axon guidance and developmental biology pathways with Reactome-FDR <em>q</em>-value <span class="math inline">\(&lt;\)</span> 0.05.</p>
 <p>Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and holdout accuracy of [] and 0.525.</p>
 <p>On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average [] minutes, whereas standard TPOT takes [] hours, approximately [] times slower.</p>
 <h2 id="discussion">Discussion</h2>
@@ -95,7 +95,7 @@
 <p>Implemented with a strongly typed GP, Template allows users to pre-specify a particular pipeline structure, which speeds up the automation computation time and provides potentially more interpretable results. Hence, Template enables the comparison between the two TPOT implementations, with and without DS.</p>
 <p>We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data. TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69). When another subset is chosen in the final pipeline, this method still produces holdout accuracy comparable to that of standard TPOT and XGBoost (0.565 - 0.575).</p>
 <p>Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity <span class="citation" data-cites="p7dAO241">[<a href="#ref-p7dAO241">17</a>]</span>. We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders <span class="citation" data-cites="p7dAO241">[<a href="#ref-p7dAO241">17</a>]</span> and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss <span class="citation" data-cites="19yG9lS3X Okd6uiRx">[<a href="#ref-19yG9lS3X">29</a>,<a href="#ref-Okd6uiRx">30</a>]</span>.</p>
-<p>TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 <span class="math inline">\(&lt;\)</span> 0.636). Although DGM-13 did not show with the previous modular network approach,</p>
+<p>TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 <span class="math inline">\(&lt;\)</span> 0.636). While many of the top genes do not have direct disease association in MalaCards, several have been shown to [link with depression] in animal studies such as PPP1R16A <span class="citation" data-cites="XKNZFJkN">[<a href="#ref-XKNZFJkN">31</a>]</span> and Further, the RGL4 gene was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations <span class="citation" data-cites="cuk31K3D">[<a href="#ref-cuk31K3D">32</a>]</span>.</p>
 <p>It is important to discuss the complexity - interpretability trade-off in the context of AutoML. While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but yield suboptimal prediction accuracy. Finding the balance between pipeline complexity model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.</p>
 <p>[Computation time] With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to lower dimension of a selected subset. Therefore, TPOT-DS is more computationally efficient than standard TPOT.</p>
 <p>A limitation of the DS analysis is the required predefition of subsets prior to executing TPOT-DS. While this characteristic of an intelligent system is desirable when <em>a prior</em> knowledge on the biomedical data is available, it might pose as a challenge when this knowledge is inadequate, such as when analyzing data of a brand-new disease. Nevertheless, one can perform a clustering method such as <em>k</em>-means to group features prior to performing TPOT-DS on the data. Another limitation of the current implementation of TPOT-DS is its restricted ability to select only one subset. A future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome. Extensions of TPOT-DS will also involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline. Specifically, in the case of overlapping subsets, the number of features in the selected subset(s) is expected to be an element of the complexity calculation. [Extension of TPOT-DS to GWAS]</p>
@@ -262,6 +262,18 @@ PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/19125212">19125212</a> · PMCI
 E Eilat, S Mendlovic, A Doron, V Zakuth, Z Spirer<br />
 <em>Journal of immunology (Baltimore, Md. : 1950)</em> (1999-07-01) <a href="https://www.ncbi.nlm.nih.gov/pubmed/10384158">https://www.ncbi.nlm.nih.gov/pubmed/10384158</a><br />
 PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/10384158">10384158</a></p>
+</div>
+<div id="ref-XKNZFJkN">
+<p>31. <strong>A Molecular Signature of Depression in the Amygdala</strong><br />
+Etienne Sibille Ph.D., Yingjie Wang M.S., Jennifer Joeyen-Waldorf B.S., Chris Gaiteri B.S., Alexandre Surget Ph.D., Sunghee Oh B.S., Catherine Belzung Ph.D., George C. Tseng Ph.D., David A. Lewis M.D.<br />
+<em>American Journal of Psychiatry</em> (2009-09) <a href="https://doi.org/fmbrrk">https://doi.org/fmbrrk</a><br />
+DOI: <a href="https://doi.org/10.1176/appi.ajp.2009.08121760">10.1176/appi.ajp.2009.08121760</a> · PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/19605536">19605536</a> · PMCID: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882057">PMC2882057</a></p>
+</div>
+<div id="ref-cuk31K3D">
+<p>32. <strong>High-Coverage Whole-Exome Sequencing Identifies Candidate Genes for Suicide in Victims with Major Depressive Disorder</strong><br />
+Dóra Tombácz, Zoltán Maróti, Tibor Kalmár, Zsolt Csabai, Zsolt Balázs, Shinichi Takahashi, Miklós Palkovits, Michael Snyder, Zsolt Boldogkői<br />
+<em>Scientific Reports</em> (2017-08-02) <a href="https://doi.org/gbrpc3">https://doi.org/gbrpc3</a><br />
+DOI: <a href="https://doi.org/10.1038/s41598-017-06522-3">10.1038/s41598-017-06522-3</a> · PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/28769055">28769055</a> · PMCID: <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC5541090">PMC5541090</a></p>
 </div>
 </div>
 <script>

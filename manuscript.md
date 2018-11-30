@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-27'
+date-meta: '2018-11-30'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/a2ff54efd025b218b3fafc9020a34c889e82c672/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/b12c7b1ec186adea94aa7cf5ed6c50fc06821640/))
 was automatically generated
-from [trang1618/tpot-ds-ms@a2ff54e](https://github.com/trang1618/tpot-ds-ms/tree/a2ff54efd025b218b3fafc9020a34c889e82c672)
-on November 27, 2018.
+from [trang1618/tpot-ds-ms@b12c7b1](https://github.com/trang1618/tpot-ds-ms/tree/b12c7b1ec186adea94aa7cf5ed6c50fc06821640)
+on November 30, 2018.
 </em></small>
 
 ## Authors
@@ -225,8 +225,8 @@ Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Se
 
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
-Previously, this module's enrichment score did not show statistically significant association with the MADRS.
-
+Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
+Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05.
 
 Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and holdout accuracy of [] and 0.525.
 
@@ -252,7 +252,8 @@ In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significa
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
 TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
-Although DGM-13 did not show with the previous modular network approach, 
+While many of the top genes do not have direct disease association in MalaCards, several have been shown to [link with depression] in animal studies such as PPP1R16A [@XKNZFJkN] and 
+Further, the RGL4 gene was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
 
 It is important to discuss the complexity - interpretability trade-off in the context of AutoML.
 While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. 

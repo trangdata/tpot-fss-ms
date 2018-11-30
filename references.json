@@ -674,6 +674,69 @@
     "id": "p7dAO241"
   },
   {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1038/s41598-017-06522-3",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "High-Coverage Whole-Exome Sequencing Identifies Candidate Genes for Suicide in Victims with Major Depressive Disorder",
+    "volume": "7",
+    "author": [
+      {
+        "given": "Dóra",
+        "family": "Tombácz"
+      },
+      {
+        "given": "Zoltán",
+        "family": "Maróti"
+      },
+      {
+        "given": "Tibor",
+        "family": "Kalmár"
+      },
+      {
+        "given": "Zsolt",
+        "family": "Csabai"
+      },
+      {
+        "given": "Zsolt",
+        "family": "Balázs"
+      },
+      {
+        "given": "Shinichi",
+        "family": "Takahashi"
+      },
+      {
+        "given": "Miklós",
+        "family": "Palkovits"
+      },
+      {
+        "given": "Michael",
+        "family": "Snyder"
+      },
+      {
+        "given": "Zsolt",
+        "family": "Boldogkői"
+      }
+    ],
+    "container-title": "Scientific Reports",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          8,
+          2
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gbrpc3",
+    "container-title-short": "Sci Rep",
+    "PMCID": "PMC5541090",
+    "PMID": "28769055",
+    "id": "cuk31K3D"
+  },
+  {
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "issue": "2",
     "DOI": "10.1109/4235.996017",
@@ -837,6 +900,78 @@
     "URL": "https://doi.org/ct3mnb",
     "container-title-short": "Evolutionary Computation",
     "id": "KgFuJ0Jv"
+  },
+  {
+    "publisher": "American Psychiatric Publishing",
+    "issue": "9",
+    "DOI": "10.1176/appi.ajp.2009.08121760",
+    "type": "article-journal",
+    "page": "1011-1024",
+    "source": "Crossref",
+    "title": "A Molecular Signature of Depression in the Amygdala",
+    "volume": "166",
+    "author": [
+      {
+        "suffix": "Ph.D.",
+        "given": "Etienne",
+        "family": "Sibille"
+      },
+      {
+        "suffix": "M.S.",
+        "given": "Yingjie",
+        "family": "Wang"
+      },
+      {
+        "suffix": "B.S.",
+        "given": "Jennifer",
+        "family": "Joeyen-Waldorf"
+      },
+      {
+        "suffix": "B.S.",
+        "given": "Chris",
+        "family": "Gaiteri"
+      },
+      {
+        "suffix": "Ph.D.",
+        "given": "Alexandre",
+        "family": "Surget"
+      },
+      {
+        "suffix": "B.S.",
+        "given": "Sunghee",
+        "family": "Oh"
+      },
+      {
+        "suffix": "Ph.D.",
+        "given": "Catherine",
+        "family": "Belzung"
+      },
+      {
+        "suffix": "Ph.D.",
+        "given": "George C.",
+        "family": "Tseng"
+      },
+      {
+        "suffix": "M.D.",
+        "given": "David A.",
+        "family": "Lewis"
+      }
+    ],
+    "container-title": "American Journal of Psychiatry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2009,
+          9
+        ]
+      ]
+    },
+    "URL": "https://doi.org/fmbrrk",
+    "container-title-short": "AJP",
+    "PMCID": "PMC2882057",
+    "PMID": "19605536",
+    "id": "XKNZFJkN"
   },
   {
     "publisher": "Springer Nature",
