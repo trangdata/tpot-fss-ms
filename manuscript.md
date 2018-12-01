@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-11-30'
+date-meta: '2018-12-01'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/b12c7b1ec186adea94aa7cf5ed6c50fc06821640/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/662262df5fcf198bbe4b7a50fdf08044ccf82f52/))
 was automatically generated
-from [trang1618/tpot-ds-ms@b12c7b1](https://github.com/trang1618/tpot-ds-ms/tree/b12c7b1ec186adea94aa7cf5ed6c50fc06821640)
-on November 30, 2018.
+from [trang1618/tpot-ds-ms@662262d](https://github.com/trang1618/tpot-ds-ms/tree/662262df5fcf198bbe4b7a50fdf08044ccf82f52)
+on December 1, 2018.
 </em></small>
 
 ## Authors
