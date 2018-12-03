@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-01'
+date-meta: '2018-12-03'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/662262df5fcf198bbe4b7a50fdf08044ccf82f52/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/83b19470982802b16da9bf40f892e4d0845b5fcc/))
 was automatically generated
-from [trang1618/tpot-ds-ms@662262d](https://github.com/trang1618/tpot-ds-ms/tree/662262df5fcf198bbe4b7a50fdf08044ccf82f52)
-on December 1, 2018.
+from [trang1618/tpot-ds-ms@83b1947](https://github.com/trang1618/tpot-ds-ms/tree/83b19470982802b16da9bf40f892e4d0845b5fcc)
+on December 3, 2018.
 </em></small>
 
 ## Authors
@@ -97,7 +97,7 @@ Consequently, AutoML allows data scientists to focus their effort in applying th
 Various approaches have been employed to build AutoML systems for diverse applications.
 Auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] use Bayesian optimization for model selection and hyperparameter optimization.
 Meanwhile, Recipe [@6ChydIkb] optimizes the ML pipeline through grammar-based genetic programming and Autostacker [@RiocGZOq] automates stacked ensembling.
-Both methods automate hyperparameter tuning and model selection using evaluation algorithm.
+Both methods automate hyperparameter tuning and model selection using evolutionary algorithm.
 DEvol [@1CQSBxFFr] designs deep neural network specifically via genetic programming.
 H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
 Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
@@ -154,7 +154,8 @@ With both real-world and simulated data, we hope to acquire a comprehensive view
 The simulated datasets were generated using the `R` package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
 In the current study, to be consistent with the real expression dataset (described below), we simulate interaction effect data with *m* = 200 individuals (100 cases and 100 controls) and *p* = 5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
 Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
-Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features. 
+Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features.
+
 #### Real-world RNA-Seq expression data
 We employed TPOT-DS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. [@p7dAO241]. 
 Gene expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering. 
@@ -172,10 +173,10 @@ We also compare the out-of-sample accuracy of TPOT-DS's exported pipeline on the
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using the `R` package `caret` [@6MvKCe21] version 6.0-80 with the repeated cross-validation algorithm and random search method. 
 
-## Manuscript drafting
-The manuscript is written using Manubot [@1GGGHdsew], a software that supports open paper writing collaboration via GitHub using the Markdown language.
+### Manuscript drafting
+This manuscript is written using Manubot [@1GGGHdsew], a software that supports open paper writing collaboration via GitHub using the Markdown language.
 Manubot uses continuous integration to monitor changes and automatically update the manuscript.
-Consequently, the latest version of this manuscript is always available at https://lelaboratoire.github.io/tpot-ds-ms/.
+Consequently, the latest version of this manuscript is always available at [https://trang1618.github.io/tpot-ds-ms/](https://trang1618.github.io/tpot-ds-ms/).
 
 ## Results
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
@@ -217,21 +218,19 @@ This pipeline yields the highest holdout prediction accuracy of 0.75.
 
 In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.715 and out-of-sample accuracy of 0.636.
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
-Although there is no direct link between the top ten genes of the module (Fig. {@fig:featImp}A) and MDD in the literature, many of these genes interact with other MDD-related genes.
-For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl]. []
+Although there is no direct link between the top genes of the module (Fig. {@fig:featImp}A) and MDD in the literature, many of these genes interact with other MDD-related genes.
+For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl].
+Many of DGM-5's top genes were also shown to have statistically significant association with diagnosis phenotypes from a univariate analysis after multiple hypothesis testing correction [@p7dAO241].
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
-![Importance scores of the top ten expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2](images/importanceFeatures.svg){#fig:featImp width="100%"}
-
+![Importance scores of the top twenty expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2](images/importanceFeatures.svg){#fig:featImp width="100%"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
 Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
-Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05.
+Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05 [@p7dAO241].
 
-Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [] and 0.543, and holdout accuracy of [] and 0.525.
-
-On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average [] minutes, whereas standard TPOT takes [] hours, approximately [] times slower.
-
+Without DS, the standard TPOT and tuned XGBoost models respectively report an average cross-validated accuracy of [0.703] and 0.543, and holdout accuracy of [0.642] and 0.525.
+On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average 40 minutes, whereas standard TPOT takes 13.3 hours, approximately 20 times slower.
 
 ## Discussion
 To our knowledge, TPOT-DS is the first AutoML tool to offer the option of feature selection at the group level.
@@ -246,36 +245,40 @@ Hence, Template enables the comparison between the two TPOT implementations, wit
 We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
 When another subset is chosen in the final pipeline, this method still produces holdout accuracy comparable to that of standard TPOT and XGBoost (0.565 - 0.575).
+For the RNASeq gene expression data, the best TPOT-DS pipeline selects DGM-5 and reports competitive accuracy with standard TPOT (0.636 vs. 0.642) but with a smaller feature space (291 vs. 5,635 genes) and 20 times more computationally efficient.
+Both TPOT-DS and standard TPOT significantly outperform XGBoost in terms of accuracy (*p* = []).
 
 Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. 
 In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
-TPOT-DS also select DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
-While many of the top genes do not have direct disease association in MalaCards, several have been shown to [link with depression] in animal studies such as PPP1R16A [@XKNZFJkN] and 
-Further, the RGL4 gene was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
+TPOT-DS also selects DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
+While many of the top genes do not have direct disease association in MalaCards, several have been linked to depression in animal studies such as PPP1R16A [@XKNZFJkN] and MXRA8 [@lAZSHU1O].
+Further, the RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
+[More here...]
 
-It is important to discuss the complexity - interpretability trade-off in the context of AutoML.
+Complexity-interpretability trade-off is an important topic to discuss in the context of AutoML.
 While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. 
-Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but  yield suboptimal prediction accuracy.
+Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but yield suboptimal prediction accuracy.
 Finding the balance between pipeline complexity model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
+With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to the selected subset's lower dimension compared to that of the entire dataset.
+We hope that, with the complexity reduction from imposing a strongly-type GP template and dataset selector, a small loss in dataset-specific predictive accuracy can be compensated by considerable increase in interpretibility and generalizability.
+In this study, the resulting TPOT-DS pipelines are more interpretable with only two simple optimized operators after the dataset selector: a transformer and a classifier.
+In the case of the expression analysis, these pipelines also highlight two small sets of interconnected genes that contain candidates for MDD and related disorders.
+Additionally, complexity reduction results in more efficient computation, which is strongly desirable in biomedical big data analysis.
 
-[Computation time]
-With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to lower dimension of a selected  subset.
-Therefore, TPOT-DS is more computationally efficient than standard TPOT.
-
-
-A limitation of the DS analysis is the required predefition of subsets prior to executing TPOT-DS.
+A limitation of the DS analysis is the required pre-definition of subsets prior to executing TPOT-DS.
 While this characteristic of an intelligent system is desirable when *a prior* knowledge on the biomedical data is available, it might pose as a challenge when this knowledge is inadequate, such as when analyzing data of a brand-new disease.
 Nevertheless, one can perform a clustering method such as *k*-means to group features prior to performing TPOT-DS on the data. 
 Another limitation of the current implementation of TPOT-DS is its restricted ability to select only one subset. 
 A future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome.
+A new operator that combines the data subsets will prove useful in this design.
 Extensions of TPOT-DS will also involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline.
 Specifically, in the case of overlapping subsets, the number of features in the selected subset(s) is expected to be an element of the complexity calculation.
-[Extension of TPOT-DS to GWAS]
+Extension of TPOT-DS to GWAS is straightforward.
+However, because of the low predictive power of variants in current GWAS, alternative metrics beside accuracy, balanced accuracy or area under the receiving operator characteristic curve will need to be designed and included in the fitness function of TPOT's evolutionary algorithm.
 
-
-
+[Conclusion]
 
 ## References {.page_break_before}
 
