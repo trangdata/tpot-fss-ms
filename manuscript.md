@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/d6c7e5e01823f03d2460711a65b8a25421af510b/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/1f2e568eff020980d987832a12095a8085088ff4/))
 was automatically generated
-from [trang1618/tpot-ds-ms@d6c7e5e](https://github.com/trang1618/tpot-ds-ms/tree/d6c7e5e01823f03d2460711a65b8a25421af510b)
+from [trang1618/tpot-ds-ms@1f2e568](https://github.com/trang1618/tpot-ds-ms/tree/1f2e568eff020980d987832a12095a8085088ff4)
 on December 3, 2018.
 </em></small>
 
@@ -255,7 +255,9 @@ We also remarked that DGM-5 contains many genes that are biologically relevant o
 TPOT-DS also selects DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
 While many of the top genes do not have direct disease association in MalaCards, several have been linked to depression in animal studies such as PPP1R16A [@XKNZFJkN] and MXRA8 [@lAZSHU1O].
 Further, the RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
-[More here...]
+The lack of previously found association of these genes with the phenotype is likely because MDD is a complex disorder of heterogeneous etiology [@sd1g3RjP].
+Hence, the clinical diagnosis is the accumulative result of coordinated variation of many genes in the module, especially ones with high importance scores.
+Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may deploy expression quantitative trait loci (QTL) or interaction QTL analysis to discover disease-associated variants [@1T5OumxC].
 
 Complexity-interpretability trade-off is an important topic to discuss in the context of AutoML.
 While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. 

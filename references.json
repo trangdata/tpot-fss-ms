@@ -213,6 +213,61 @@
   },
   {
     "publisher": "Elsevier BV",
+    "issue": "7",
+    "DOI": "10.1016/j.biopsych.2014.07.029",
+    "type": "article-journal",
+    "page": "510-512",
+    "source": "Crossref",
+    "title": "Genetic Studies of Major Depressive Disorder: Why Are There No Genome-wide Association Study Findings and What Can We Do About It?",
+    "volume": "76",
+    "author": [
+      {
+        "given": "Douglas F.",
+        "family": "Levinson"
+      },
+      {
+        "given": "Sara",
+        "family": "Mostafavi"
+      },
+      {
+        "given": "Yuri",
+        "family": "Milaneschi"
+      },
+      {
+        "given": "Margarita",
+        "family": "Rivera"
+      },
+      {
+        "given": "Stephan",
+        "family": "Ripke"
+      },
+      {
+        "given": "Naomi R.",
+        "family": "Wray"
+      },
+      {
+        "given": "Patrick F.",
+        "family": "Sullivan"
+      }
+    ],
+    "container-title": "Biological Psychiatry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          10
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gd8sv4",
+    "container-title-short": "Biological Psychiatry",
+    "PMCID": "PMC4740915",
+    "PMID": "25201436",
+    "id": "sd1g3RjP"
+  },
+  {
+    "publisher": "Elsevier BV",
     "DOI": "10.1016/j.brainres.2009.06.036",
     "type": "article-journal",
     "page": "1-12",
@@ -294,6 +349,57 @@
     "container-title-short": "Journal of Affective Disorders",
     "PMID": "20226536",
     "id": "KXwvC8hd"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "4",
+    "DOI": "10.1038/gene.2016.15",
+    "type": "article-journal",
+    "page": "244-250",
+    "source": "Crossref",
+    "title": "An interaction quantitative trait loci tool implicates epistatic functional variants in an apoptosis pathway in smallpox vaccine eQTL data",
+    "volume": "17",
+    "author": [
+      {
+        "given": "C A",
+        "family": "Lareau"
+      },
+      {
+        "given": "B C",
+        "family": "White"
+      },
+      {
+        "given": "A L",
+        "family": "Oberg"
+      },
+      {
+        "given": "R B",
+        "family": "Kennedy"
+      },
+      {
+        "given": "G A",
+        "family": "Poland"
+      },
+      {
+        "given": "B A",
+        "family": "McKinney"
+      }
+    ],
+    "container-title": "Genes & Immunity",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          4,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9mvjk",
+    "container-title-short": "Genes Immun",
+    "PMID": "27052692",
+    "id": "1T5OumxC"
   },
   {
     "publisher": "Springer Nature",
