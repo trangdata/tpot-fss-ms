@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/83b19470982802b16da9bf40f892e4d0845b5fcc/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/d6c7e5e01823f03d2460711a65b8a25421af510b/))
 was automatically generated
-from [trang1618/tpot-ds-ms@83b1947](https://github.com/trang1618/tpot-ds-ms/tree/83b19470982802b16da9bf40f892e4d0845b5fcc)
+from [trang1618/tpot-ds-ms@d6c7e5e](https://github.com/trang1618/tpot-ds-ms/tree/d6c7e5e01823f03d2460711a65b8a25421af510b)
 on December 3, 2018.
 </em></small>
 
@@ -240,7 +240,7 @@ We assessed TPOT-DS's out-of-sample prediction accuracy compared to standard TPO
 We applied TPOT-DS to real-world expression data to demonstrate the identification of biologically relevant groups of genes.
 
 Implemented with a strongly typed GP, Template allows users to pre-specify a particular pipeline structure, which speeds up the automation computation time and provides potentially more interpretable results.
-Hence, Template enables the comparison between the two TPOT implementations, with and without DS.
+Consequently, Template enables the comparison between the two TPOT implementations, with and without DS.
 
 We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
