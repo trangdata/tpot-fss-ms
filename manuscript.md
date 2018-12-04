@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/45d2f00f3d2d9b3f6177be13f31589548199003a/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/b3bbb3e41251a6dff4e5a1f72dccba8b81b436b2/))
 was automatically generated
-from [trang1618/tpot-ds-ms@45d2f00](https://github.com/trang1618/tpot-ds-ms/tree/45d2f00f3d2d9b3f6177be13f31589548199003a)
+from [trang1618/tpot-ds-ms@b3bbb3e](https://github.com/trang1618/tpot-ds-ms/tree/b3bbb3e41251a6dff4e5a1f72dccba8b81b436b2)
 on December 4, 2018.
 </em></small>
 
@@ -198,7 +198,7 @@ Our simulation design produces a reasonable distribution of the functional featu
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
 Therefore, our first aim is to determine how well TPOT-DS can identify the first subset ($S_1$) that contains the largest number of informative features.
 In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and holdout accuracy of 0.69.
-Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.531, and holdout accuracy of [0.565] and 0.53.
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.55, and holdout accuracy of [0.565] and 0.595.
 
 ![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset *s1* is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS width="100%"}
 
