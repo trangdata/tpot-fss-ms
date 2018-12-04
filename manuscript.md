@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/246068e2dc3063a765c348e45714bcf636452302/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/45d2f00f3d2d9b3f6177be13f31589548199003a/))
 was automatically generated
-from [trang1618/tpot-ds-ms@246068e](https://github.com/trang1618/tpot-ds-ms/tree/246068e2dc3063a765c348e45714bcf636452302)
+from [trang1618/tpot-ds-ms@45d2f00](https://github.com/trang1618/tpot-ds-ms/tree/45d2f00f3d2d9b3f6177be13f31589548199003a)
 on December 4, 2018.
 </em></small>
 
