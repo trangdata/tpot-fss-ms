@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-03'
+date-meta: '2018-12-04'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/1f2e568eff020980d987832a12095a8085088ff4/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/246068e2dc3063a765c348e45714bcf636452302/))
 was automatically generated
-from [trang1618/tpot-ds-ms@1f2e568](https://github.com/trang1618/tpot-ds-ms/tree/1f2e568eff020980d987832a12095a8085088ff4)
-on December 3, 2018.
+from [trang1618/tpot-ds-ms@246068e](https://github.com/trang1618/tpot-ds-ms/tree/246068e2dc3063a765c348e45714bcf636452302)
+on December 4, 2018.
 </em></small>
 
 ## Authors
@@ -100,7 +100,7 @@ Meanwhile, Recipe [@6ChydIkb] optimizes the ML pipeline through grammar-based ge
 Both methods automate hyperparameter tuning and model selection using evolutionary algorithm.
 DEvol [@1CQSBxFFr] designs deep neural network specifically via genetic programming.
 H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
-Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
+Finally, Xcessiv [@iAZgC34a] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
 
 Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a ML pipeline to solve a supervised learning problem.
 At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
@@ -198,7 +198,7 @@ Our simulation design produces a reasonable distribution of the functional featu
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
 Therefore, our first aim is to determine how well TPOT-DS can identify the first subset ($S_1$) that contains the largest number of informative features.
 In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simDS}), with an average cross-validated accuracy on the training set of 0.73 and holdout accuracy of 0.69.
-Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.533, and holdout accuracy of [0.565] and 0.575.
+Without DS, the standard TPOT and tuned XGBoost models respectively report a cross-validated accuracy of [0.661] and 0.531, and holdout accuracy of [0.565] and 0.53.
 
 ![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset *s1* is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS width="100%"}
 
@@ -229,7 +229,7 @@ After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:rea
 Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
 Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05 [@p7dAO241].
 
-Without DS, the standard TPOT and tuned XGBoost models respectively report an average cross-validated accuracy of [0.703] and 0.543, and holdout accuracy of [0.642] and 0.525.
+Without DS, the standard TPOT and tuned XGBoost models respectively report an average cross-validated accuracy of [0.703] and 0.607, and holdout accuracy of [0.642] and 0.725.
 On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average 40 minutes, whereas standard TPOT takes 13.3 hours, approximately 20 times slower.
 
 ## Discussion
@@ -245,8 +245,8 @@ Consequently, Template enables the comparison between the two TPOT implementatio
 We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
 When another subset is chosen in the final pipeline, this method still produces holdout accuracy comparable to that of standard TPOT and XGBoost (0.565 - 0.575).
-For the RNASeq gene expression data, the best TPOT-DS pipeline selects DGM-5 and reports competitive accuracy with standard TPOT (0.636 vs. 0.642) but with a smaller feature space (291 vs. 5,635 genes) and 20 times more computationally efficient.
-Both TPOT-DS and standard TPOT significantly outperform XGBoost in terms of accuracy (*p* = []).
+For the RNASeq gene expression data, the best TPOT-DS pipeline selects DGM-5 and reports competitive holdout accuracy with standard TPOT (0.636 vs. 0.642) but with a smaller feature space (291 vs. 5,635 genes) and 20 times more computationally efficient.
+The best pipeline from TPOT-DS produces comparable holdout accuracy with XGBoost (0.75 vs. 0.725).
 
 Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. 
 In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
@@ -264,7 +264,7 @@ While arbitrarily-shaped pipelines may yield predictions competitive to human-le
 Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but yield suboptimal prediction accuracy.
 Finding the balance between pipeline complexity model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
 With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to the selected subset's lower dimension compared to that of the entire dataset.
-We hope that, with the complexity reduction from imposing a strongly-type GP template and dataset selector, a small loss in dataset-specific predictive accuracy can be compensated by considerable increase in interpretibility and generalizability.
+We hope that, with the complexity reduction from imposing a strongly-type GP template and dataset selector, a small loss in dataset-specific predictive accuracy can be compensated by considerable increase in interpretability and generalizability.
 In this study, the resulting TPOT-DS pipelines are more interpretable with only two simple optimized operators after the dataset selector: a transformer and a classifier.
 In the case of the expression analysis, these pipelines also highlight two small sets of interconnected genes that contain candidates for MDD and related disorders.
 Additionally, complexity reduction results in more efficient computation, which is strongly desirable in biomedical big data analysis.

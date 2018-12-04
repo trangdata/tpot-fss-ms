@@ -1485,19 +1485,6 @@
     "id": "1CQSBxFFr"
   },
   {
-    "URL": "https://github.com/reiinakano/xcessiv",
-    "title": "reiinakano/xcessiv",
-    "container-title": "GitHub",
-    "author": [
-      {
-        "family": "reiinakano",
-        "given": ""
-      }
-    ],
-    "type": "webpage",
-    "id": "HA8l3lpi"
-  },
-  {
     "URL": "https://greenelab.github.io/meta-review/",
     "type": "webpage",
     "id": "1GGGHdsew"
@@ -1546,5 +1533,10 @@
     "title": "Kaggle: Your Home for Data Science",
     "type": "webpage",
     "id": "1MHQyfXY"
+  },
+  {
+    "URL": "https://xcessiv.readthedocs.io",
+    "type": "webpage",
+    "id": "iAZgC34a"
   }
 ]
