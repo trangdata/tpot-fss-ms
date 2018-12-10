@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-04'
+date-meta: '2018-12-10'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/b3bbb3e41251a6dff4e5a1f72dccba8b81b436b2/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/481a6e8e9d0a674e48d5819882401d985abf25f0/))
 was automatically generated
-from [trang1618/tpot-ds-ms@b3bbb3e](https://github.com/trang1618/tpot-ds-ms/tree/b3bbb3e41251a6dff4e5a1f72dccba8b81b436b2)
-on December 4, 2018.
+from [trang1618/tpot-ds-ms@481a6e8](https://github.com/trang1618/tpot-ds-ms/tree/481a6e8e9d0a674e48d5819882401d985abf25f0)
+on December 10, 2018.
 </em></small>
 
 ## Authors
@@ -235,12 +235,14 @@ On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 2
 ## Discussion
 To our knowledge, TPOT-DS is the first AutoML tool to offer the option of feature selection at the group level.
 Previously, it was computationally expensive for any AutoML program to process biomedical big data.
-TPOT-DS is able to identify the most meaningful group of features to include in the prediction pipeline. 
+TPOT-DS is able to identify the most meaningful group of features to include in the prediction pipeline.
 We assessed TPOT-DS's out-of-sample prediction accuracy compared to standard TPOT and XGBoost, another state-of-the-art machine learning method.
 We applied TPOT-DS to real-world expression data to demonstrate the identification of biologically relevant groups of genes.
 
-Implemented with a strongly typed GP, Template allows users to pre-specify a particular pipeline structure, which speeds up the automation computation time and provides potentially more interpretable results.
-Consequently, Template enables the comparison between the two TPOT implementations, with and without DS.
+Implemented with a strongly typed GP, Template provides more flexibility by allowing users to pre-specify a particular pipeline structure based on their knowledge, which speeds up AutoML process and provides potentially more interpretable results.
+For example, in high-dimensional data, dimensionality reduction or feature selection algorithms are preferably included at the beginning of the pipelines via Template to identify important features and, meanwhile, reduce computation time.
+For datasets with categorical features, preprocessing operators for encoding those features, like one-hot encoder, should be specified in the pipeline structure to improve pipelines' performance.
+Template was utilized in this study to specify the Dataset Selector as the first step of the pipeline, which enables the comparison between the two TPOT implementations, with and without DS.
 
 We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
@@ -248,7 +250,7 @@ When another subset is chosen in the final pipeline, this method still produces 
 For the RNASeq gene expression data, the best TPOT-DS pipeline selects DGM-5 and reports competitive holdout accuracy with standard TPOT (0.636 vs. 0.642) but with a smaller feature space (291 vs. 5,635 genes) and 20 times more computationally efficient.
 The best pipeline from TPOT-DS produces comparable holdout accuracy with XGBoost (0.75 vs. 0.725).
 
-Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline. 
+Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline.
 In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
@@ -260,7 +262,7 @@ Hence, the clinical diagnosis is the accumulative result of coordinated variatio
 Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may deploy expression quantitative trait loci (QTL) or interaction QTL analysis to discover disease-associated variants [@1T5OumxC].
 
 Complexity-interpretability trade-off is an important topic to discuss in the context of AutoML.
-While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable. 
+While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable.
 Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but yield suboptimal prediction accuracy.
 Finding the balance between pipeline complexity model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
 With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to the selected subset's lower dimension compared to that of the entire dataset.
@@ -271,8 +273,8 @@ Additionally, complexity reduction results in more efficient computation, which 
 
 A limitation of the DS analysis is the required pre-definition of subsets prior to executing TPOT-DS.
 While this characteristic of an intelligent system is desirable when *a prior* knowledge on the biomedical data is available, it might pose as a challenge when this knowledge is inadequate, such as when analyzing data of a brand-new disease.
-Nevertheless, one can perform a clustering method such as *k*-means to group features prior to performing TPOT-DS on the data. 
-Another limitation of the current implementation of TPOT-DS is its restricted ability to select only one subset. 
+Nevertheless, one can perform a clustering method such as *k*-means to group features prior to performing TPOT-DS on the data.
+Another limitation of the current implementation of TPOT-DS is its restricted ability to select only one subset.
 A future design to support tree structures for Template will enable TPOT-DS to identify more than one subset that have high predictive power of the outcome.
 A new operator that combines the data subsets will prove useful in this design.
 Extensions of TPOT-DS will also involve overlapping subsets, which will require pipeline complexity reformulation beyond the total number of operators included in a pipeline.
@@ -280,7 +282,10 @@ Specifically, in the case of overlapping subsets, the number of features in the 
 Extension of TPOT-DS to GWAS is straightforward.
 However, because of the low predictive power of variants in current GWAS, alternative metrics beside accuracy, balanced accuracy or area under the receiving operator characteristic curve will need to be designed and included in the fitness function of TPOT's evolutionary algorithm.
 
-[Conclusion]
+In this study, we developed two new operators for TPOT, Dataset Selector and Template, to enhance its performance on high-dimensional data by simplifying pipeline structure and reducing the computational expense.
+With domain knowledge, Dataset Selector can help users narrow down important features for further interpretation.
+Template largely increase flexibility of using TPOT via customizing pipeline structure, which potentially enrich the application of AutoML on different real world problems.
+
 
 ## References {.page_break_before}
 

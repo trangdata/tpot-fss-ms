@@ -1386,101 +1386,21 @@
   },
   {
     "URL": "http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
-    "title": "AutoML: Automatic Machine Learning — H2O 3.22.0.1 documentation",
-    "issued": {
-      "date-parts": [
-        [
-          2018,
-          10,
-          26
-        ]
-      ]
-    },
     "type": "webpage",
     "id": "sOdEzGT3"
   },
   {
     "URL": "http://www.jmlr.org/papers/v13/fortin12a.html",
-    "title": "DEAP: Evolutionary Algorithms Made Easy",
-    "container-title": "Journal of Machine Learning Research",
-    "issued": {
-      "date-parts": [
-        [
-          2012
-        ]
-      ]
-    },
-    "author": [
-      {
-        "family": "Fortin",
-        "given": "Félix-Antoine"
-      },
-      {
-        "family": "De Rainville",
-        "given": "François-Michel"
-      },
-      {
-        "family": "Gardner",
-        "given": "Marc-André"
-      },
-      {
-        "family": "Parizeau",
-        "given": "Marc"
-      },
-      {
-        "family": "Gagné",
-        "given": "Christian"
-      }
-    ],
     "type": "webpage",
     "id": "Gcs0HrMy"
   },
   {
     "URL": "http://www.jmlr.org/papers/v18/16-261.html",
-    "title": "Auto-WEKA 2.0: Automatic model selection and hyperparameter optimization in WEKA",
-    "container-title": "Journal of Machine Learning Research",
-    "issued": {
-      "date-parts": [
-        [
-          2017
-        ]
-      ]
-    },
-    "author": [
-      {
-        "family": "Kotthoff",
-        "given": "Lars"
-      },
-      {
-        "family": "Thornton",
-        "given": "Chris"
-      },
-      {
-        "family": "Hoos",
-        "given": "Holger H."
-      },
-      {
-        "family": "Hutter",
-        "given": "Frank"
-      },
-      {
-        "family": "Leyton-Brown",
-        "given": "Kevin"
-      }
-    ],
     "type": "webpage",
     "id": "ai67wdhp"
   },
   {
     "URL": "https://github.com/joeddav/devol",
-    "title": "joeddav/devol",
-    "container-title": "GitHub",
-    "author": [
-      {
-        "family": "joeddav",
-        "given": ""
-      }
-    ],
     "type": "webpage",
     "id": "1CQSBxFFr"
   },
@@ -1491,46 +1411,11 @@
   },
   {
     "URL": "https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning",
-    "title": "Efficient and Robust Automated Machine Learning",
-    "issued": {
-      "date-parts": [
-        [
-          2015
-        ]
-      ]
-    },
-    "author": [
-      {
-        "family": "Feurer",
-        "given": "Matthias"
-      },
-      {
-        "family": "Klein",
-        "given": "Aaron"
-      },
-      {
-        "family": "Eggensperger",
-        "given": "Katharina"
-      },
-      {
-        "family": "Springenberg",
-        "given": "Jost"
-      },
-      {
-        "family": "Blum",
-        "given": "Manuel"
-      },
-      {
-        "family": "Hutter",
-        "given": "Frank"
-      }
-    ],
     "type": "webpage",
     "id": "8JQDv397"
   },
   {
     "URL": "https://www.kaggle.com/",
-    "title": "Kaggle: Your Home for Data Science",
     "type": "webpage",
     "id": "1MHQyfXY"
   },
