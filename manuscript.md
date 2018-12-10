@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/481a6e8e9d0a674e48d5819882401d985abf25f0/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/7839d5db63ed25b15098ff605fbadd4aad4801b5/))
 was automatically generated
-from [trang1618/tpot-ds-ms@481a6e8](https://github.com/trang1618/tpot-ds-ms/tree/481a6e8e9d0a674e48d5819882401d985abf25f0)
+from [trang1618/tpot-ds-ms@7839d5d](https://github.com/trang1618/tpot-ds-ms/tree/7839d5db63ed25b15098ff605fbadd4aad4801b5)
 on December 10, 2018.
 </em></small>
 
@@ -283,9 +283,8 @@ Extension of TPOT-DS to GWAS is straightforward.
 However, because of the low predictive power of variants in current GWAS, alternative metrics beside accuracy, balanced accuracy or area under the receiving operator characteristic curve will need to be designed and included in the fitness function of TPOT's evolutionary algorithm.
 
 In this study, we developed two new operators for TPOT, Dataset Selector and Template, to enhance its performance on high-dimensional data by simplifying pipeline structure and reducing the computational expense.
-With domain knowledge, Dataset Selector can help users narrow down important features for further interpretation.
-Template largely increase flexibility of using TPOT via customizing pipeline structure, which potentially enrich the application of AutoML on different real world problems.
-
+Dataset Selector helps users leverage domain knowledge to narrow down important features for further interpretation, and Template largely increases flexibility of TPOT via customizing pipeline structure.
+Future extension and integration of these two operators have the potential to enrich the application of AutoML on different real world biomedical problems.
 
 ## References {.page_break_before}
 
