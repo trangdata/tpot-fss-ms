@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/4ea8f5cd12c1ac8149a400715ba3fee6761298d8/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/15506e2cf57f99fc0e94b1c020e4d6493f9863aa/))
 was automatically generated
-from [trang1618/tpot-ds-ms@4ea8f5c](https://github.com/trang1618/tpot-ds-ms/tree/4ea8f5cd12c1ac8149a400715ba3fee6761298d8)
+from [trang1618/tpot-ds-ms@15506e2](https://github.com/trang1618/tpot-ds-ms/tree/15506e2cf57f99fc0e94b1c020e4d6493f9863aa)
 on December 11, 2018.
 </em></small>
 
@@ -95,12 +95,12 @@ These intelligent systems increase the accessibility and scalability of various 
 Consequently, AutoML allows data scientists to focus their effort in applying their expertise in other important research components such as developing meaningful hypotheses or communicating the results.
 
 Various approaches have been employed to build AutoML systems for diverse applications.
-Auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] use Bayesian optimization for model selection and hyperparameter optimization.
+Auto-sklearn [@gHP5TebN=2969547] [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] use Bayesian optimization for model selection and hyperparameter optimization.
 Meanwhile, Recipe [@6ChydIkb] optimizes the ML pipeline through grammar-based genetic programming and Autostacker [@RiocGZOq] automates stacked ensembling.
 Both methods automate hyperparameter tuning and model selection using evolutionary algorithm.
 DEvol [@1CQSBxFFr] designs deep neural network specifically via genetic programming.
 H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
-Finally, Xcessiv [@iAZgC34a] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
+Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
 
 Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a ML pipeline to solve a supervised learning problem.
 At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
@@ -174,7 +174,7 @@ In the family of gradient boosted decision trees, XGBoost accounts for complex n
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using the `R` package `caret` [@6MvKCe21] version 6.0-80 with the repeated cross-validation algorithm and random search method. 
 
 ### Manuscript drafting
-This manuscript is written using Manubot [@1GGGHdsew], a software that supports open paper writing collaboration via GitHub using the Markdown language.
+This manuscript is collaboratively written using Manubot [@1GGGHdsew], a software that supports open paper writing via GitHub using the Markdown language.
 Manubot uses continuous integration to monitor changes and automatically update the manuscript.
 Consequently, the latest version of this manuscript is always available at [https://trang1618.github.io/tpot-ds-ms/](https://trang1618.github.io/tpot-ds-ms/).
 
@@ -223,7 +223,7 @@ For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MD
 Many of DGM-5's top genes were also shown to have statistically significant association with diagnosis phenotypes from a univariate analysis after multiple hypothesis testing correction [@p7dAO241].
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
-![Importance scores of the top twenty expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features in the best pipelines are provided in Table S2](images/importanceFeatures.svg){#fig:featImp width="100%"}
+![Importance scores of the top twenty expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features computed from the final classifiers of the best pipelines are provided in Table S2.](images/importanceFeatures.svg){#fig:featImp width="100%"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average cross-validated accuracy on the training set of 0.717 and out-of-sample accuracy of 0.563.
 Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
@@ -248,7 +248,7 @@ We simulated data of the similar scale and chalenging enough for the models to h
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
 When another subset is chosen in the final pipeline, this method still produces holdout accuracy comparable to that of standard TPOT and XGBoost (0.565 - 0.575).
 For the RNASeq gene expression data, the best TPOT-DS pipeline selects DGM-5 and reports competitive holdout accuracy with standard TPOT (0.636 vs. 0.642) but with a smaller feature space (291 vs. 5,635 genes) and 20 times more computationally efficient.
-The best pipeline from TPOT-DS produces comparable holdout accuracy with XGBoost (0.75 vs. 0.725).
+The best pipeline from TPOT-DS also produces comparable holdout accuracy with XGBoost (0.75 vs. 0.725).
 
 Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline.
 In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
@@ -259,7 +259,7 @@ While many of the top genes do not have direct disease association in MalaCards,
 Further, the RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
 The lack of previously found association of these genes with the phenotype is likely because MDD is a complex disorder of heterogeneous etiology [@sd1g3RjP].
 Hence, the clinical diagnosis is the accumulative result of coordinated variation of many genes in the module, especially ones with high importance scores.
-Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may deploy expression quantitative trait loci (QTL) or interaction QTL analysis to discover disease-associated variants [@1T5OumxC].
+Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may deploy expression quantitative trait loci (e-QTL) or interaction QTL analysis to discover disease-associated variants [@1T5OumxC].
 
 Complexity-interpretability trade-off is an important topic to discuss in the context of AutoML.
 While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable.
@@ -282,7 +282,7 @@ Specifically, in the case of overlapping subsets, the number of features in the 
 Extension of TPOT-DS to GWAS is straightforward.
 However, because of the low predictive power of variants in current GWAS, alternative metrics beside accuracy, balanced accuracy or area under the receiving operator characteristic curve will need to be designed and included in the fitness function of TPOT's evolutionary algorithm.
 
-In this study, we developed two new operators for TPOT, Dataset Selector and Template, to enhance its performance on high-dimensional data by simplifying pipeline structure and reducing the computational expense.
+In this study, we developed two new operators for TPOT, Dataset Selector and Template, to enhance its performance on high-dimensional data by simplifying the pipeline structure and reducing the computational expense.
 Dataset Selector helps users leverage domain knowledge to narrow down important features for further interpretation, and Template largely increases flexibility of TPOT via customizing pipeline structure.
 Future extension and integration of these two operators have the potential to enrich the application of AutoML on different real world biomedical problems.
 

@@ -1400,9 +1400,19 @@
     "id": "ai67wdhp"
   },
   {
+    "URL": "https://dl.acm.org/citation.cfm?id",
+    "type": "webpage",
+    "id": "gHP5TebN"
+  },
+  {
     "URL": "https://github.com/joeddav/devol",
     "type": "webpage",
     "id": "1CQSBxFFr"
+  },
+  {
+    "URL": "https://github.com/reiinakano/xcessiv",
+    "type": "webpage",
+    "id": "HA8l3lpi"
   },
   {
     "URL": "https://greenelab.github.io/meta-review/",
@@ -1418,10 +1428,5 @@
     "URL": "https://www.kaggle.com/",
     "type": "webpage",
     "id": "1MHQyfXY"
-  },
-  {
-    "URL": "https://xcessiv.readthedocs.io",
-    "type": "webpage",
-    "id": "iAZgC34a"
   }
 ]
