@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-11'
+date-meta: '2018-12-12'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/d84728a27663f449400d0d7391847c995a27179d/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/2f4cfdf781111be650aa04f7da55d7243a238532/))
 was automatically generated
-from [trang1618/tpot-ds-ms@d84728a](https://github.com/trang1618/tpot-ds-ms/tree/d84728a27663f449400d0d7391847c995a27179d)
-on December 11, 2018.
+from [trang1618/tpot-ds-ms@2f4cfdf](https://github.com/trang1618/tpot-ds-ms/tree/2f4cfdf781111be650aa04f7da55d7243a238532)
+on December 12, 2018.
 </em></small>
 
 ## Authors
@@ -85,6 +85,15 @@ We show that DS and Template help reduce TPOT computation time and potentially p
 Our simulations show TPOT-DS's outperformance compared to the a tuned XGBoost model and standard TPOT implementation.
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
 Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
+
+## Author Summary
+
+Big data become more and more popular in many fields, like meteorology, complex physics simulations, large scale imaging, genomics, biomedical research, environmental research and more.
+TPOT is a Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming and has served as a data science assistant for helping user to find best analysis solution.
+However, big data challenges this tool by extremely long runtime, highly computational expense as well complex pipeline with low interpretability.
+To solve those issues, we added two features, Template and Dataset Selector, into TPOT to reduce computational expense with domain knowledges.
+Our approaches make this data science assistant has more flexibility on big data analysis.
+
 
 ## Introduction
 
