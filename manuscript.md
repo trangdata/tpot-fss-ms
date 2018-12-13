@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-12'
+date-meta: '2018-12-13'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/2f4cfdf781111be650aa04f7da55d7243a238532/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/d11c73d200c5ca0fddd7c169e9761abb48a6bed1/))
 was automatically generated
-from [trang1618/tpot-ds-ms@2f4cfdf](https://github.com/trang1618/tpot-ds-ms/tree/2f4cfdf781111be650aa04f7da55d7243a238532)
-on December 12, 2018.
+from [trang1618/tpot-ds-ms@d11c73d](https://github.com/trang1618/tpot-ds-ms/tree/d11c73d200c5ca0fddd7c169e9761abb48a6bed1)
+on December 13, 2018.
 </em></small>
 
 ## Authors
@@ -88,12 +88,10 @@ Independent of the previous study that identified significant association with d
 
 ## Author Summary
 
-Big data become more and more popular in many fields, like meteorology, complex physics simulations, large scale imaging, genomics, biomedical research, environmental research and more.
-TPOT is a Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming and has served as a data science assistant for helping user to find best analysis solution.
-However, big data challenges this tool by extremely long runtime, highly computational expense as well complex pipeline with low interpretability.
-To solve those issues, we added two features, Template and Dataset Selector, into TPOT to reduce computational expense with domain knowledges.
-Our approaches make this data science assistant has more flexibility on big data analysis.
-
+Big data have recently become prevalent in many fields including meteorology, complex physics simulations, large scale imaging, genomics, biomedical research, environmental research and more.
+However, big data present challenges for Automated Machine Learning (AutoML) tools that help data scientists find best analysis solution with the long runtime, high computational expense as well complex pipeline with low interpretability.
+TPOT, a Python AutoML tool that uses genetic programming to optimize machine learning pipelines for analyzing biomedical data, faces the same challenges in the early implementations.
+We developed two novel features for TPOT, Template and Dataset Selector, that leverage domain knowledge, greatly reduce the computational expense and flexibly extend TPOT's application to biomedical big data analysis.
 
 ## Introduction
 
