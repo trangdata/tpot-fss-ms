@@ -1,4 +1,4 @@
-# Expanding TPOT to transcriptomics applications
+# Scaling tree-based automated machine learning to biomedical big data with a dataset selector
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
