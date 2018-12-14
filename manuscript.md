@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-13'
+date-meta: '2018-12-14'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/f6b40543e19286933deff853776232a3d8b2131f/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/b7ae18fa7c0881dfa303dcd2f0843fc29546cbf0/))
 was automatically generated
-from [trang1618/tpot-ds-ms@f6b4054](https://github.com/trang1618/tpot-ds-ms/tree/f6b40543e19286933deff853776232a3d8b2131f)
-on December 13, 2018.
+from [trang1618/tpot-ds-ms@b7ae18f](https://github.com/trang1618/tpot-ds-ms/tree/b7ae18fa7c0881dfa303dcd2f0843fc29546cbf0)
+on December 14, 2018.
 </em></small>
 
 ## Authors
@@ -73,7 +73,7 @@ on December 13, 2018.
 
 ## Abstract {.page_break_before}
 
-Automated machine learning (AutoML) systems are helpful data science assistants designed to scan the data for novel features, select an appropriate supervised learning model and optimize its parameters.
+Automated machine learning (AutoML) systems are helpful data science assistants designed to scan data for novel features, select appropriate supervised learning models and optimize their parameters.
 For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist's prediction problem.
 However, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
 We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. 
@@ -163,15 +163,17 @@ In the current study, to be consistent with the real expression dataset (describ
 Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network random normal expression levels and permute the values of targeted features within the cases to generate interactions. 
 Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-DS’s performance in accommodating large numbers of non-predictive features.
 
+To closely resemble the module size distribution in the RNA-Seq data, we first fit a $\Gamma$ distribution to the observed module sizes then sample from this distribution values for the simulated subset size, before the total number of features reaches 4,800 (number of background features). Then, the background features were randomly placed in each subset corresponding to its size. Also, for each subset $S_i, i = 1, \dots, n$, a functional feature $s_j$ belongs to the subset with the probability
+$$P(s_j \in S_i) \sim 1.618^{-i}$$ {#eq:p_subset}
+where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. 
+
 #### Real-world RNA-Seq expression data
 We employed TPOT-DS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. [@p7dAO241]. 
 Gene expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering. 
 Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and are now used in the current study to test for association with MDD status. 
 We use the 23 subsets of interconnected genes called depression gene modules (DGMs) identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the DS operator.
-
-To closely resemble the module size distribution in the RNA-Seq data, we first fit a $\Gamma$ distribution to the observed module sizes then sample from this distribution values for the simulated subset size, before the total number of features reaches 4,800 (number of background features). Then, the background features were randomly placed in each subset corresponding to its size. Also, for each subset $S_i, i = 1, \dots, n$, a functional feature $s_j$ belongs to the subset with the probability
-$$P(s_j \in S_i) \sim 1.618^{-i}$$ {#eq:p_subset}
-where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. 
+We remark that these modules were constructed by an unsupervised machine learning method with dynamic tree cutting from a co-expression network.
+As a result, this prior knowledge of the gene structure does not depend on the diagnostic phenotype and thus yields no bias in the downstream analysis of TPOT-DS.
 
 ### Performance assessment
 For each simulated and real-world dataset, after randomly splitting the entire data in two balanced smaller sets (75% training and 25% holdout), we trained TPOT-DS with the Template `Dataset Selector-Transformer-Classifier` on training data to predict class (e.g., diagnostic phenotype in real-world data) in the holdout set.
