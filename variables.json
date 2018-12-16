@@ -1,5 +1,5 @@
 {
-  "date": "December 14, 2018",
+  "date": "December 16, 2018",
   "authors": [
     {
       "github": "trang1618",
@@ -58,17 +58,17 @@
     "repo_slug": "trang1618/tpot-ds-ms",
     "repo_owner": "trang1618",
     "repo_name": "tpot-ds-ms",
-    "commit": "b7ae18fa7c0881dfa303dcd2f0843fc29546cbf0"
+    "commit": "74e2ad5d0b0849476d21470d728d817c0ffb958f"
   },
   "manuscript_stats": {
     "reference_counts": {
       "arxiv": 4,
-      "doi": 20,
-      "pmid": 2,
+      "doi": 21,
+      "pmid": 3,
       "raw": 1,
-      "url": 8,
-      "total": 35
+      "url": 9,
+      "total": 38
     },
-    "word_count": 4553
+    "word_count": 4656
   }
 }

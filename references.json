@@ -1123,6 +1123,52 @@
     "id": "NKnMeQUs"
   },
   {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1186/s13040-017-0154-4",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "PMLB: a large benchmark suite for machine learning evaluation and comparison",
+    "volume": "10",
+    "author": [
+      {
+        "given": "Randal S.",
+        "family": "Olson"
+      },
+      {
+        "given": "William",
+        "family": "La Cava"
+      },
+      {
+        "given": "Patryk",
+        "family": "Orzechowski"
+      },
+      {
+        "given": "Ryan J.",
+        "family": "Urbanowicz"
+      },
+      {
+        "given": "Jason H.",
+        "family": "Moore"
+      }
+    ],
+    "container-title": "BioData Mining",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          12
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfrbw5",
+    "container-title-short": "BioData Mining",
+    "PMCID": "PMC5725843",
+    "PMID": "29238404",
+    "id": "BnXfrP0P"
+  },
+  {
     "publisher": "Public Library of Science (PLoS)",
     "issue": "3",
     "DOI": "10.1371/journal.pone.0058880",
@@ -1352,6 +1398,49 @@
     "id": "19yG9lS3X"
   },
   {
+    "title": "Data-driven advice for applying machine learning to bioinformatics problems.",
+    "volume": "23",
+    "page": "192-203",
+    "container-title": "Pacific Symposium on Biocomputing. Pacific Symposium on Biocomputing",
+    "container-title-short": "Pac Symp Biocomput",
+    "ISSN": "2335-6936",
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "Randal S",
+        "family": "Olson"
+      },
+      {
+        "given": "William La",
+        "family": "Cava"
+      },
+      {
+        "given": "Zairah",
+        "family": "Mustahsan"
+      },
+      {
+        "given": "Akshay",
+        "family": "Varik"
+      },
+      {
+        "given": "Jason H",
+        "family": "Moore"
+      }
+    ],
+    "PMID": "29218881",
+    "PMCID": "PMC5890912",
+    "abstract": "As the bioinformatics field grows, it must keep pace not only with new data but with new algorithms. Here we contribute a thorough analysis of 13 state-of-the-art, commonly used machine learning algorithms on a set of 165 publicly available classification problems in order to provide data-driven algorithm recommendations to current researchers. We present a number of statistical and visual comparisons of algorithm performance and quantify the effect of model selection and algorithm tuning for each algorithm and dataset. The analysis culminates in the recommendation of five algorithms with hyperparameters that maximize classifier performance across the tested problems, as well as general guidelines for applying machine learning to supervised classification problems.",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/29218881",
+    "type": "article-journal",
+    "id": "h0b16kU4"
+  },
+  {
     "publisher": "Morgan Kaufmann Publishers Inc.",
     "type": "book",
     "title": "Genetic Programming: An Introduction: on the Automatic Evolution of Computer Programs and Its Applications",
@@ -1413,6 +1502,11 @@
     "URL": "https://greenelab.github.io/meta-review/",
     "type": "webpage",
     "id": "1GGGHdsew"
+  },
+  {
+    "URL": "https://hal.archives-ouvertes.fr/hal-00650905/",
+    "type": "webpage",
+    "id": "1iuWTU7i"
   },
   {
     "URL": "https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning",

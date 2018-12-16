@@ -20,11 +20,13 @@ string	citation	standard_citation	citation_id
 @doi:10.1162/evco.1995.3.2.199	doi:10.1162/evco.1995.3.2.199	doi:10.1162/evco.1995.3.2.199	KgFuJ0Jv
 @doi:10.1176/appi.ajp.2009.08121760	doi:10.1176/appi.ajp.2009.08121760	doi:10.1176/appi.ajp.2009.08121760	XKNZFJkN
 @doi:10.1186/s13040-015-0040-x	doi:10.1186/s13040-015-0040-x	doi:10.1186/s13040-015-0040-x	NKnMeQUs
+@doi:10.1186/s13040-017-0154-4	doi:10.1186/s13040-017-0154-4	doi:10.1186/s13040-017-0154-4	BnXfrP0P
 @doi:10.1371/journal.pone.0058880	doi:10.1371/journal.pone.0058880	doi:10.1371/journal.pone.0058880	lAZSHU1O
 @doi:10.18637/jss.v028.i05	doi:10.18637/jss.v028.i05	doi:10.18637/jss.v028.i05	6MvKCe21
 @doi:10.3390/en10081168	doi:10.3390/en10081168	doi:10.3390/en10081168	19eUrsX1M
 @pmid:10384158	pmid:10384158	pmid:10384158	Okd6uiRx
 @pmid:19125212	pmid:19125212	pmid:19125212	19yG9lS3X
+@pmid:29218881	pmid:29218881	pmid:29218881	h0b16kU4
 @raw:GPbook	raw:GPbook	raw:GPbook	NopW1Vw3
 @url:http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html	url:http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html	url:http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html	sOdEzGT3
 @url:http://www.jmlr.org/papers/v13/fortin12a.html	url:http://www.jmlr.org/papers/v13/fortin12a.html	url:http://www.jmlr.org/papers/v13/fortin12a.html	Gcs0HrMy
@@ -32,5 +34,6 @@ string	citation	standard_citation	citation_id
 @url:https://github.com/joeddav/devol	url:https://github.com/joeddav/devol	url:https://github.com/joeddav/devol	1CQSBxFFr
 @url:https://github.com/reiinakano/xcessiv	url:https://github.com/reiinakano/xcessiv	url:https://github.com/reiinakano/xcessiv	HA8l3lpi
 @url:https://greenelab.github.io/meta-review/	url:https://greenelab.github.io/meta-review/	url:https://greenelab.github.io/meta-review/	1GGGHdsew
+@url:https://hal.archives-ouvertes.fr/hal-00650905/	url:https://hal.archives-ouvertes.fr/hal-00650905/	url:https://hal.archives-ouvertes.fr/hal-00650905/	1iuWTU7i
 @url:https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning	url:https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning	url:https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning	8JQDv397
 @url:https://www.kaggle.com/	url:https://www.kaggle.com/	url:https://www.kaggle.com/	1MHQyfXY

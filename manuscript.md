@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-14'
+date-meta: '2018-12-16'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/b7ae18fa7c0881dfa303dcd2f0843fc29546cbf0/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/74e2ad5d0b0849476d21470d728d817c0ffb958f/))
 was automatically generated
-from [trang1618/tpot-ds-ms@b7ae18f](https://github.com/trang1618/tpot-ds-ms/tree/b7ae18fa7c0881dfa303dcd2f0843fc29546cbf0)
-on December 14, 2018.
+from [trang1618/tpot-ds-ms@74e2ad5](https://github.com/trang1618/tpot-ds-ms/tree/74e2ad5d0b0849476d21470d728d817c0ffb958f)
+on December 16, 2018.
 </em></small>
 
 ## Authors
@@ -77,14 +77,14 @@ Automated machine learning (AutoML) systems are helpful data science assistants 
 For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist's prediction problem.
 However, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
 We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. 
-Dataset selector (DS) provides the option to specify subsets of the features, assuming the signals come from specific subsets.
-DS reduces the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
-Consequently, DS makes TPOT applicable on big data by slicing the dataset into smaller sets of features and allowing genetic algorithm to select the best subset in the final pipeline.
+Dataset selector (DS) provides the option to specify subsets of the features as separate datasets, assuming the signals come from one or more of these specific data subsets.
+Built in at the beginning of each pipeline structure, DS reduces the computational expense of TPOT to only evaluate on a smaller subset of data rather than the entire dataset.
+Consequently, DS increases TPOT's efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline.
 Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline.
 We show that DS and Template help reduce TPOT computation time and potentially provide more interpretable results.
-Our simulations show TPOT-DS's outperformance compared to the a tuned XGBoost model and standard TPOT implementation.
+Our simulations show TPOT-DS outperformed a tuned XGBoost model and standard TPOT implementation.
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
-Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
+Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, in an automated fashion, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
 ## Author Summary
 
@@ -95,7 +95,8 @@ We developed two novel features for TPOT, Template and Dataset Selector, that le
 
 ## Introduction
 
-For many bioinformatics problems of classifying individuals into clinical categories from high-dimensional biological data, choosing a classifier is merely one step of the arduous process that leads to predictions.
+For many bioinformatics problems of classifying individuals into clinical categories from high-dimensional biological data, performance of a machine learning (ML) model depend greatly on the problem it is applied to [@BnXfrP0P;@h0b16kU4].
+In addition, choosing a classifier is merely one step of the arduous process that leads to predictions.
 To detect patterns among features (*e.g.*, clinical variables) and their associations with the outcome (*e.g.*, clinical diagnosis), a data scientist typically has to design and test different complex machine learning (ML) frameworks that consist of data exploration, feature engineering, model selection and prediction.
 Automated machine learning (AutoML) systems were developed to automate this challenging and time-consuming process.
 These intelligent systems increase the accessibility and scalability of various machine learning applications by efficiently solving an optimization problem to discover pipelines that yield satisfactory outcomes, such as prediction accuracy.
@@ -109,18 +110,16 @@ DEvol [@1CQSBxFFr] designs deep neural network specifically via genetic programm
 H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
 Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
 
-Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that automates the laborious process of designing a ML pipeline to solve a supervised learning problem.
-At its core, TPOT uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
-While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering in building a complete pipeline. Applying GP with the NSGA-II Pareto optimization [@iBP5Naag], TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity.
-Specifically, to automatically generate and optimize these machine learning pipelines, TPOT utilizes the Python package DEAP [@Gcs0HrMy] to implement the GP algorithm.		
-
+Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
+While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering by evaludating the complete pipelines based on their cross-validated score such as mean squared error or balanced accuracy.
 Given no a priori knowledge about the problem, TPOT has been showed to frequently outperform standard machine learning analyses [@QkGSlAB3; @JEn7WIoN].
 Effort has been made to specialize TPOT for human genetics research, which results in a useful extended version of TPOT, TPOT-MDR, that features Multifactor Dimensionality Reduction and an Expert Knowledge Filter [@AvvI4W9K].
-However, at the current stage, TPOT still requires great computational expense to analyze large datasets such as in genome-wide association studies or gene expression analyses. Consequently, application of TPOT on real-world datasets has been limited to small sets of features [@3LGbkjqK].
+However, at the current stage, TPOT still requires great computational expense to analyze large datasets such as in genome-wide association studies (GWAS) or gene expression analyses. 
+Consequently, application of TPOT on real-world datasets has been limited to small sets of features [@3LGbkjqK].
 
 In this work, we introduce two new features implemented in TPOT that helps increase the system’s scalability.
 First, the Dataset Selector (DS) allows the users to pass specific subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
-Consequently, DS makes TPOT applicable on large data sets by slicing the data into smaller sets of features (*e.g.* genes) and allowing genetic algorithm to select the best subset in the final pipeline.
+Consequently, DS increases TPOT's efficiency in application on large data sets by slicing the data into smaller sets of features (*e.g.* genes) and allowing genetic algorithm to select the best subset in the final pipeline.
 Second, Template enables the option for strongly typed GP, a method to enforce type constraints in genetic programming.
 By letting users specify a desired structure of the resulting machine learning pipeline, Template helps reduce TPOT computation time and potentially provide more interpretable results.
 
@@ -131,10 +130,17 @@ Then, we provide detail of a real-world RNA-Seq expression dataset and describe 
 Finally, we discuss other methods and performance metrics for comparison.
 The `R` and `Python` scripts for simulation and analysis are publicly available on the GitHub repository https://github.com/lelaboratoire/tpot-ds.
 
+### Tree-based Pipeline Optimization Tool
+Tree-based Pipeline Optimization Tool (TPOT) automates the laborious process of designing a ML pipeline by representing pipelines as binary expression trees with ML operators as primitives.
+Pipeline elements include algorithms from the extensive library of scikit-learn [@1iuWTU7i] as well as other efficient implementations such as extreme gradient boosting.
+Applying GP with the NSGA-II Pareto optimization [@iBP5Naag], TPOT optimizes the accuracy achieved by the pipeline while accounting for its complexity.
+Specifically, to automatically generate and optimize these machine learning pipelines, TPOT utilizes the Python package DEAP [@Gcs0HrMy] to implement the GP algorithm.
+Implementation details can be found at TPOT's active Github repository [https://github.com/EpistasisLab/tpot](https://github.com/EpistasisLab/tpot).
+
 ### Dataset Selector 
 TPOT's current operators include sets of feature pre-processors, feature transformers, feature selection techniques, and supervised classifiers and regressions. 
 In this study, we introduce a new operator called Dataset Selector (DS) that enables biologically guided group-level feature selection. 
-Specifically, taking place at the very first stage of the pipeline, DS passes only a specific subset of the features onwards. 
+Specifically, taking place at the very first stage of the pipeline, DS passes only a specific subset of the features onwards, effectively slicing the large original dataset into smaller ones. 
 Hence, with DS, users can specify subsets of features of interest to reduce the feature space’s dimension at pipeline initialization. 
 From predefined subsets of features, the DS operator allows TPOT to select the best subset that maximize average accuracy in k-fold cross validation (5-fold by default). 
 
@@ -273,8 +279,8 @@ Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may d
 Complexity-interpretability trade-off is an important topic to discuss in the context of AutoML.
 While arbitrarily-shaped pipelines may yield predictions competitive to human-level performance, these pipelines are often too complex to be interpretable.
 Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but yield suboptimal prediction accuracy.
-Finding the balance between pipeline complexity model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
-With dataset selector, each pipeline individual of a TPOT generation during optimization holds lower complexity due to the selected subset's lower dimension compared to that of the entire dataset.
+Finding the balance between pipeline complexity, model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
+With DS, each pipeline individual of a TPOT generation during optimization holds lower complexity due to the selected subset's lower dimension compared to that of the entire dataset.
 We hope that, with the complexity reduction from imposing a strongly-type GP template and dataset selector, a small loss in dataset-specific predictive accuracy can be compensated by considerable increase in interpretability and generalizability.
 In this study, the resulting TPOT-DS pipelines are more interpretable with only two simple optimized operators after the dataset selector: a transformer and a classifier.
 In the case of the expression analysis, these pipelines also highlight two small sets of interconnected genes that contain candidates for MDD and related disorders.
