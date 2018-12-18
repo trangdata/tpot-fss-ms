@@ -1247,33 +1247,6 @@
     "id": "lAZSHU1O"
   },
   {
-    "publisher": "Foundation for Open Access Statistic",
-    "issue": "5",
-    "DOI": "10.18637/jss.v028.i05",
-    "type": "article-journal",
-    "source": "Crossref",
-    "title": "Building Predictive Models inRUsing thecaretPackage",
-    "volume": "28",
-    "author": [
-      {
-        "given": "Max",
-        "family": "Kuhn"
-      }
-    ],
-    "container-title": "Journal of Statistical Software",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2008
-        ]
-      ]
-    },
-    "URL": "https://doi.org/gdgzwf",
-    "container-title-short": "J. Stat. Soft.",
-    "id": "6MvKCe21"
-  },
-  {
     "publisher": "MDPI AG",
     "issue": "8",
     "DOI": "10.3390/en10081168",
