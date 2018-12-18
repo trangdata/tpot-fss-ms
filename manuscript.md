@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/5629a3c040351c0f4b4d1c24e5cd970c6e1a82d6/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/879f354ba8a3980a81143f2fa07e0c88e8d3ee64/))
 was automatically generated
-from [trang1618/tpot-ds-ms@5629a3c](https://github.com/trang1618/tpot-ds-ms/tree/5629a3c040351c0f4b4d1c24e5cd970c6e1a82d6)
+from [trang1618/tpot-ds-ms@879f354](https://github.com/trang1618/tpot-ds-ms/tree/879f354ba8a3980a81143f2fa07e0c88e8d3ee64)
 on December 18, 2018.
 </em></small>
 
@@ -200,7 +200,7 @@ Consequently, the latest version of this manuscript is always available at [http
 ## Results
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
 
-### Subset selection
+### Evaluation of TPOT's subset selection ability
 #### Simulated data
 We compare the accuracy of each method for a simulated dataset with moderate interaction effect.
 We assign values of the effect size in the simulations to generate adequately challenging datasets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1.
@@ -244,11 +244,11 @@ After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:rea
 Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
 Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05 [@p7dAO241].
 
-### Performance evaluation
+### Accuracy assessment
 For the simulated data, across all 100 model fits, the optimal TPOT-DS pipeline yields an average holdout prediction accuracy of 0.65, while the standard TPOT without DS and tuned XGBoost models respectively report an average holdout accuracy of 0.48 and 0.49 (Fig. {@fig:compAcc}).
 This overfitting in the performance of these other two models is likely due to the models' high flexibility that *over-learns* the training data, especially with the presence of many noisy background variables.
 
-![Performance comparison of three models: tuned XGBoost, optimal pipeline from standard TPOT and optimal pipeline from TPOT-DS.](compareAcc.svg){#fig:compAcc width="90%"}
+![Performance comparison of three models: tuned XGBoost, optimal pipeline from standard TPOT and optimal pipeline from TPOT-DS.](images/compareAcc.svg){#fig:compAcc width="90%"}
 
 Meanwhile, for the real-world expression data, the optimal TPOT-DS pipeline yields an average holdout prediction accuracy of 0.68, while the standard TPOT without DS and tuned XGBoost models respectively produces an average holdout accuracy of 0.60 and 0.59 across all 100 model fits (Fig. {@fig:compAcc}). In summary, the optimal models from standard TPOT and XGBoost perform better in real-world data compared to simulated data but still worse than that of TPOT-DS.
 
