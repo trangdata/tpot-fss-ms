@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/ec193403a6490c0f7bede7cb8651485f3c93babe/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/c77b3f7c61ff528368d00a50b6746d75011b795b/))
 was automatically generated
-from [trang1618/tpot-ds-ms@ec19340](https://github.com/trang1618/tpot-ds-ms/tree/ec193403a6490c0f7bede7cb8651485f3c93babe)
+from [trang1618/tpot-ds-ms@c77b3f7](https://github.com/trang1618/tpot-ds-ms/tree/c77b3f7c61ff528368d00a50b6746d75011b795b)
 on December 19, 2018.
 </em></small>
 
@@ -82,7 +82,7 @@ Built in at the beginning of each pipeline structure, DS reduces the computation
 Consequently, DS increases TPOT's efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline.
 Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline.
 We show that DS and Template help reduce TPOT computation time and potentially provide more interpretable results.
-Our simulations show TPOT-DS outperformed a tuned XGBoost model and standard TPOT implementation.
+Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and standard TPOT implementation.
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
 Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, in an automated fashion, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
