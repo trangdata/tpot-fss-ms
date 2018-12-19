@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/823020982027deb6d471680bb2b0ab6c04d8472d/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/a616d0987b49a4a2dff239311f1279fd29269792/))
 was automatically generated
-from [trang1618/tpot-ds-ms@8230209](https://github.com/trang1618/tpot-ds-ms/tree/823020982027deb6d471680bb2b0ab6c04d8472d)
+from [trang1618/tpot-ds-ms@a616d09](https://github.com/trang1618/tpot-ds-ms/tree/a616d0987b49a4a2dff239311f1279fd29269792)
 on December 19, 2018.
 </em></small>
 
@@ -200,51 +200,29 @@ Consequently, the latest version of this manuscript is always available at [http
 ## Results
 Our main goal is to test the performance of methods to identify features that discriminate between groups and optimize the classification accuracy.
 
-### Evaluation of TPOT's subset selection ability
-#### Simulated data
-We compare the accuracy of each method for a simulated dataset with moderate interaction effect.
-We assign values of the effect size in the simulations to generate adequately challenging datasets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1.
-The data set is split into 75% training and 25% holdout.
-The three models, TPOT-DS, standard TPOT and XGBoost, are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy. 
-Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
-According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
-Therefore, our first aim is to determine how well TPOT-DS can identify the first subset ($S_1$) that contains the largest number of informative features.
-The general workflow of TPOT-DS is shown in Figure {@fig:flow} along with the optimal pipeline found with the specified template `Dataset Selector-Transformer-Classifier` in simulated data (top) and real-world expression data (bottom).
+### The general workflow of TPOT-DS
+The template `Dataset Selector-Transformer-Classifier` specifies a simple general workflow of TPOT-DS (Fig. {@fig:flow}).
 
 ![TPOT-DS's workflow and example pipelines. Optimal pipeline with optimized parameters are shown for simulated data (top) and real-world data (bottom).](images/flow.png){#fig:flow width="90%"}
 
+As discussed earlier in the Methods section, the optimal pipeline from TPOT-DS and standard TPOT is selected to be closest to the 90th percentile of the cross-validation accuracy.
+The optimal model of XGBoost holds properly tuned hyperparameters.
 For simulated dataset, the optimal pipeline selects subset $S_1$ then constructs an approximate feature map for a linear kernel with Nystroem, which uses a subset of the data as basis for the approximation.
 The final prediction is made with an extra-trees classifier that fits a number of randomized decision trees on various sub-samples of the dataset with the presented optimized parameters (Fig. {@fig:flow}).
-
-In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simDS}), with the highest average holdout accuracy (0.69 across all 75 pipelines).
-
-![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset *s1* is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS width="100%"}
-
-#### RNA-Seq expression data
-We apply standard TPOT, TPOT-DS and XGBoost to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls (HC) described in [@p7dAO241].
-The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
-We excluded 277 genes that did not belong to 23 subsets of interconnected genes (DGMs) so that the dataset remains the same across the three methods.
-As with simulated data, all models are built from the training dataset (61 HC, 56 MDD), then the trained model is applied to the independent holdout data (18 HC, 22 MDD) to obtain the generalization accuracy.
-
-The most optimal pipeline selects subset DGM-5 then scales each expression feature by its maximum absolute value (Fig. {@fig:flow}).
+For the real-world dataset, the most optimal pipeline selects subset DGM-5 then scales each expression feature by its maximum absolute value.
 Similar to the best pipeline for simulated data, the final prediction is made with an extra-trees classifier with a different set of optimized parameters (Fig. {@fig:flow}).
 
-![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS width="80%"}
+### Accuracy assessment of optimal pipelines
+We compare the accuracy produced by optimal models from TPOT-DS, standard TPOT and XGBoost on classifying a simulated dataset with moderate interaction effect.
+We assign values of the effect size in the simulations to generate adequately challenging datasets so that the methods' accuracies stay moderate and do not cluster around 0.5 or 1.
+The data set is split into 75% training and 25% holdout.
+The three models are built from the training dataset, then the trained model is applied to the independent holdout data to obtain the generalization accuracy. 
 
-In 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with the highest average holdout accuracy of 0.636 across 64 pipelines.
-In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
-Although there is no direct link between the top genes of the module (Fig. {@fig:featImp}a) and MDD in the literature, many of these genes interact with other MDD-related genes.
-For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl].
-Many of DGM-5's top genes were also shown to have statistically significant association with diagnosis phenotypes from a univariate analysis after multiple hypothesis testing correction [@p7dAO241].
-Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
+We also apply the three methods to the RNA-Seq study of 78 major depressive disorder (MDD) subjects and 79 healthy controls (HC) described in [@p7dAO241].
+The dataset contains 5,912 genes after preprocessing and filtering (see Methods for more detail).
+We excluded 277 genes that did not belong to 23 subsets of interconnected genes (DGMs) so that the dataset remains the same across the three methods.
+As with simulated data, all models are built from the training dataset (61 HC, 56 MDD), then the trained model is applied to the independent holdout data (18 HC, 22 MDD).
 
-![Importance scores of the top twenty expression features in the best pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features computed from the final classifiers of the best pipelines are provided in Table S2.](images/importanceFeatures.svg){#fig:featImp width="100%"}
-
-After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average holdout accuracy of 0.563 across 30 pipelines.
-Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
-Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05 [@p7dAO241].
-
-### Accuracy assessment
 For the simulated data, across all 100 model fits, the optimal TPOT-DS pipeline yields an average holdout prediction accuracy of 0.65, while the standard TPOT without DS and tuned XGBoost models respectively report an average holdout accuracy of 0.48 and 0.49 (Fig. {@fig:compAcc}).
 This overfitting in the performance of these other two models is likely due to the models' high flexibility that *over-learns* the training data, especially with the presence of many noisy background variables.
 
@@ -254,6 +232,32 @@ Meanwhile, for the real-world expression data, the optimal TPOT-DS pipeline yiel
 In summary, the optimal models from standard TPOT and XGBoost perform better in real-world data compared to simulated data but still worse than that of TPOT-DS.
 In both datasets, separate Welch two-sample one-sided *t*-tests show TPOT-DS optimal pipelines significantly outperform those of XGBoost and standard TPOT (all *p* values $<10^{-15}$).
 
+### Consistency in selecting subsets of TPOT-DS
+
+![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset *s1* is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS width="100%"}
+
+Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
+According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
+Therefore, our aim is to determine how well TPOT-DS can identify the first subset ($S_1$) that contains the largest number of informative features.
+In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simDS}), with the highest average holdout accuracy (0.69 across all 75 pipelines).
+
+![TPOT-DS's holdout accuracy in RNA-Seq expression data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5 on average produces higher MDD predition accuracy in the holdout set.](images/real_100.svg){#fig:realDS width="80%"}
+
+For the expression data, in 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with the highest average holdout accuracy of 0.636 across 64 pipelines.
+In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
+Although there is no direct link between the top genes of the module (Fig. {@fig:featImp}a) and MDD in the literature, many of these genes interact with other MDD-related genes.
+For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl].
+Many of DGM-5's top genes were also shown to have statistically significant association with diagnosis phenotypes from a univariate analysis after multiple hypothesis testing correction [@p7dAO241].
+Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
+
+![Permutation importance scores of the top twenty expression features in the optimal pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features computed by permutation from the optimal pipelines are provided in Table S2.](images/importanceFeatures.svg){#fig:featImp width="100%"}
+
+After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average holdout accuracy of 0.563 across 30 pipelines.
+Previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
+Similar to DGM-5, in the literature, there is no direct link between MDD and the top genes in the module (Fig. {@fig:featImp}b).
+Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05 [@p7dAO241].
+
+
 ### Computational expense
 For a dataset of the size simulated in our study (*m*=200 samples and *p* = 5000 attributes), TPOT-DS has a 65-minute runtime on a low performance computing machine with an Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB of RAM, whereas standard TPOT has a 18.5-hour runtime, approximately 17 times slower. On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average 40 minutes, whereas standard TPOT takes 13.3 hours, approximately 20 times slower.
 
@@ -261,12 +265,12 @@ For a dataset of the size simulated in our study (*m*=200 samples and *p* = 5000
 To our knowledge, TPOT-DS is the first AutoML tool to offer the option of feature selection at the group level.
 Previously, it was computationally expensive for any AutoML program to process biomedical big data.
 TPOT-DS is able to identify the most meaningful group of features to include in the prediction pipeline.
-We assessed TPOT-DS's out-of-sample prediction accuracy compared to standard TPOT and XGBoost, another state-of-the-art machine learning method.
-We applied TPOT-DS to real-world expression data to demonstrate the identification of biologically relevant groups of genes.
+We assess TPOT-DS's holdout prediction accuracy compared to standard TPOT and XGBoost, another state-of-the-art machine learning method.
+We apply TPOT-DS to real-world expression data to demonstrate the identification of biologically relevant groups of genes.
 
 Implemented with a strongly typed GP, Template provides more flexibility by allowing users to pre-specify a particular pipeline structure based on their knowledge, which speeds up AutoML process and provides potentially more interpretable results.
 For example, in high-dimensional data, dimensionality reduction or feature selection algorithms are preferably included at the beginning of the pipelines via Template to identify important features and, meanwhile, reduce computation time.
-For datasets with categorical features, preprocessing operators for encoding those features, like one-hot encoder, should be specified in the pipeline structure to improve pipelines' performance.
+For datasets with categorical features, preprocessing operators for encoding those features such as one-hot encoder should be specified in the pipeline structure to improve pipelines' performance.
 Template was utilized in this study to specify the DS as the first step of the pipeline, which enables the comparison between the two TPOT implementations, with and without DS.
 
 We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
@@ -280,8 +284,8 @@ In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significa
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
 
 TPOT-DS also selects DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
-While many of the top genes do not have direct disease association in MalaCards, several have been linked to depression in animal studies such as PPP1R16A [@XKNZFJkN] and MXRA8 [@lAZSHU1O].
-Further, the RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
+While many of the top genes do not have direct disease association in MalaCards, several have been linked to depression-like behavior of animals such as PPP1R16A [@XKNZFJkN], CASKIN1[@hU27Whmi] and MXRA8 [@lAZSHU1O].
+The RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
 The lack of previously found association of these genes with the phenotype is likely because MDD is a complex disorder of heterogeneous etiology [@sd1g3RjP].
 Hence, the clinical diagnosis is the accumulative result of coordinated variation of many genes in the module, especially ones with high importance scores.
 Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may deploy expression quantitative trait loci (e-QTL) or interaction QTL analysis to discover disease-associated variants [@1T5OumxC].

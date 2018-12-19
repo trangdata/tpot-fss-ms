@@ -1169,6 +1169,65 @@
     "id": "BnXfrP0P"
   },
   {
+    "publisher": "Springer Nature America, Inc",
+    "issue": "1",
+    "DOI": "10.1186/s13041-018-0407-2",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Distribution of Caskin1 protein and phenotypic characterization of its knockout mice using a comprehensive behavioral test battery",
+    "volume": "11",
+    "author": [
+      {
+        "given": "Tayo",
+        "family": "Katano"
+      },
+      {
+        "given": "Keizo",
+        "family": "Takao"
+      },
+      {
+        "given": "Manabu",
+        "family": "Abe"
+      },
+      {
+        "given": "Maya",
+        "family": "Yamazaki"
+      },
+      {
+        "given": "Masahiko",
+        "family": "Watanabe"
+      },
+      {
+        "given": "Tsuyoshi",
+        "family": "Miyakawa"
+      },
+      {
+        "given": "Kenji",
+        "family": "Sakimura"
+      },
+      {
+        "given": "Seiji",
+        "family": "Ito"
+      }
+    ],
+    "container-title": "Molecular Brain",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          25
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfrhrr",
+    "container-title-short": "Mol Brain",
+    "PMCID": "PMC6202847",
+    "PMID": "30359304",
+    "id": "hU27Whmi"
+  },
+  {
     "publisher": "Public Library of Science (PLoS)",
     "issue": "3",
     "DOI": "10.1371/journal.pone.0058880",
