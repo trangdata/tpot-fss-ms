@@ -1447,48 +1447,415 @@
     "id": "NopW1Vw3"
   },
   {
-    "URL": "http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
     "type": "webpage",
+    "title": "AutoML: Automatic Machine Learning — H2O 3.22.0.2 documentation",
+    "URL": "http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "sOdEzGT3"
   },
   {
+    "type": "article-journal",
+    "title": "DEAP: Evolutionary Algorithms Made Easy",
+    "container-title": "Journal of Machine Learning Research",
+    "page": "2171-2175",
+    "volume": "13",
+    "issue": "Jul",
+    "source": "www.jmlr.org",
     "URL": "http://www.jmlr.org/papers/v13/fortin12a.html",
-    "type": "webpage",
+    "ISSN": "ISSN 1533-7928",
+    "shortTitle": "DEAP",
+    "author": [
+      {
+        "family": "Gagné",
+        "given": "Christian"
+      },
+      {
+        "family": "Parizeau",
+        "given": "Marc"
+      },
+      {
+        "family": "Gardner",
+        "given": "Marc-André"
+      },
+      {
+        "family": "Rainville",
+        "given": "François-Michel De"
+      },
+      {
+        "family": "Fortin",
+        "given": "Félix-Antoine"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2012"
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "Gcs0HrMy"
   },
   {
+    "type": "article-journal",
+    "title": "Auto-WEKA 2.0: Automatic model selection and hyperparameter optimization in WEKA",
+    "container-title": "Journal of Machine Learning Research",
+    "page": "1-5",
+    "volume": "18",
+    "issue": "25",
+    "source": "www.jmlr.org",
     "URL": "http://www.jmlr.org/papers/v18/16-261.html",
-    "type": "webpage",
+    "shortTitle": "Auto-WEKA 2.0",
+    "author": [
+      {
+        "family": "Leyton-Brown",
+        "given": "Kevin"
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      },
+      {
+        "family": "Hoos",
+        "given": "Holger H."
+      },
+      {
+        "family": "Thornton",
+        "given": "Chris"
+      },
+      {
+        "family": "Kotthoff",
+        "given": "Lars"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2017"
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "ai67wdhp"
   },
   {
+    "type": "book",
+    "title": "Genetic ConvNet architecture search with Keras. Contribute to joeddav/devol development by creating an account on GitHub",
+    "genre": "Python",
+    "source": "GitHub",
     "URL": "https://github.com/joeddav/devol",
-    "type": "webpage",
+    "note": "original-date: 2017-02-10T03:07:54Z",
+    "author": [
+      {
+        "family": "Davison",
+        "given": "Joe"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          11
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "1CQSBxFFr"
   },
   {
+    "type": "book",
+    "title": "A web-based application for quick, scalable, and automated hyperparameter tuning and stacked ensembling in Python.: reiinakano/xcessiv",
+    "genre": "Python",
+    "source": "GitHub",
     "URL": "https://github.com/reiinakano/xcessiv",
-    "type": "webpage",
+    "note": "original-date: 2017-03-07T18:18:25Z",
+    "shortTitle": "A web-based application for quick, scalable, and automated hyperparameter tuning and stacked ensembling in Python.",
+    "author": [
+      {
+        "family": "Nakano",
+        "given": "Reiichiro"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          18
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "HA8l3lpi"
   },
   {
-    "URL": "https://greenelab.github.io/meta-review/",
     "type": "webpage",
+    "title": "Open collaborative writing with Manubot",
+    "URL": "https://greenelab.github.io/meta-review/",
+    "language": "en-US",
+    "author": [
+      {
+        "family": "Himmelstein",
+        "given": "Daniel S."
+      },
+      {
+        "family": "Slochower",
+        "given": "David R."
+      },
+      {
+        "family": "Malladi",
+        "given": "Venkat S."
+      },
+      {
+        "family": "Greene",
+        "given": "Casey S."
+      },
+      {
+        "family": "Gitter",
+        "given": "Anthony"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          18
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "1GGGHdsew"
   },
   {
-    "URL": "https://hal.archives-ouvertes.fr/hal-00650905/",
-    "type": "webpage",
+    "type": "article-journal",
+    "title": "Scikit-learn: Machine Learning in Python",
+    "container-title": "Journal of Machine Learning Research",
+    "source": "HAL Archives Ouvertes",
+    "abstract": "Scikit-learn is a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems. This package focuses on bringing machine learning to non-specialists using a general-purpose high-level language. Emphasis is put on ease of use, performance, documentation, and API consistency. It has minimal dependencies and is distributed under the simplified BSD license, encouraging its use in both academic and commercial settings. Source code, binaries, and documentation can be downloaded from http://scikit-learn.sourceforge.net.",
+    "URL": "https://hal.inria.fr/hal-00650905",
+    "shortTitle": "Scikit-learn",
+    "author": [
+      {
+        "family": "Pedregosa",
+        "given": "Fabian"
+      },
+      {
+        "family": "Varoquaux",
+        "given": "Gaël"
+      },
+      {
+        "family": "Gramfort",
+        "given": "Alexandre"
+      },
+      {
+        "family": "Michel",
+        "given": "Vincent"
+      },
+      {
+        "family": "Thirion",
+        "given": "Bertrand"
+      },
+      {
+        "family": "Grisel",
+        "given": "Olivier"
+      },
+      {
+        "family": "Blondel",
+        "given": "Mathieu"
+      },
+      {
+        "family": "Prettenhofer",
+        "given": "Peter"
+      },
+      {
+        "family": "Weiss",
+        "given": "Ron"
+      },
+      {
+        "family": "Dubourg",
+        "given": "Vincent"
+      },
+      {
+        "family": "Vanderplas",
+        "given": "Jake"
+      },
+      {
+        "family": "Passos",
+        "given": "Alexandre"
+      },
+      {
+        "family": "Cournapeau",
+        "given": "David"
+      },
+      {
+        "family": "Brucher",
+        "given": "Matthieu"
+      },
+      {
+        "family": "Perrot",
+        "given": "Matthieu"
+      },
+      {
+        "family": "Duchesnay",
+        "given": "Édouard"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2011",
+          10
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "1iuWTU7i"
   },
   {
-    "URL": "https://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning",
-    "type": "webpage",
+    "type": "chapter",
+    "title": "Efficient and Robust Automated Machine Learning",
+    "container-title": "Advances in Neural Information Processing Systems 28",
+    "publisher": "Curran Associates, Inc.",
+    "page": "2962–2970",
+    "source": "Neural Information Processing Systems",
+    "URL": "http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf",
+    "author": [
+      {
+        "family": "Feurer",
+        "given": "Matthias"
+      },
+      {
+        "family": "Klein",
+        "given": "Aaron"
+      },
+      {
+        "family": "Eggensperger",
+        "given": "Katharina"
+      },
+      {
+        "family": "Springenberg",
+        "given": "Jost"
+      },
+      {
+        "family": "Blum",
+        "given": "Manuel"
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      }
+    ],
+    "editor": [
+      {
+        "family": "Cortes",
+        "given": "C."
+      },
+      {
+        "family": "Lawrence",
+        "given": "N. D."
+      },
+      {
+        "family": "Lee",
+        "given": "D. D."
+      },
+      {
+        "family": "Sugiyama",
+        "given": "M."
+      },
+      {
+        "family": "Garnett",
+        "given": "R."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2015"
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "8JQDv397"
   },
   {
-    "URL": "https://www.kaggle.com/",
     "type": "webpage",
+    "title": "Kaggle: Your Home for Data Science",
+    "URL": "https://www.kaggle.com/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2018",
+          12,
+          19
+        ]
+      ]
+    },
     "id": "1MHQyfXY"
   }
 ]
