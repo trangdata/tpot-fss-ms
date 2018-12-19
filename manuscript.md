@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-18'
+date-meta: '2018-12-19'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/879f354ba8a3980a81143f2fa07e0c88e8d3ee64/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/ec193403a6490c0f7bede7cb8651485f3c93babe/))
 was automatically generated
-from [trang1618/tpot-ds-ms@879f354](https://github.com/trang1618/tpot-ds-ms/tree/879f354ba8a3980a81143f2fa07e0c88e8d3ee64)
-on December 18, 2018.
+from [trang1618/tpot-ds-ms@ec19340](https://github.com/trang1618/tpot-ds-ms/tree/ec193403a6490c0f7bede7cb8651485f3c93babe)
+on December 19, 2018.
 </em></small>
 
 ## Authors
@@ -250,7 +250,9 @@ This overfitting in the performance of these other two models is likely due to t
 
 ![Performance comparison of three models: tuned XGBoost, optimal pipeline from standard TPOT and optimal pipeline from TPOT-DS.](images/compareAcc.svg){#fig:compAcc width="90%"}
 
-Meanwhile, for the real-world expression data, the optimal TPOT-DS pipeline yields an average holdout prediction accuracy of 0.68, while the standard TPOT without DS and tuned XGBoost models respectively produces an average holdout accuracy of 0.60 and 0.59 across all 100 model fits (Fig. {@fig:compAcc}). In summary, the optimal models from standard TPOT and XGBoost perform better in real-world data compared to simulated data but still worse than that of TPOT-DS.
+Meanwhile, for the real-world expression data, the optimal TPOT-DS pipeline yields an average holdout prediction accuracy of 0.68, while the standard TPOT without DS and tuned XGBoost models respectively produces an average holdout accuracy of 0.60 and 0.59 across all 100 model fits (Fig. {@fig:compAcc}).
+In summary, the optimal models from standard TPOT and XGBoost perform better in real-world data compared to simulated data but still worse than that of TPOT-DS.
+In both datasets, separate Welch two-sample one-sided *t*-tests show TPOT-DS optimal pipelines significantly outperform those of XGBoost and standard TPOT (all *p* values $<10^{-15}$).
 
 ### Computational expense
 For a dataset of the size simulated in our study (*m*=200 samples and *p* = 5000 attributes), TPOT-DS has a 65-minute runtime on a low performance computing machine with an Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB of RAM, whereas standard TPOT has a 18.5-hour runtime, approximately 17 times slower. On the same low performance computing machine (Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB RAM), each replication of TPOT-DS on the expression data takes on average 40 minutes, whereas standard TPOT takes 13.3 hours, approximately 20 times slower.
@@ -265,7 +267,7 @@ We applied TPOT-DS to real-world expression data to demonstrate the identificati
 Implemented with a strongly typed GP, Template provides more flexibility by allowing users to pre-specify a particular pipeline structure based on their knowledge, which speeds up AutoML process and provides potentially more interpretable results.
 For example, in high-dimensional data, dimensionality reduction or feature selection algorithms are preferably included at the beginning of the pipelines via Template to identify important features and, meanwhile, reduce computation time.
 For datasets with categorical features, preprocessing operators for encoding those features, like one-hot encoder, should be specified in the pipeline structure to improve pipelines' performance.
-Template was utilized in this study to specify the Dataset Selector as the first step of the pipeline, which enables the comparison between the two TPOT implementations, with and without DS.
+Template was utilized in this study to specify the DS as the first step of the pipeline, which enables the comparison between the two TPOT implementations, with and without DS.
 
 We simulated data of the similar scale and chalenging enough for the models to have similar predictive power as in the real-world RNA-Seq data.
 TPOT-DS correctly selects the first subset (containing the most important features) 75% of the time with high holdout accuracy (0.69).
@@ -289,8 +291,8 @@ While arbitrarily-shaped pipelines may yield predictions competitive to human-le
 Vice versa, a simpler pipeline with defined steps of operators may be easier to interpret but yield suboptimal prediction accuracy.
 Finding the balance between pipeline complexity, model interpretation and generalization remains a challenging task for AutoML application in biomedical big data.
 With DS, each pipeline individual of a TPOT generation during optimization holds lower complexity due to the selected subset's lower dimension compared to that of the entire dataset.
-We hope that, with the complexity reduction from imposing a strongly-type GP template and dataset selector, a small loss in dataset-specific predictive accuracy can be compensated by considerable increase in interpretability and generalizability.
-In this study, the resulting TPOT-DS pipelines are more interpretable with only two simple optimized operators after the dataset selector: a transformer and a classifier.
+We hope that, with the complexity reduction from imposing a strongly-type GP template and DS, a small loss in dataset-specific predictive accuracy can be compensated by considerable increase in interpretability and generalizability.
+In this study, the resulting TPOT-DS pipelines are more interpretable with only two simple optimized operators after the DS: a transformer and a classifier.
 In the case of the expression analysis, these pipelines also highlight two small sets of interconnected genes that contain candidates for MDD and related disorders.
 Additionally, complexity reduction results in more efficient computation, which is strongly desirable in biomedical big data analysis.
 
