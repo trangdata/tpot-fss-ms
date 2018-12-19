@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/85258915066ef1038c9812ee1c6b5942a154a5dc/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/5bb5906b598b01900d1a95b63a2ba40fb6b1eb10/))
 was automatically generated
-from [trang1618/tpot-ds-ms@8525891](https://github.com/trang1618/tpot-ds-ms/tree/85258915066ef1038c9812ee1c6b5942a154a5dc)
+from [trang1618/tpot-ds-ms@5bb5906](https://github.com/trang1618/tpot-ds-ms/tree/5bb5906b598b01900d1a95b63a2ba40fb6b1eb10)
 on December 19, 2018.
 </em></small>
 
@@ -245,17 +245,16 @@ In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipe
 For the expression data, in 100 replications, TPOT-DS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realDS}), with the highest average holdout accuracy of 0.636 across 64 pipelines.
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
 Although there is no direct link between the top genes of the module (Fig. {@fig:featImp}a) and MDD in the literature, many of these genes interact with other MDD-related genes.
-For example, NR2C2 and TCF7L1 interact with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl].
-Many of DGM-5's top genes were also shown to have statistically significant association with diagnosis phenotypes from a univariate analysis after multiple hypothesis testing correction [@p7dAO241].
+For example, NR2C2 interacts with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl].
+Many of DGM-5's top genes, including FAM13A, NR2C2,PP7080 and OXR1, were previously shown to have significant association with the diagnosis phenotype using a Relief-based feature selection method [@rO22KppO].
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
 ![Permutation importance scores of the top twenty expression features in the optimal pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features computed by permutation from the optimal pipelines are provided in Table S2.](images/importanceFeatures.svg){#fig:featImp width="100%"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-DS 30 times (Fig. {@fig:realDS}), with an average holdout accuracy of 0.563 across 30 pipelines.
 The previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
-Similar to DGM-5, in the literature, there is no direct link between MDD and the top genes in the module (Fig. {@fig:featImp}b).
-Gene set enrichment analysis reported DGM-13's involvement in axon guidance and developmental biology pathways with Reactome-FDR *q*-value $<$ 0.05 [@p7dAO241].
-
+While many of the top genes (Fig. {@fig:featImp}b) do not have direct disease association, several have been linked to depression-like behavior in animal studies such as PPP1R16A [@XKNZFJkN] and CASKIN1 [@hU27Whmi].
+The RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
 
 ### Computational expense
 For a dataset of the size simulated in our study (*m* = 200 samples and *p* = 5000 attributes), standard TPOT has a 18.5-hour runtime on a low performance computing machine with an Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB of RAM, whereas TPOT-DS has a 65-minute runtime, approximately 17 times faster.
@@ -277,15 +276,12 @@ We simulated data of the similar scale and challenging enough for the models to 
 TPOT-DS correctly selects the subset with the most important features in the majority of replications and produces high average holdout accuracy of 0.69.
 In both simulated and RNASeq gene expression data, the final TPOT-DS pipeline outperforms that of standard TPOT and XGBoost.
 The low holdout accuracies of standard TPOT and XGBoost are expected because of the few signals in a high-dimenional feature space of the data.
-Meanwhile, TPOT-DS was able to find the more compact feature space to operate on, resulting in higher prediction accuracy and lower computational expense.
+Meanwhile, TPOT-DS finds a more compact feature space to operate on, resulting in higher prediction accuracy and lower computational expense.
 
 Interestingly enough, TPOT-DS repeatedly selects DGM-5 to include in the final pipeline.
 In a previous study, we showed DGM-5 and DGM-17 enrichment scores were significantly associated with depression severity [@p7dAO241].
 We also remarked that DGM-5 contains many genes that are biologically relevant or previously associated with mood disorders [@p7dAO241] and its enriched pathways such as apoptosis indicates a genetic signature of MDD pertaining to shrinkage of brain region-specific volume due to cell loss [@19yG9lS3X;@Okd6uiRx].
-
 TPOT-DS also selects DGM-13 as a potentially predictive group of features with smaller average holdout accuracy compared to DGM-5 (0.563 $<$ 0.636).
-While many of the top genes do not have direct disease association in MalaCards, several have been linked to depression-like behavior in animal studies such as PPP1R16A [@XKNZFJkN], CASKIN1 [@hU27Whmi] and MXRA8 [@lAZSHU1O].
-The RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to have a rare protein disruptive variant in at least one suicide patient among 60 other mutations [@cuk31K3D].
 The lack of previously found association of these genes with the phenotype is likely because MDD is a complex disorder of heterogeneous etiology [@sd1g3RjP].
 Hence, the clinical diagnosis is the accumulative result of coordinated variation of many genes in the module, especially ones with high importance scores. 
 Future studies to refine and characterize genes in DGM-13 as well as DGM-5 may deploy expression quantitative trait loci (e-QTL) or interaction QTL analysis to discover disease-associated variants [@1T5OumxC].

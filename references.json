@@ -843,6 +843,51 @@
     "id": "cuk31K3D"
   },
   {
+    "publisher": "Oxford University Press (OUP)",
+    "DOI": "10.1093/bioinformatics/bty788",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "STatistical Inference Relief (STIR) feature selection",
+    "author": [
+      {
+        "given": "Trang T",
+        "family": "Le"
+      },
+      {
+        "given": "Ryan J",
+        "family": "Urbanowicz"
+      },
+      {
+        "given": "Jason H",
+        "family": "Moore"
+      },
+      {
+        "given": "Brett A",
+        "family": "McKinney"
+      }
+    ],
+    "container-title": "Bioinformatics",
+    "language": "en",
+    "editor": [
+      {
+        "given": "Inanc",
+        "family": "Birol"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          18
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfbdwx",
+    "PMID": "30239600",
+    "id": "rO22KppO"
+  },
+  {
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "issue": "2",
     "DOI": "10.1109/4235.996017",
@@ -1226,84 +1271,6 @@
     "PMCID": "PMC6202847",
     "PMID": "30359304",
     "id": "hU27Whmi"
-  },
-  {
-    "publisher": "Public Library of Science (PLoS)",
-    "issue": "3",
-    "DOI": "10.1371/journal.pone.0058880",
-    "type": "article-journal",
-    "page": "e58880",
-    "source": "Crossref",
-    "title": "Effect of Acute Stressor and Serotonin Transporter Genotype on Amygdala First Wave Transcriptome in Mice",
-    "volume": "8",
-    "author": [
-      {
-        "given": "Christa",
-        "family": "Hohoff"
-      },
-      {
-        "given": "Ali",
-        "family": "Gorji"
-      },
-      {
-        "given": "Sylvia",
-        "family": "Kaiser"
-      },
-      {
-        "given": "Edith",
-        "family": "Willscher"
-      },
-      {
-        "given": "Eberhard",
-        "family": "Korsching"
-      },
-      {
-        "given": "Oliver",
-        "family": "Ambrée"
-      },
-      {
-        "given": "Volker",
-        "family": "Arolt"
-      },
-      {
-        "given": "Klaus-Peter",
-        "family": "Lesch"
-      },
-      {
-        "given": "Norbert",
-        "family": "Sachser"
-      },
-      {
-        "given": "Jürgen",
-        "family": "Deckert"
-      },
-      {
-        "given": "Lars",
-        "family": "Lewejohann"
-      }
-    ],
-    "container-title": "PLoS ONE",
-    "language": "en",
-    "editor": [
-      {
-        "given": "Judith",
-        "family": "Homberg"
-      }
-    ],
-    "issued": {
-      "date-parts": [
-        [
-          2013,
-          3,
-          11
-        ]
-      ]
-    },
-    "URL": "https://doi.org/gfkt9h",
-    "container-title-short": "PLoS ONE",
-    "PMCID": "PMC3594195",
-    "PMID": "23536833",
-    "id": "lAZSHU1O"
   },
   {
     "publisher": "MDPI AG",
