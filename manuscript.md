@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-19'
+date-meta: '2018-12-20'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/5bb5906b598b01900d1a95b63a2ba40fb6b1eb10/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/e8365f5f1d4177948ad99b18c82126ebd8d42e4b/))
 was automatically generated
-from [trang1618/tpot-ds-ms@5bb5906](https://github.com/trang1618/tpot-ds-ms/tree/5bb5906b598b01900d1a95b63a2ba40fb6b1eb10)
-on December 19, 2018.
+from [trang1618/tpot-ds-ms@e8365f5](https://github.com/trang1618/tpot-ds-ms/tree/e8365f5f1d4177948ad99b18c82126ebd8d42e4b)
+on December 20, 2018.
 </em></small>
 
 ## Authors
@@ -185,7 +185,7 @@ As a result, this prior knowledge of the gene structure does not depend on the d
 For each simulated and real-world dataset, after randomly splitting the entire data in two balanced smaller sets (75% training and 25% holdout), we trained TPOT-DS with the Template `Dataset Selector-Transformer-Classifier` on training data to predict class (*e.g.*, diagnostic phenotype in real-world data) in the holdout set.
 We assess the performance of TPOT-DS by quantifying its ability to correctly select the most important subset (containing most functional features) in 100 replicates of TPOT runs on simulated data with known underlying truth.
 To prevent potential overfitting, we select the pipeline that is closest to the 90th percentile of the cross-validation accuracy to be optimal.
-This rationale is motivated by a similar procedure for optimizing the penalty coefficient in regularized regression where the most parsimonious model within one standard error of the minimum cross-validation error is picked [].
+This rationale is motivated by a similar procedure for optimizing the penalty coefficient in regularized regression where the most parsimonious model within one standard error of the minimum cross-validation error is picked.
 We compare the holdout (out-of-sample) accuracy of TPOT-DS's optimal pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and eXtreme Gradient Boosting [@8w9fI63O], or XGBoost, which is a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using TPOT Template with only one classifier `XGBClassifier`, which is imported from the `xgboost` python package. 
@@ -235,7 +235,7 @@ In both datasets, separate Welch two-sample one-sided *t*-tests show TPOT-DS opt
 
 ![TPOT-DS's holdout accuracy in simulated data with selected subset. Number of pipeline inclusions of each subset in 100 replications is displayed above the boxplots. Subset $S_1$ is the most frequent to be included in the final pipeline and yields the best prediction accuracy in the holdout set.](images/sim_100.svg){#fig:simDS width="100%"}
 
-Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table [S1].
+Our simulation design produces a reasonable distribution of the functional features in all subsets, of which proportions are shown in Table S1.
 According to Eq. {@eq:p_subset}, the earlier the subset, the more functional features it has.
 Therefore, our aim is to determine how well TPOT-DS can identify the first subset ($S_1$) that contains the largest number of informative features.
 In 100 replications, TPOT-DS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simDS}), with the highest average holdout accuracy (0.69 across all 75 pipelines).
