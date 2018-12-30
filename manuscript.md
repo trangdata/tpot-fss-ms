@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-20'
+date-meta: '2018-12-30'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/e8365f5f1d4177948ad99b18c82126ebd8d42e4b/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/ee7f32bd7286377a6a32506cfdb2223f8079d9d2/))
 was automatically generated
-from [trang1618/tpot-ds-ms@e8365f5](https://github.com/trang1618/tpot-ds-ms/tree/e8365f5f1d4177948ad99b18c82126ebd8d42e4b)
-on December 20, 2018.
+from [trang1618/tpot-ds-ms@ee7f32b](https://github.com/trang1618/tpot-ds-ms/tree/ee7f32bd7286377a6a32506cfdb2223f8079d9d2)
+on December 30, 2018.
 </em></small>
 
 ## Authors
@@ -75,16 +75,15 @@ on December 20, 2018.
 
 Automated machine learning (AutoML) systems are helpful data science assistants designed to scan data for novel features, select appropriate supervised learning models and optimize their parameters.
 For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist's prediction problem.
-However, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
+However, like other AutoML systems, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
 We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. 
 Dataset selector (DS) provides the option to specify subsets of the features as separate datasets, assuming the signals come from one or more of these specific data subsets.
-Built in at the beginning of each pipeline structure, DS reduces the computational expense of TPOT to only evaluate on a smaller subset of data rather than the entire dataset.
-Consequently, DS increases TPOT's efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline.
+DS increases TPOT's efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline.
 Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline.
-We show that DS and Template help reduce TPOT computation time and may provide more interpretable results.
+Consequently, DS and Template help reduce TPOT computation time and may provide more interpretable results.
 Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and standard TPOT implementation.
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
-Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, in an automated fashion, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
+Independent of the previous study that identified significant association with depression severity of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
 ## Author Summary
 

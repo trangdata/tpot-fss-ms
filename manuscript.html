@@ -7,7 +7,7 @@
   <meta name="author" content="Trang T. Le" />
   <meta name="author" content="Weixuan Fu" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2018-12-20" />
+  <meta name="dcterms.date" content="2018-12-30" />
   <meta name="keywords" content="tpot, automl, machine learning" />
   <title>Scaling tree-based automated machine learning to biomedical big data with a dataset selector</title>
   <style type="text/css">
@@ -30,7 +30,7 @@
 <header id="title-block-header">
 <h1 class="title">Scaling tree-based automated machine learning to biomedical big data with a dataset selector</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/e8365f5f1d4177948ad99b18c82126ebd8d42e4b/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/e8365f5f1d4177948ad99b18c82126ebd8d42e4b">trang1618/tpot-ds-ms@e8365f5</a> on December 20, 2018. </em></small></p>
+<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-ds-ms/v/ee7f32bd7286377a6a32506cfdb2223f8079d9d2/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-ds-ms/tree/ee7f32bd7286377a6a32506cfdb2223f8079d9d2">trang1618/tpot-ds-ms@ee7f32b</a> on December 30, 2018. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" width="13" height="13" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" width="13" height="13" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -40,7 +40,7 @@
 <p><sup>☯</sup> — These authors contributed equally to this work.</p>
 <p><sup>†</sup> — Direct correspondence to jhmoore@upenn.edu.</p>
 <h2 id="abstract" class="page_break_before">Abstract</h2>
-<p>Automated machine learning (AutoML) systems are helpful data science assistants designed to scan data for novel features, select appropriate supervised learning models and optimize their parameters. For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist’s prediction problem. However, TPOT may reach computational resource limits when working on big data such as whole-genome expression data. We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. Dataset selector (DS) provides the option to specify subsets of the features as separate datasets, assuming the signals come from one or more of these specific data subsets. Built in at the beginning of each pipeline structure, DS reduces the computational expense of TPOT to only evaluate on a smaller subset of data rather than the entire dataset. Consequently, DS increases TPOT’s efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline. Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline. We show that DS and Template help reduce TPOT computation time and may provide more interpretable results. Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and standard TPOT implementation. We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder. Independent of the previous study that identified significant association with depression severity of the enrichment scores of two modules, in an automated fashion, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.</p>
+<p>Automated machine learning (AutoML) systems are helpful data science assistants designed to scan data for novel features, select appropriate supervised learning models and optimize their parameters. For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist’s prediction problem. However, like other AutoML systems, TPOT may reach computational resource limits when working on big data such as whole-genome expression data. We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. Dataset selector (DS) provides the option to specify subsets of the features as separate datasets, assuming the signals come from one or more of these specific data subsets. DS increases TPOT’s efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline. Template enforces type constraints with strongly typed genetic programming and enables the incorporation of DS at the beginning of each pipeline. Consequently, DS and Template help reduce TPOT computation time and may provide more interpretable results. Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and standard TPOT implementation. We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder. Independent of the previous study that identified significant association with depression severity of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.</p>
 <h2 id="author-summary">Author Summary</h2>
 <p>Big data have recently become prevalent in many fields including meteorology, complex physics simulations, large scale imaging, genomics, biomedical research, environmental research and more. TPOT is a Python Automated Machine Learning (AutoML) tool that uses genetic programming to optimize machine learning pipelines for analyzing biomedical data. However, like other AutoML tools, when analyzing big data, the early implementations of TPOT face the challenges of long runtime, high computational expense as well complex pipeline with low interpretability. Here, we develop two novel features for TPOT, Dataset Selector and Template, that leverage domain knowledge, greatly reduce the computational expense and flexibly extend TPOT’s application to biomedical big data analysis.</p>
 <h2 id="introduction">Introduction</h2>
@@ -152,15 +152,15 @@ Boyuan Chen, Harvey Wu, Warren Mo, Ishanu Chattopadhyay, Hod Lipson<br />
 <div id="ref-1CQSBxFFr">
 <p>8. <strong>Genetic ConvNet architecture search with Keras. Contribute to joeddav/devol development by creating an account on GitHub</strong><br />
 Joe Davison<br />
-(2018-12-20) <a href="https://github.com/joeddav/devol">https://github.com/joeddav/devol</a></p>
+(2018-12-28) <a href="https://github.com/joeddav/devol">https://github.com/joeddav/devol</a></p>
 </div>
 <div id="ref-sOdEzGT3">
-<p>9. <strong>AutoML: Automatic Machine Learning — H2O 3.22.0.2 documentation</strong><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html">http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html</a></p>
+<p>9. <strong>AutoML: Automatic Machine Learning — H2O 3.22.1.1 documentation</strong><a href="http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html">http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html</a></p>
 </div>
 <div id="ref-HA8l3lpi">
 <p>10. <strong>A web-based application for quick, scalable, and automated hyperparameter tuning and stacked ensembling in Python.: reiinakano/xcessiv</strong><br />
 Reiichiro Nakano<br />
-(2018-12-20) <a href="https://github.com/reiinakano/xcessiv">https://github.com/reiinakano/xcessiv</a></p>
+(2018-12-29) <a href="https://github.com/reiinakano/xcessiv">https://github.com/reiinakano/xcessiv</a></p>
 </div>
 <div id="ref-NopW1Vw3">
 <p>11. <strong>Genetic Programming: An Introduction: on the Automatic Evolution of Computer Programs and Its Applications</strong><br />
