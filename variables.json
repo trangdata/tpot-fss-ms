@@ -41,7 +41,7 @@
       "affiliations": [
         "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
       ],
-      "funders": "National Institute of Health Grant Nos. LM010098, LM012601",
+      "funders": "National Institutes of Health Grant Nos. LM010098, LM012601, AI116794",
       "symbol_str": "\u2020",
       "affiliation_numbers": [
         1
@@ -58,17 +58,18 @@
     "repo_slug": "trang1618/tpot-ds-ms",
     "repo_owner": "trang1618",
     "repo_name": "tpot-ds-ms",
-    "commit": "ee7f32bd7286377a6a32506cfdb2223f8079d9d2"
+    "commit": "d217f5b54f08455b71808cba208c908af7cb172d"
   },
   "manuscript_stats": {
     "reference_counts": {
       "arxiv": 4,
       "doi": 21,
+      "isbn": 1,
       "pmid": 3,
       "raw": 1,
       "url": 9,
-      "total": 38
+      "total": 39
     },
-    "word_count": 4816
+    "word_count": 4817
   }
 }

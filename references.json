@@ -1311,6 +1311,42 @@
     "id": "19eUrsX1M"
   },
   {
+    "type": "book",
+    "title": "The elements of statistical learning: data mining, inference, and prediction",
+    "collection-title": "Springer series in statistics",
+    "publisher": "Springer",
+    "publisher-place": "New York, NY",
+    "number-of-pages": "745",
+    "edition": "2nd ed",
+    "source": "Library of Congress ISBN",
+    "event-place": "New York, NY",
+    "ISBN": "9780387848570",
+    "call-number": "Q325.5 .H39 2009",
+    "shortTitle": "The elements of statistical learning",
+    "author": [
+      {
+        "family": "Hastie",
+        "given": "Trevor"
+      },
+      {
+        "family": "Tibshirani",
+        "given": "Robert"
+      },
+      {
+        "family": "Friedman",
+        "given": "J. H."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2009"
+        ]
+      ]
+    },
+    "id": "Od6nwLRB"
+  },
+  {
     "title": "Increased apoptosis in patients with major depression: A preliminary study.",
     "volume": "163",
     "issue": "1",
@@ -1606,7 +1642,7 @@
         [
           "2018",
           12,
-          28
+          30
         ]
       ]
     },

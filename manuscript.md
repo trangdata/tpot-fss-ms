@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/ee7f32bd7286377a6a32506cfdb2223f8079d9d2/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/d217f5b54f08455b71808cba208c908af7cb172d/))
 was automatically generated
-from [trang1618/tpot-ds-ms@ee7f32b](https://github.com/trang1618/tpot-ds-ms/tree/ee7f32bd7286377a6a32506cfdb2223f8079d9d2)
+from [trang1618/tpot-ds-ms@d217f5b](https://github.com/trang1618/tpot-ds-ms/tree/d217f5b54f08455b71808cba208c908af7cb172d)
 on December 30, 2018.
 </em></small>
 
@@ -61,7 +61,7 @@ on December 30, 2018.
     [moorejh](https://twitter.com/moorejh)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
-     · Funded by National Institute of Health Grant Nos. LM010098, LM012601
+     · Funded by National Institutes of Health Grant Nos. LM010098, LM012601, AI116794
   </small>
 
 
@@ -184,7 +184,7 @@ As a result, this prior knowledge of the gene structure does not depend on the d
 For each simulated and real-world dataset, after randomly splitting the entire data in two balanced smaller sets (75% training and 25% holdout), we trained TPOT-DS with the Template `Dataset Selector-Transformer-Classifier` on training data to predict class (*e.g.*, diagnostic phenotype in real-world data) in the holdout set.
 We assess the performance of TPOT-DS by quantifying its ability to correctly select the most important subset (containing most functional features) in 100 replicates of TPOT runs on simulated data with known underlying truth.
 To prevent potential overfitting, we select the pipeline that is closest to the 90th percentile of the cross-validation accuracy to be optimal.
-This rationale is motivated by a similar procedure for optimizing the penalty coefficient in regularized regression where the most parsimonious model within one standard error of the minimum cross-validation error is picked.
+This rationale is motivated by a similar procedure for optimizing the penalty coefficient in regularized regression where the most parsimonious model within one standard error of the minimum cross-validation error is picked [@Od6nwLRB].
 We compare the holdout (out-of-sample) accuracy of TPOT-DS's optimal pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and eXtreme Gradient Boosting [@8w9fI63O], or XGBoost, which is a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using TPOT Template with only one classifier `XGBClassifier`, which is imported from the `xgboost` python package. 
