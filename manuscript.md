@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-30'
+date-meta: '2018-12-31'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/d217f5b54f08455b71808cba208c908af7cb172d/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/48c50d718a35c397b12445f49f14930020e8cb36/))
 was automatically generated
-from [trang1618/tpot-ds-ms@d217f5b](https://github.com/trang1618/tpot-ds-ms/tree/d217f5b54f08455b71808cba208c908af7cb172d)
-on December 30, 2018.
+from [trang1618/tpot-ds-ms@48c50d7](https://github.com/trang1618/tpot-ds-ms/tree/48c50d718a35c397b12445f49f14930020e8cb36)
+on December 31, 2018.
 </em></small>
 
 ## Authors
@@ -84,6 +84,8 @@ Consequently, DS and Template help reduce TPOT computation time and may provide 
 Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and standard TPOT implementation.
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
 Independent of the previous study that identified significant association with depression severity of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
+
+Availability: Code and data available at [https://github.com/trang1618/tpot-ds](https://github.com/trang1618/tpot-ds).
 
 ## Author Summary
 
