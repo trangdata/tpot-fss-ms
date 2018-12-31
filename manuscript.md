@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/48c50d718a35c397b12445f49f14930020e8cb36/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/0070c145ec64096fe16cadc5c52ea425b28dc985/))
 was automatically generated
-from [trang1618/tpot-ds-ms@48c50d7](https://github.com/trang1618/tpot-ds-ms/tree/48c50d718a35c397b12445f49f14930020e8cb36)
+from [trang1618/tpot-ds-ms@0070c14](https://github.com/trang1618/tpot-ds-ms/tree/0070c145ec64096fe16cadc5c52ea425b28dc985)
 on December 31, 2018.
 </em></small>
 
@@ -85,7 +85,8 @@ Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
 Independent of the previous study that identified significant association with depression severity of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
-Availability: Code and data available at [https://github.com/trang1618/tpot-ds](https://github.com/trang1618/tpot-ds).
+### Availability
+Code and data available at [https://github.com/trang1618/tpot-ds](https://github.com/trang1618/tpot-ds).
 
 ## Author Summary
 
