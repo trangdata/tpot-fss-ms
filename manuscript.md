@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2018-12-31'
+date-meta: '2019-01-03'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/0070c145ec64096fe16cadc5c52ea425b28dc985/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/1ec623bfc926a3db4a1f8e15b54a343627a7b982/))
 was automatically generated
-from [trang1618/tpot-ds-ms@0070c14](https://github.com/trang1618/tpot-ds-ms/tree/0070c145ec64096fe16cadc5c52ea425b28dc985)
-on December 31, 2018.
+from [trang1618/tpot-ds-ms@1ec623b](https://github.com/trang1618/tpot-ds-ms/tree/1ec623bfc926a3db4a1f8e15b54a343627a7b982)
+on January 3, 2019.
 </em></small>
 
 ## Authors
@@ -73,9 +73,12 @@ on December 31, 2018.
 
 ## Abstract {.page_break_before}
 
+### Motivation
 Automated machine learning (AutoML) systems are helpful data science assistants designed to scan data for novel features, select appropriate supervised learning models and optimize their parameters.
 For this purpose, Tree-based Pipeline Optimization Tool (TPOT) was developed using strongly typed genetic programming to recommend an optimized analysis pipeline for the data scientist's prediction problem.
 However, like other AutoML systems, TPOT may reach computational resource limits when working on big data such as whole-genome expression data.
+
+### Results
 We introduce two new features implemented in TPOT that helps increase the system’s scalability: Dataset selector and Template. 
 Dataset selector (DS) provides the option to specify subsets of the features as separate datasets, assuming the signals come from one or more of these specific data subsets.
 DS increases TPOT's efficiency in application on big data by slicing the dataset into smaller sets of features and allowing genetic programming to select the best subset in the final pipeline.
@@ -85,8 +88,15 @@ Our simulations show TPOT-DS significantly outperforms a tuned XGBoost model and
 We apply TPOT-DS to real RNA-Seq data from a study of major depressive disorder.
 Independent of the previous study that identified significant association with depression severity of two modules, TPOT-DS corroborates that one of the modules is largely predictive of the clinical diagnosis of each individual.
 
-### Availability
-Code and data available at [https://github.com/trang1618/tpot-ds](https://github.com/trang1618/tpot-ds).
+### Availability and Implementation
+Detailed simulation and analysis code needed to reproduce the results in this study is available at [https://github.com/trang1618/tpot-ds](https://github.com/trang1618/tpot-ds).
+Implementation of the new TPOT operators is available at [https://github.com/EpistasisLab/tpot](https://github.com/EpistasisLab/tpot).
+
+### Contact
+[jhmoore@upenn.edu](jhmoore@upenn.edu)
+
+### Supplementary information
+Supplementary data are available at Bioinformatics online.
 
 ## Author Summary
 
