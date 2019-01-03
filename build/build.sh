@@ -14,7 +14,7 @@ manubot process \
   --log-level=INFO
 
 # pandoc settings
-CSL_PATH=build/assets/style.csl
+CSL_PATH=https://github.com/citation-style-language/styles/raw/master/bioinformatics.csl
 DOCX_PATH=build/assets/pandoc-reference.docx
 BIBLIOGRAPHY_PATH=output/references.json
 INPUT_PATH=output/manuscript.md
