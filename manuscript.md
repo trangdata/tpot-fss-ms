@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2019-01-03'
+date-meta: '2019-01-04'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/53d19830b4dd491cd8fc3c992f251974fbeb66ab/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/50861f9b91380b317f3cdf1bcf31eac1b244e307/))
 was automatically generated
-from [trang1618/tpot-ds-ms@53d1983](https://github.com/trang1618/tpot-ds-ms/tree/53d19830b4dd491cd8fc3c992f251974fbeb66ab)
-on January 3, 2019.
+from [trang1618/tpot-ds-ms@50861f9](https://github.com/trang1618/tpot-ds-ms/tree/50861f9b91380b317f3cdf1bcf31eac1b244e307)
+on January 4, 2019.
 </em></small>
 
 ## Authors
@@ -118,9 +118,9 @@ Various approaches have been employed to build AutoML systems for diverse applic
 Auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] use Bayesian optimization for model selection and hyperparameter optimization.
 Recipe [@6ChydIkb] optimizes the ML pipeline through grammar-based genetic programming and Autostacker [@RiocGZOq] automates stacked ensembling.
 Both methods automate hyperparameter tuning and model selection using evolutionary algorithm.
-DEvol [@1CQSBxFFr] designs deep neural network specifically via genetic programming.
-H2O.ai [@sOdEzGT3] automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
-Finally, Xcessiv [@HA8l3lpi] provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
+DEvol ((github.com/joeddav/devol)[https://github.com/joeddav/devol]) designs deep neural network specifically via genetic programming.
+H2O.ai ((docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html)[http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html]) automates data preprocessing, hyperparameter tuning, random grid search and stacked ensembles in a distributed ML platform in multiple languages.
+Finally, Xcessiv ((github.com/reiinakano/xcessiv)[https://github.com/reiinakano/xcessiv]) provides web-based application for quick, scalable, and automated hyper-parameter tuning and stacked ensembling in Python.
 
 Tree-based Pipeline Optimization Tool (TPOT) is a genetic programming-based AutoML system that uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
 While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering by evaluating the complete pipelines based on their cross-validated score such as mean squared error or balanced accuracy.
@@ -198,7 +198,7 @@ For each simulated and real-world dataset, after randomly splitting the entire d
 We assess the performance of TPOT-DS by quantifying its ability to correctly select the most important subset (containing most functional features) in 100 replicates of TPOT runs on simulated data with known underlying truth.
 To prevent potential overfitting, we select the pipeline that is closest to the 90th percentile of the cross-validation accuracy to be optimal.
 This rationale is motivated by a similar procedure for optimizing the penalty coefficient in regularized regression where the most parsimonious model within one standard error of the minimum cross-validation error is picked [@Od6nwLRB].
-We compare the holdout (out-of-sample) accuracy of TPOT-DS's optimal pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and eXtreme Gradient Boosting [@8w9fI63O], or XGBoost, which is a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions [@1MHQyfXY] and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
+We compare the holdout (out-of-sample) accuracy of TPOT-DS's optimal pipeline on the holdout set with that of standard TPOT (with `Transformer-Classifier` Template, no DS operator) and eXtreme Gradient Boosting [@8w9fI63O], or XGBoost, which is a fast and an efficient implementation of the gradient tree boosting method that has shown much utility in many winning Kaggle solutions ((kaggle.com)[https://www.kaggle.com/]) and been successfully incorporated in several neural network architectures [@19eUrsX1M;@13as7dipI].
 In the family of gradient boosted decision trees, XGBoost accounts for complex non-linear interaction structure among features and leverages gradient descents and boosting (sequential ensemble of weak classifiers) to effectively produce a strong prediction model.
 To obtain the optimal performance for this baseline model, we tune XGBoost hyperparameters using TPOT Template with only one classifier `XGBClassifier`, which is imported from the `xgboost` python package. 
 Because of stochasticity in the optimal pipeline from TPOT-DS, standard TPOT and the tuned XGBoost model, we fit these models on the training data 100 times and compare 100 holdout accuracy values from each method.

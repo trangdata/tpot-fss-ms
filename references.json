@@ -1509,21 +1509,6 @@
     "id": "NopW1Vw3"
   },
   {
-    "type": "webpage",
-    "title": "AutoML: Automatic Machine Learning — H2O 3.22.1.1 documentation",
-    "URL": "http://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          1,
-          3
-        ]
-      ]
-    },
-    "id": "sOdEzGT3"
-  },
-  {
     "type": "article-journal",
     "title": "DEAP: Evolutionary Algorithms Made Easy",
     "container-title": "Journal of Machine Learning Research",
@@ -1568,7 +1553,7 @@
         [
           "2019",
           1,
-          3
+          4
         ]
       ]
     },
@@ -1618,78 +1603,11 @@
         [
           "2019",
           1,
-          3
+          4
         ]
       ]
     },
     "id": "ai67wdhp"
-  },
-  {
-    "type": "book",
-    "title": "Genetic ConvNet architecture search with Keras. Contribute to joeddav/devol development by creating an account on GitHub",
-    "genre": "Python",
-    "source": "GitHub",
-    "URL": "https://github.com/joeddav/devol",
-    "note": "original-date: 2017-02-10T03:07:54Z",
-    "author": [
-      {
-        "family": "Davison",
-        "given": "Joe"
-      }
-    ],
-    "issued": {
-      "date-parts": [
-        [
-          "2018",
-          12,
-          30
-        ]
-      ]
-    },
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          1,
-          3
-        ]
-      ]
-    },
-    "id": "1CQSBxFFr"
-  },
-  {
-    "type": "book",
-    "title": "A web-based application for quick, scalable, and automated hyperparameter tuning and stacked ensembling in Python.: reiinakano/xcessiv",
-    "genre": "Python",
-    "source": "GitHub",
-    "URL": "https://github.com/reiinakano/xcessiv",
-    "note": "original-date: 2017-03-07T18:18:25Z",
-    "shortTitle": "A web-based application for quick, scalable, and automated hyperparameter tuning and stacked ensembling in Python.",
-    "author": [
-      {
-        "family": "Nakano",
-        "given": "Reiichiro"
-      }
-    ],
-    "issued": {
-      "date-parts": [
-        [
-          "2018",
-          12,
-          31
-        ]
-      ]
-    },
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          1,
-          3
-        ]
-      ]
-    },
-    "id": "HA8l3lpi"
   },
   {
     "type": "webpage",
@@ -1732,7 +1650,7 @@
         [
           "2019",
           1,
-          3
+          4
         ]
       ]
     },
@@ -1825,7 +1743,7 @@
         [
           "2019",
           1,
-          3
+          4
         ]
       ]
     },
@@ -1899,25 +1817,10 @@
         [
           "2019",
           1,
-          3
+          4
         ]
       ]
     },
     "id": "8JQDv397"
-  },
-  {
-    "type": "webpage",
-    "title": "Kaggle: Your Home for Data Science",
-    "URL": "https://www.kaggle.com/",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          1,
-          3
-        ]
-      ]
-    },
-    "id": "1MHQyfXY"
   }
 ]
