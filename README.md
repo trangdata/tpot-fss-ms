@@ -18,10 +18,10 @@ This repository is the manuscript for a current development of TPOT with two new
 
 Manubot is a system for writing scholarly manuscripts via GitHub.
 Manubot automates citations and references, versions manuscripts using git, and enables collaborative writing via GitHub.
-The [Manubot Rootstock repository](https://git.io/vQSvo) is a general purpose template for creating new Manubot instances, as detailed in [`SETUP.md`](SETUP.md).
+The [rootstock repository](https://git.io/fhQH1) is a general purpose template for creating new Manubot instances, as detailed in [`SETUP.md`](SETUP.md).
 See [`USAGE.md`](USAGE.md) for documentation how to write a manuscript.
 
-Please open [an issue](https://github.com/trang1618/tpot-ds-ms/issues) for questions related to Manubot usage, bug reports, or general inquiries.
+Please open [an issue](https://git.io/fhQHM) for questions related to Manubot usage, bug reports, or general inquiries.
 
 ### Repository directories & files
 
@@ -93,7 +93,7 @@ We encourage users to openly license their manuscripts, which is the default as 
 [![License: CC0 1.0](https://img.shields.io/badge/License%20Parts-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Except when noted otherwise, the entirety of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
-Please attribute by linking to https://github.com/trang1618/tpot-ds-ms.
+Please attribute by linking to https://github.com/manubot/rootstock.
 
 Since CC BY is not ideal for code and data, certain repository components are also released under the CC0 1.0 public domain dedication ([`LICENSE-CC0.md`](LICENSE-CC0.md)).
 All files matched by the following glob patterns are dual licensed under CC BY 4.0 and CC0 1.0:
@@ -113,8 +113,4 @@ All other files are only available under CC BY 4.0, including:
 + `*.pdf`
 + `*.docx`
 
-Except for the following files with different licenses:
-
-+ `build/assets/anchors.js` which is [released](https://www.bryanbraun.com/anchorjs/) under an [MIT License](https://opensource.org/licenses/MIT)
-
-Please open [an issue](https://github.com/trang1618/tpot-ds-ms/issues) for any question related to licensing.
+Please open [an issue](https://github.com/manubot/rootstock/issues) for any question related to licensing.
