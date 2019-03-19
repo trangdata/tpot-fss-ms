@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/5f9920eeb60a37cfd4547f566ae94f09766848be/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/507f293dc330cc60515ed089ef2f8aa5618c11d3/))
 was automatically generated
-from [trang1618/tpot-ds-ms@5f9920e](https://github.com/trang1618/tpot-ds-ms/tree/5f9920eeb60a37cfd4547f566ae94f09766848be)
+from [trang1618/tpot-ds-ms@507f293](https://github.com/trang1618/tpot-ds-ms/tree/507f293dc330cc60515ed089ef2f8aa5618c11d3)
 on March 19, 2019.
 </em></small>
 
@@ -114,7 +114,7 @@ These intelligent systems increase the accessibility and scalability of various 
 Consequently, AutoML allows data scientists to focus their effort in applying their expertise in other important research components such as developing meaningful hypotheses or communicating the results.
 
 Various approaches have been employed to build AutoML systems for diverse applications.
-Auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n, @ai67wdhp] use Bayesian optimization for model selection and hyperparameter optimization.
+Auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n] use Bayesian optimization for model selection and hyperparameter optimization.
 Recipe [@6ChydIkb] optimizes the ML pipeline through grammar-based genetic programming and Autostacker [@RiocGZOq] automates stacked ensembling.
 Both methods automate hyperparameter tuning and model selection using evolutionary algorithm.
 DEvol (https://github.com/joeddav/devol) designs deep neural network specifically via genetic programming.
