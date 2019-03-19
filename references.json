@@ -1560,6 +1560,57 @@
     "id": "Gcs0HrMy"
   },
   {
+    "type": "article-journal",
+    "title": "Auto-WEKA 2.0: Automatic model selection and hyperparameter optimization in WEKA",
+    "container-title": "Journal of Machine Learning Research",
+    "page": "1-5",
+    "volume": "18",
+    "issue": "25",
+    "source": "www.jmlr.org",
+    "URL": "http://jmlr.org/papers/v18/16-261.html",
+    "ISSN": "1533-7928",
+    "shortTitle": "Auto-WEKA 2.0",
+    "author": [
+      {
+        "family": "Leyton-Brown",
+        "given": "Kevin"
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      },
+      {
+        "family": "Hoos",
+        "given": "Holger H."
+      },
+      {
+        "family": "Thornton",
+        "given": "Chris"
+      },
+      {
+        "family": "Kotthoff",
+        "given": "Lars"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2017"
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          3,
+          19
+        ]
+      ]
+    },
+    "id": "ai67wdhp"
+  },
+  {
     "type": "webpage",
     "title": "Open collaborative writing with Manubot",
     "URL": "https://greenelab.github.io/meta-review/",
@@ -1591,7 +1642,7 @@
         [
           "2019",
           3,
-          14
+          19
         ]
       ]
     },
