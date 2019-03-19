@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2019-01-04'
+date-meta: '2019-03-19'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-ds-ms/v/63bcf5f5a3959720f94db36ed952ae69359b0d96/))
+([permalink](https://trang1618.github.io/tpot-ds-ms/v/5f9920eeb60a37cfd4547f566ae94f09766848be/))
 was automatically generated
-from [trang1618/tpot-ds-ms@63bcf5f](https://github.com/trang1618/tpot-ds-ms/tree/63bcf5f5a3959720f94db36ed952ae69359b0d96)
-on January 4, 2019.
+from [trang1618/tpot-ds-ms@5f9920e](https://github.com/trang1618/tpot-ds-ms/tree/5f9920eeb60a37cfd4547f566ae94f09766848be)
+on March 19, 2019.
 </em></small>
 
 ## Authors
@@ -33,9 +33,9 @@ on January 4, 2019.
 + **Trang T. Le**<sup>☯</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0003-3737-6565](https://orcid.org/0000-0003-3737-6565)
-    · ![GitHub icon](images/github.svg){height="13px" width="13px"}
+    · ![GitHub icon](images/github.svg){.inline_icon}
     [trang1618](https://github.com/trang1618)
-    · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
     [trang1618](https://twitter.com/trang1618)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
@@ -44,9 +44,9 @@ on January 4, 2019.
 + **Weixuan Fu**<sup>☯</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0002-6434-5468](https://orcid.org/0000-0002-6434-5468)
-    · ![GitHub icon](images/github.svg){height="13px" width="13px"}
+    · ![GitHub icon](images/github.svg){.inline_icon}
     [weixuanfu](https://github.com/weixuanfu)
-    · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
     [weixuanfu](https://twitter.com/weixuanfu)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
@@ -55,9 +55,9 @@ on January 4, 2019.
 + **Jason H. Moore**<sup>†</sup><br>
     ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
     [0000-0002-5015-1099](https://orcid.org/0000-0002-5015-1099)
-    · ![GitHub icon](images/github.svg){height="13px" width="13px"}
+    · ![GitHub icon](images/github.svg){.inline_icon}
     [EpistasisLab](https://github.com/EpistasisLab)
-    · ![Twitter icon](images/twitter.svg){height="13px" width="13px"}
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
     [moorejh](https://twitter.com/moorejh)<br>
   <small>
      Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
@@ -68,7 +68,6 @@ on January 4, 2019.
 <sup>☯</sup> --- These authors contributed equally to this work.
 
 <sup>†</sup> --- Direct correspondence to jhmoore@upenn.edu.
-
 
 
 ## Abstract {.page_break_before}

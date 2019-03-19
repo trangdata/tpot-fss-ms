@@ -705,7 +705,7 @@
     "id": "rqdZ0HWl"
   },
   {
-    "publisher": "Springer Nature America, Inc",
+    "publisher": "Springer Nature",
     "issue": "1",
     "DOI": "10.1038/s41398-018-0234-3",
     "type": "article-journal",
@@ -1053,7 +1053,7 @@
     "id": "KgFuJ0Jv"
   },
   {
-    "publisher": "American Psychiatric Publishing",
+    "publisher": "American Psychiatric Association Publishing",
     "issue": "9",
     "DOI": "10.1176/appi.ajp.2009.08121760",
     "type": "article-journal",
@@ -1214,7 +1214,7 @@
     "id": "BnXfrP0P"
   },
   {
-    "publisher": "Springer Nature America, Inc",
+    "publisher": "Springer Nature",
     "issue": "1",
     "DOI": "10.1186/s13041-018-0407-2",
     "type": "article-journal",
@@ -1552,8 +1552,8 @@
       "date-parts": [
         [
           "2019",
-          1,
-          4
+          3,
+          19
         ]
       ]
     },
@@ -1567,7 +1567,8 @@
     "volume": "18",
     "issue": "25",
     "source": "www.jmlr.org",
-    "URL": "http://www.jmlr.org/papers/v18/16-261.html",
+    "URL": "http://jmlr.org/papers/v18/16-261.html",
+    "ISSN": "1533-7928",
     "shortTitle": "Auto-WEKA 2.0",
     "author": [
       {
@@ -1602,8 +1603,8 @@
       "date-parts": [
         [
           "2019",
-          1,
-          4
+          3,
+          19
         ]
       ]
     },
@@ -1639,9 +1640,9 @@
     "issued": {
       "date-parts": [
         [
-          "2018",
-          12,
-          31
+          "2019",
+          3,
+          14
         ]
       ]
     },
@@ -1649,8 +1650,8 @@
       "date-parts": [
         [
           "2019",
-          1,
-          4
+          3,
+          19
         ]
       ]
     },
@@ -1742,8 +1743,8 @@
       "date-parts": [
         [
           "2019",
-          1,
-          4
+          3,
+          19
         ]
       ]
     },
@@ -1816,8 +1817,8 @@
       "date-parts": [
         [
           "2019",
-          1,
-          4
+          3,
+          19
         ]
       ]
     },
