@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/trang1618/tpot-ds-ms/tree/gh-pages) branch hosts the contents of this directory at https://trang1618.github.io/tpot-ds-ms/.
-The permalink for this webpage version is https://trang1618.github.io/tpot-ds-ms/v/a1be08cf14d21a768f2d2a51426e68b1abc7553f/.
+The permalink for this webpage version is https://trang1618.github.io/tpot-ds-ms/v/e708fb0fc614c85518b735987b404c379d599215/.
 To redirect to the permalink for the latest manuscript version at anytime, use the link https://trang1618.github.io/tpot-ds-ms/v/freeze/.
 
 ## Files
@@ -36,4 +36,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`a1be08cf14d21a768f2d2a51426e68b1abc7553f`](https://github.com/trang1618/tpot-ds-ms/commit/a1be08cf14d21a768f2d2a51426e68b1abc7553f).
+[`e708fb0fc614c85518b735987b404c379d599215`](https://github.com/trang1618/tpot-ds-ms/commit/e708fb0fc614c85518b735987b404c379d599215).
