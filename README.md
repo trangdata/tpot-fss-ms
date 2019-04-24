@@ -2,15 +2,15 @@
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
-[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://trang1618.github.io/tpot-ds-ms/)
-[![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://trang1618.github.io/tpot-ds-ms/manuscript.pdf)
-[![Build Status](https://travis-ci.org/trang1618/tpot-ds-ms.svg?branch=master)](https://travis-ci.org/trang1618/tpot-ds-ms)
+[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://trang1618.github.io/tpot-fss-ms/)
+[![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://trang1618.github.io/tpot-fss-ms/manuscript.pdf)
+[![Build Status](https://travis-ci.org/trang1618/tpot-fss-ms.svg?branch=master)](https://travis-ci.org/trang1618/tpot-fss-ms)
 
 ## Manuscript description
 
 <!-- usage note: edit this section. -->
 
-This repository is the manuscript for a current development of TPOT with two new features: Dataset Selector and Template. Analysis code is available in the repository https://github.com/trang1618/tpot-ds. The manuscript is collaboratively written on GitHub using [Manubot](https://github.com/greenelab/manubot-rootstock).
+This repository is the manuscript for a current development of TPOT with two new features: Dataset Selector and Template. Analysis code is available in the repository https://github.com/trang1618/tpot-fss. The manuscript is collaboratively written on GitHub using [Manubot](https://github.com/greenelab/manubot-rootstock).
 
 ## Manubot
 
@@ -68,17 +68,17 @@ sh build/autobuild.sh
 
 ### Continuous Integration
 
-[![Build Status](https://travis-ci.org/trang1618/tpot-ds-ms.svg?branch=master)](https://travis-ci.org/trang1618/tpot-ds-ms)
+[![Build Status](https://travis-ci.org/trang1618/tpot-fss-ms.svg?branch=master)](https://travis-ci.org/trang1618/tpot-fss-ms)
 
 Whenever a pull request is opened, Travis CI will test whether the changes break the build process to generate a formatted manuscript.
 The build process aims to detect common errors, such as invalid citations.
 If your pull request build fails, see the Travis CI logs for the cause of failure and revise your pull request accordingly.
 
-When a commit to the `master` branch occurs (for example, when a pull request is merged), Travis CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/trang1618/tpot-ds-ms/tree/gh-pages) and [`output`](https://github.com/trang1618/tpot-ds-ms/tree/output) branches.
+When a commit to the `master` branch occurs (for example, when a pull request is merged), Travis CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/trang1618/tpot-fss-ms/tree/gh-pages) and [`output`](https://github.com/trang1618/tpot-fss-ms/tree/output) branches.
 The `gh-pages` branch uses [GitHub Pages](https://pages.github.com/) to host the following URLs:
 
-+ **HTML manuscript** at https://trang1618.github.io/tpot-ds-ms/
-+ **PDF manuscript** at https://trang1618.github.io/tpot-ds-ms/manuscript.pdf
++ **HTML manuscript** at https://trang1618.github.io/tpot-fss-ms/
++ **PDF manuscript** at https://trang1618.github.io/tpot-fss-ms/manuscript.pdf
 
 For continuous integration configuration details, see [`.travis.yml`](.travis.yml).
 
@@ -93,7 +93,7 @@ We encourage users to openly license their manuscripts, which is the default as 
 [![License: CC0 1.0](https://img.shields.io/badge/License%20Parts-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Except when noted otherwise, the entirety of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
-Please attribute by linking to https://github.com/trang1618/tpot-ds-ms.
+Please attribute by linking to https://github.com/trang1618/tpot-fss-ms.
 
 Since CC BY is not ideal for code and data, certain repository components are also released under the CC0 1.0 public domain dedication ([`LICENSE-CC0.md`](LICENSE-CC0.md)).
 All files matched by the following glob patterns are dual licensed under CC BY 4.0 and CC0 1.0:
@@ -113,4 +113,4 @@ All other files are only available under CC BY 4.0, including:
 + `*.pdf`
 + `*.docx`
 
-Please open [an issue](https://github.com/trang1618/tpot-ds-ms/issues) for any question related to licensing.
+Please open [an issue](https://github.com/trang1618/tpot-fss-ms/issues) for any question related to licensing.
