@@ -34,6 +34,46 @@
     "id": "S6aZVb3n"
   },
   {
+    "number": "1603.09441v1",
+    "version": "1",
+    "URL": "https://arxiv.org/abs/1603.09441v1",
+    "title": "A Stratified Analysis of Bayesian Optimization Methods",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          3,
+          31
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Ian Dewancker"
+      },
+      {
+        "literal": "Michael McCourt"
+      },
+      {
+        "literal": "Scott Clark"
+      },
+      {
+        "literal": "Patrick Hayes"
+      },
+      {
+        "literal": "Alexandra Johnson"
+      },
+      {
+        "literal": "George Ke"
+      }
+    ],
+    "container-title": "arXiv",
+    "publisher": "arXiv",
+    "abstract": "Empirical analysis serves as an important complement to theoretical analysis\nfor studying practical Bayesian optimization. Often empirical insights expose\nstrengths and weaknesses inaccessible to theoretical analysis. We define two\nmetrics for comparing the performance of Bayesian optimization methods and\npropose a ranking mechanism for summarizing performance within various genres\nor strata of test functions. These test functions serve to mimic the complexity\nof hyperparameter optimization problems, the most prominent application of\nBayesian optimization, but with a closed form which allows for rapid evaluation\nand more predictable behavior. This offers a flexible and efficient way to\ninvestigate functions with specific properties of interest, such as oscillatory\nbehavior or an optimum on the domain boundary.",
+    "type": "report",
+    "id": "dNxrF1HD"
+  },
+  {
     "number": "1607.08878v1",
     "version": "1",
     "URL": "https://arxiv.org/abs/1607.08878v1",
@@ -844,10 +884,13 @@
   },
   {
     "publisher": "Oxford University Press (OUP)",
+    "issue": "8",
     "DOI": "10.1093/bioinformatics/bty788",
     "type": "article-journal",
+    "page": "1358-1365",
     "source": "Crossref",
     "title": "STatistical Inference Relief (STIR) feature selection",
+    "volume": "35",
     "author": [
       {
         "given": "Trang T",
@@ -1273,6 +1316,39 @@
     "id": "hU27Whmi"
   },
   {
+    "publisher": "The Open Journal",
+    "issue": "33",
+    "DOI": "10.21105/joss.01132",
+    "type": "article-journal",
+    "page": "1132",
+    "source": "Crossref",
+    "title": "GAMA: Genetic Automated Machine learning Assistant",
+    "volume": "4",
+    "author": [
+      {
+        "given": "Pieter",
+        "family": "Gijsbers"
+      },
+      {
+        "given": "Joaquin",
+        "family": "Vanschoren"
+      }
+    ],
+    "container-title": "Journal of Open Source Software",
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          30
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfztpr",
+    "container-title-short": "JOSS",
+    "id": "VXN63GWK"
+  },
+  {
     "publisher": "MDPI AG",
     "issue": "8",
     "DOI": "10.3390/en10081168",
@@ -1317,13 +1393,12 @@
     "publisher": "Springer",
     "publisher-place": "New York, NY",
     "number-of-pages": "745",
-    "edition": "Second edition, corrected at 12th printing 2017",
-    "source": "Gemeinsamer Bibliotheksverbund ISBN",
+    "edition": "2nd ed",
+    "source": "Library of Congress ISBN",
     "event-place": "New York, NY",
     "ISBN": "9780387848570",
-    "note": "OCLC: 995842694",
+    "call-number": "Q325.5 .H39 2009",
     "shortTitle": "The elements of statistical learning",
-    "language": "eng",
     "author": [
       {
         "family": "Hastie",
@@ -1335,13 +1410,13 @@
       },
       {
         "family": "Friedman",
-        "given": "Jerome H."
+        "given": "J. H."
       }
     ],
     "issued": {
       "date-parts": [
         [
-          "2017"
+          "2009"
         ]
       ]
     },
@@ -1511,6 +1586,44 @@
   },
   {
     "type": "article-journal",
+    "title": "Random Search for Hyper-Parameter Optimization",
+    "container-title": "Journal of Machine Learning Research",
+    "page": "281-305",
+    "volume": "13",
+    "issue": "Feb",
+    "source": "www.jmlr.org",
+    "URL": "http://www.jmlr.org/papers/v13/bergstra12a.html",
+    "ISSN": "ISSN 1533-7928",
+    "author": [
+      {
+        "family": "Bengio",
+        "given": "Yoshua"
+      },
+      {
+        "family": "Bergstra",
+        "given": "James"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2012"
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          4,
+          24
+        ]
+      ]
+    },
+    "id": "1FSwIjR9s"
+  },
+  {
+    "type": "article-journal",
     "title": "DEAP: Evolutionary Algorithms Made Easy",
     "container-title": "Journal of Machine Learning Research",
     "page": "2171-2175",
@@ -1554,7 +1667,7 @@
         [
           "2019",
           4,
-          4
+          24
         ]
       ]
     },
@@ -1605,7 +1718,7 @@
         [
           "2019",
           4,
-          4
+          24
         ]
       ]
     },
@@ -1622,20 +1735,20 @@
         "given": "Daniel S."
       },
       {
-        "family": "Slochower",
-        "given": "David R."
+        "family": "Rubinetti",
+        "given": "Vincent"
       },
       {
-        "family": "Malladi",
-        "given": "Venkat S."
+        "family": "Slochower",
+        "given": "David R."
       },
       {
         "family": "Hu",
         "given": "Dongbo"
       },
       {
-        "family": "Rubinetti",
-        "given": "Vincent"
+        "family": "Malladi",
+        "given": "Venkat S."
       },
       {
         "family": "Greene",
@@ -1651,7 +1764,7 @@
         [
           "2019",
           4,
-          3
+          22
         ]
       ]
     },
@@ -1660,7 +1773,7 @@
         [
           "2019",
           4,
-          4
+          24
         ]
       ]
     },
@@ -1753,7 +1866,7 @@
         [
           "2019",
           4,
-          4
+          24
         ]
       ]
     },
@@ -1827,7 +1940,7 @@
         [
           "2019",
           4,
-          4
+          24
         ]
       ]
     },
