@@ -1,5 +1,36 @@
 [
   {
+    "number": "1012.2599v1",
+    "version": "1",
+    "URL": "https://arxiv.org/abs/1012.2599v1",
+    "title": "A Tutorial on Bayesian Optimization of Expensive Cost Functions, with\n  Application to Active User Modeling and Hierarchical Reinforcement Learning",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          12,
+          12
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Eric Brochu"
+      },
+      {
+        "literal": "Vlad M. Cora"
+      },
+      {
+        "literal": "Nando de Freitas"
+      }
+    ],
+    "container-title": "arXiv",
+    "publisher": "arXiv",
+    "abstract": "We present a tutorial on Bayesian optimization, a method of finding the\nmaximum of expensive cost functions. Bayesian optimization employs the Bayesian\ntechnique of setting a prior over the objective function and combining it with\nevidence to get a posterior function. This permits a utility-based selection of\nthe next observation to make on the objective function, which must take into\naccount both exploration (sampling from areas of high uncertainty) and\nexploitation (sampling areas likely to offer improvement over the current best\nobservation). We also present two detailed extensions of Bayesian optimization,\nwith experiments---active user modelling with preferences, and hierarchical\nreinforcement learning---and a discussion of the pros and cons of Bayesian\noptimization based on our experiences.",
+    "type": "report",
+    "id": "12jXoIQAE"
+  },
+  {
     "number": "1208.3719v2",
     "version": "2",
     "URL": "https://arxiv.org/abs/1208.3719v2",
@@ -137,43 +168,6 @@
     "abstract": "We introduce an automatic machine learning (AutoML) modeling architecture\ncalled Autostacker, which combines an innovative hierarchical stacking\narchitecture and an Evolutionary Algorithm (EA) to perform efficient parameter\nsearch. Neither prior domain knowledge about the data nor feature preprocessing\nis needed. Using EA, Autostacker quickly evolves candidate pipelines with high\npredictive accuracy. These pipelines can be used as is or as a starting point\nfor human experts to build on. Autostacker finds innovative combinations and\nstructures of machine learning models, rather than selecting a single model and\noptimizing its hyperparameters. Compared with other AutoML systems on fifteen\ndatasets, Autostacker achieves state-of-art or competitive performance both in\nterms of test accuracy and time cost.",
     "type": "report",
     "id": "RiocGZOq"
-  },
-  {
-    "number": "1803.04487v1",
-    "version": "1",
-    "URL": "https://arxiv.org/abs/1803.04487v1",
-    "title": "Integrated machine learning pipeline for aberrant biomarker enrichment\n  (i-mAB): characterizing clusters of differentiation within a compendium of\n  systemic lupus erythematosus patients",
-    "issued": {
-      "date-parts": [
-        [
-          2018,
-          3,
-          8
-        ]
-      ]
-    },
-    "author": [
-      {
-        "literal": "Trang T. Le"
-      },
-      {
-        "literal": "Nigel O. Blackwood"
-      },
-      {
-        "literal": "Jaclyn N. Taroni"
-      },
-      {
-        "literal": "Weixuan Fu"
-      },
-      {
-        "literal": "Matthew K. Breitenstein"
-      }
-    ],
-    "container-title": "arXiv",
-    "publisher": "arXiv",
-    "abstract": "Clusters of differentiation (CD) are cell surface biomarkers that denote key\nbiological differences between cell types and disease state. CD-targeting\ntherapeutic monoclonal antibodies (mAB) afford rich trans-disease repositioning\nopportunities. Within a compendium of systemic lupus erythematous (SLE)\npatients, we applied the Integrated machine learning pipeline for aberrant\nbiomarker enrichment (i-mAB) to profile de novo gene expression features\naffecting CD20, CD22 and CD30 gene aberrance. First, a novel relief-based\nalgorithm identified interdependent features(p=681) predicting\ntreatment-na\\\"ive SLE patients (balanced accuracy=0.822). We then compiled\nCD-associated expression profiles using regularized logistic regression and\npathway enrichment analyses. On an independent general cell line model system\ndata, we replicated associations (in silico) of BCL7A(padj=1.69e-9) and\nSTRBP(padj=4.63e-8) with CD22; NCOA2(padj=7.00e-4), ATN1(padj=1.71e-2), and\nHOXC4(padj=3.34e-2) with CD30; and PHOSPHO1, a phosphatase linked to bone\nmineralization, with both CD22(padj=4.37e-2) and CD30(padj=7.40e-3). Utilizing\ncarefully aggregated secondary data and leveraging a priori hypotheses, i-mAB\nfostered robust biomarker profiling among interdependent biological features.",
-    "type": "report",
-    "id": "3LGbkjqK"
   },
   {
     "publisher": "Springer International Publishing",
@@ -1423,6 +1417,38 @@
     "id": "Od6nwLRB"
   },
   {
+    "type": "book",
+    "title": "Introduction to evolutionary computing",
+    "collection-title": "Natural computing series",
+    "publisher": "Springer",
+    "publisher-place": "Berlin",
+    "number-of-pages": "299",
+    "edition": "1. ed., corr. 2. printing, softcover version of original hardcover ed. 2003",
+    "source": "Gemeinsamer Bibliotheksverbund ISBN",
+    "event-place": "Berlin",
+    "ISBN": "9783642072857",
+    "note": "OCLC: 837781639",
+    "language": "eng",
+    "author": [
+      {
+        "family": "Eiben",
+        "given": "Agoston E."
+      },
+      {
+        "family": "Smith",
+        "given": "James E."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2010"
+        ]
+      ]
+    },
+    "id": "paJ8Z08z"
+  },
+  {
     "title": "Increased apoptosis in patients with major depression: A preliminary study.",
     "volume": "163",
     "issue": "1",
@@ -1550,6 +1576,51 @@
     "URL": "https://www.ncbi.nlm.nih.gov/pubmed/29218881",
     "type": "article-journal",
     "id": "h0b16kU4"
+  },
+  {
+    "title": "Integrated machine learning pipeline for aberrant biomarker enrichment (i-mAB): characterizing clusters of differentiation within a compendium of systemic lupus erythematosus patients.",
+    "volume": "2018",
+    "page": "1358-1367",
+    "container-title": "AMIA ... Annual Symposium proceedings. AMIA Symposium",
+    "container-title-short": "AMIA Annu Symp Proc",
+    "ISSN": "1942-597X",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          12,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "Trang T",
+        "family": "Le"
+      },
+      {
+        "given": "Nigel O",
+        "family": "Blackwood"
+      },
+      {
+        "given": "Jaclyn N",
+        "family": "Taroni"
+      },
+      {
+        "given": "Weixuan",
+        "family": "Fu"
+      },
+      {
+        "given": "Matthew K",
+        "family": "Breitenstein"
+      }
+    ],
+    "PMID": "30815180",
+    "PMCID": "PMC6371296",
+    "abstract": "Clusters of differentiation (",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/30815180",
+    "type": "article-journal",
+    "id": "SqWLazSS"
   },
   {
     "publisher": "Morgan Kaufmann Publishers Inc.",

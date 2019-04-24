@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-fss-ms/v/76fd0935e0a04f4b8d8314ced5472a6a1e6dda6b/))
+([permalink](https://trang1618.github.io/tpot-fss-ms/v/c05b7a7fa5d967aaebeab03b084588dd6ec49e4b/))
 was automatically generated
-from [trang1618/tpot-fss-ms@76fd093](https://github.com/trang1618/tpot-fss-ms/tree/76fd0935e0a04f4b8d8314ced5472a6a1e6dda6b)
+from [trang1618/tpot-fss-ms@c05b7a7](https://github.com/trang1618/tpot-fss-ms/tree/c05b7a7fa5d967aaebeab03b084588dd6ec49e4b)
 on April 24, 2019.
 </em></small>
 
@@ -113,29 +113,29 @@ Automated machine learning (AutoML) systems were developed to automate this chal
 These intelligent systems increase the accessibility and scalability of various machine learning applications by efficiently solving an optimization problem to discover pipelines that yield satisfactory outcomes, such as prediction accuracy.
 Consequently, AutoML allows data scientists to focus their effort in applying their expertise in other important research components such as developing meaningful hypotheses or communicating the results.
 
-Grid search, random search [@1FSwIjR9s], Bayesian optimization and evolutionary algorithm (EA) are four common approaches to build AutoML systems for diverse applications.
-To explores possible combinations of all hyperparameters, both grid search and random search could be very computational expensive and unpractical on a model with high dimensional search space, like more than 10 hyperparameters [@dNxrF1HD].
-Bayesian optimization was used in both auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n; @ai67wdhp] for model selection and hyperparameter optimization.
-Although simple ML pipeline, including data preprocessing, feature engineering and single model prediction, was allowed in both systems, they cannot build complex pipelines or stacking models to solve complicated problems.
-Evolutionary Algorithm (EA) is more flexible to build highly extensible and complex ML pipelines or complex ensemble models for data scientists.
-For example, Recipe [@6ChydIkb] uses grammar-based genetic programming to build and optimize ML pipelines based on a fully configurable grammar and Autostacker [@RiocGZOq] uses basic EA to search good solutions to flexible combinations of many ML algorithms for better performance.
-DEvol (https://github.com/joeddav/devol) was designed for deep neural network specifically and it can optimize complex model architecture via using EA to tune hyperparameters related to convolutional/dense layers and optimizer.
-More recently, GAMA [@VXN63GWK] was released and it performs automatic ensemble of best ML pipelines evaluated by asynchronous EA instead of just using a single best pipeline for prediction.
-Overall, EA enhances AutoML systems with high flexibility in building ML models and pipelines and large search space of ML algorithms and their hyperparameter.
+Grid search, random search [@1FSwIjR9s], Bayesian optimization [@12jXoIQAE] and evolutionary algorithm (EA) [@paJ8Z08z] are four common approaches to build AutoML systems for diverse applications.
+Both grid search and random search could be too computational expensive and impractical to explore all possible combinations of the hyperparameters on a model with high dimensional search space, for example, with more than 10 hyperparameters [@dNxrF1HD].
+Bayesian optimization is implemented in both auto-sklearn [@8JQDv397] and Auto-WEKA [@S6aZVb3n; @ai67wdhp] for model selection and hyperparameter optimization.
+Although both systems allow simple ML pipelines including data preprocessing, feature engineering and single model prediction, they cannot build more complex pipelines or stacked models which are necessary for complicated prediction problems.
+On the other hand, Evolutionary Algorithm (EA) can generate highly extensible and complex ML pipelines and ensemble models for data scientists.
+For example, Recipe [@6ChydIkb] uses grammar-based EA to build and optimize ML pipelines based on a fully configurable grammar.
+Autostacker [@RiocGZOq] uses basic EA to look for flexible combinations of many ML algorithms that yield better performance.
+DEvol (https://github.com/joeddav/devol) was designed specifically for deep neural networks and can optimize complex model architecture by using EA to tune hyperparameters related to convolutional/dense layers and optimizer.
+More recently released, GAMA [@VXN63GWK] performs automatic ensemble of best ML pipelines evaluated by asynchronous EA instead of simply using a single best pipeline for prediction.
+Progressively, EA enhances AutoML systems with high flexibility in building pipelines in a large search space of ML algorithms and their hyperparameters.
 
 Tree-based Pipeline Optimization Tool (TPOT) is a EA-based AutoML system that uses genetic programming (GP) [@NopW1Vw3] to optimize a series of feature selectors, preprocessors and ML models with the objective of maximizing classification accuracy.
 While most AutoML systems primarily focus on model selection and hyperparameter optimization, TPOT also pays attention to feature selection and feature engineering by evaluating the complete pipelines based on their cross-validated score such as mean squared error or balanced accuracy.
 Given no a priori knowledge about the problem, TPOT has been shown to frequently outperform standard machine learning analyses [@QkGSlAB3; @JEn7WIoN].
 Effort has been made to specialize TPOT for human genetics research, resulting in a useful extended version of TPOT, TPOT-MDR, that features Multifactor Dimensionality Reduction and an Expert Knowledge Filter [@AvvI4W9K].
 However, at the current stage, TPOT still requires great computational expense to analyze large datasets such as in genome-wide association studies (GWAS) or gene expression analyses.
-Consequently, the application of TPOT on real-world datasets has been limited to small sets of features [@3LGbkjqK].
+Consequently, the application of TPOT on real-world datasets has been limited to small sets of features [@SqWLazSS].
 
 In this work, we introduce two new features implemented in TPOT that helps increase the system’s scalability.
 First, the Feature Set Selector (FSS) allows the users to pass specific subsets of the features, reducing the computational expense of TPOT at the beginning of each pipeline to only evaluate on a smaller subset of data rather than the entire dataset.
 Consequently, FSS increases TPOT's efficiency in application on large data sets by slicing the data into smaller sets of features (*e.g.* genes) and allowing a genetic algorithm to select the best subset in the final pipeline.
 Second, Template enables the option for strongly typed GP, a method to enforce type constraints in genetic programming.
 By letting users specify a desired structure of the resulting machine learning pipeline, Template helps reduce TPOT computation time and potentially provide more interpretable results.
-
 
 ## Methods
 We begin with descriptions of the two novel additions to TPOT, Feature Set Selector and Template.
