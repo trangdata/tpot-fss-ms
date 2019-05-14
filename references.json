@@ -1381,6 +1381,7 @@
     "id": "19eUrsX1M"
   },
   {
+    "id": "Od6nwLRB",
     "type": "book",
     "title": "The elements of statistical learning: data mining, inference, and prediction",
     "collection-title": "Springer series in statistics",
@@ -1413,10 +1414,10 @@
           "2009"
         ]
       ]
-    },
-    "id": "Od6nwLRB"
+    }
   },
   {
+    "id": "paJ8Z08z",
     "type": "book",
     "title": "Introduction to evolutionary computing",
     "collection-title": "Natural computing series",
@@ -1445,8 +1446,7 @@
           "2010"
         ]
       ]
-    },
-    "id": "paJ8Z08z"
+    }
   },
   {
     "title": "Increased apoptosis in patients with major depression: A preliminary study.",
@@ -1656,6 +1656,7 @@
     "id": "NopW1Vw3"
   },
   {
+    "id": "1FSwIjR9s",
     "type": "article-journal",
     "title": "Random Search for Hyper-Parameter Optimization",
     "container-title": "Journal of Machine Learning Research",
@@ -1667,12 +1668,12 @@
     "ISSN": "ISSN 1533-7928",
     "author": [
       {
-        "family": "Bengio",
-        "given": "Yoshua"
-      },
-      {
         "family": "Bergstra",
         "given": "James"
+      },
+      {
+        "family": "Bengio",
+        "given": "Yoshua"
       }
     ],
     "issued": {
@@ -1686,14 +1687,14 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          14
         ]
       ]
-    },
-    "id": "1FSwIjR9s"
+    }
   },
   {
+    "id": "Gcs0HrMy",
     "type": "article-journal",
     "title": "DEAP: Evolutionary Algorithms Made Easy",
     "container-title": "Journal of Machine Learning Research",
@@ -1706,24 +1707,24 @@
     "shortTitle": "DEAP",
     "author": [
       {
-        "family": "Gagné",
-        "given": "Christian"
-      },
-      {
-        "family": "Parizeau",
-        "given": "Marc"
-      },
-      {
-        "family": "Gardner",
-        "given": "Marc-André"
+        "family": "Fortin",
+        "given": "Félix-Antoine"
       },
       {
         "family": "Rainville",
         "given": "François-Michel De"
       },
       {
-        "family": "Fortin",
-        "given": "Félix-Antoine"
+        "family": "Gardner",
+        "given": "Marc-André"
+      },
+      {
+        "family": "Parizeau",
+        "given": "Marc"
+      },
+      {
+        "family": "Gagné",
+        "given": "Christian"
       }
     ],
     "issued": {
@@ -1737,14 +1738,14 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          14
         ]
       ]
-    },
-    "id": "Gcs0HrMy"
+    }
   },
   {
+    "id": "ai67wdhp",
     "type": "article-journal",
     "title": "Auto-WEKA 2.0: Automatic model selection and hyperparameter optimization in WEKA",
     "container-title": "Journal of Machine Learning Research",
@@ -1757,24 +1758,24 @@
     "shortTitle": "Auto-WEKA 2.0",
     "author": [
       {
-        "family": "Leyton-Brown",
-        "given": "Kevin"
-      },
-      {
-        "family": "Hutter",
-        "given": "Frank"
-      },
-      {
-        "family": "Hoos",
-        "given": "Holger H."
+        "family": "Kotthoff",
+        "given": "Lars"
       },
       {
         "family": "Thornton",
         "given": "Chris"
       },
       {
-        "family": "Kotthoff",
-        "given": "Lars"
+        "family": "Hoos",
+        "given": "Holger H."
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      },
+      {
+        "family": "Leyton-Brown",
+        "given": "Kevin"
       }
     ],
     "issued": {
@@ -1788,14 +1789,14 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          14
         ]
       ]
-    },
-    "id": "ai67wdhp"
+    }
   },
   {
+    "id": "1GGGHdsew",
     "type": "webpage",
     "title": "Open collaborative writing with Manubot",
     "URL": "https://greenelab.github.io/meta-review/",
@@ -1843,14 +1844,14 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          14
         ]
       ]
-    },
-    "id": "1GGGHdsew"
+    }
   },
   {
+    "id": "1iuWTU7i",
     "type": "article-journal",
     "title": "Scikit-learn: Machine Learning in Python",
     "container-title": "Journal of Machine Learning Research",
@@ -1936,14 +1937,14 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          14
         ]
       ]
-    },
-    "id": "1iuWTU7i"
+    }
   },
   {
+    "id": "8JQDv397",
     "type": "chapter",
     "title": "Efficient and Robust Automated Machine Learning",
     "container-title": "Advances in Neural Information Processing Systems 28",
@@ -2010,11 +2011,10 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          14
         ]
       ]
-    },
-    "id": "8JQDv397"
+    }
   }
 ]

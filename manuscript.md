@@ -3,7 +3,7 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2019-04-24'
+date-meta: '2019-05-14'
 keywords:
 - tpot
 - automl
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-fss-ms/v/19604056905e40239a30449a51f9f665e848db07/))
+([permalink](https://trang1618.github.io/tpot-fss-ms/v/7946213563ac2187a374c28321ad6e8b7d693d49/))
 was automatically generated
-from [trang1618/tpot-fss-ms@1960405](https://github.com/trang1618/tpot-fss-ms/tree/19604056905e40239a30449a51f9f665e848db07)
-on April 24, 2019.
+from [trang1618/tpot-fss-ms@7946213](https://github.com/trang1618/tpot-fss-ms/tree/7946213563ac2187a374c28321ad6e8b7d693d49)
+on May 14, 2019.
 </em></small>
 
 ## Authors
@@ -191,10 +191,12 @@ $$P(s_j \in S_i) \sim 1.618^{-i}$$ {#eq:p_subset}
 where 1.618 is an approximation of the golden ratio and yields a reasonable distribution of the functional features: they are more likely to be included in the earlier subsets (subset 1 and 2) than the later ones. 
 
 #### Real-world RNA-Seq expression data
-We employed TPOT-FSS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. [@p7dAO241]. 
-Gene expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering. 
-Consequently, whole blood RNA-Seq measurements of 5,912 genes were obtained and are now used in the current study to test for association with MDD status. 
-We use the 23 subsets of interconnected genes called depression gene modules (DGMs) identified from the RNA-Seq gene network module analysis [@p7dAO241] as input for the FSS operator.
+We employ TPOT-FSS on an RNA-Seq expression dataset of 78 individuals with major depressive disorder (MDD) and 79 healthy controls (HC) from Ref. [@p7dAO241].
+RNA expression levels were quantified from reads of 19,968 annotated protein-coding genes and underwent a series of preprocessing steps including low read-count and outlier removal, technical and batch effect adjustment, and coefficient of variation filtering.
+Consequently, whole blood RNA-Seq measurements of 5,912 transcripts were used to identify depression gene modules (DGMs) based on a read alignment protocol that enriched for the expression of antisense RNA.
+In the current study, we apply TPOT-FSS to this processed dataset to verify our method’s ability to select the subset of features that is important for predicting the MDD outcome.
+The primary antisense-enriched dataset, along with a second preprocessed dataset enriched for gene expression, is available on the Github repository of the original MDD study (https://github.com/insilico/DepressionGeneModules).
+We use the interconnected genes in 23 DGMs identified from the original RNA-Seq gene network module analysis [@p7dAO241] as input for the FSS operator.
 We remark that these modules were constructed by an unsupervised machine learning method with dynamic tree cutting from a co-expression network.
 As a result, this prior knowledge of the gene structure does not depend on the diagnostic phenotype and thus yields no bias in the downstream analysis of TPOT-FSS.
 
