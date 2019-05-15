@@ -20,9 +20,9 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-fss-ms/v/851b910f8aace078e707a27e1536b3ed4412d416/))
+([permalink](https://trang1618.github.io/tpot-fss-ms/v/0f85860394cbae7f193dbd4b7e68d8ae33b182f6/))
 was automatically generated
-from [trang1618/tpot-fss-ms@851b910](https://github.com/trang1618/tpot-fss-ms/tree/851b910f8aace078e707a27e1536b3ed4412d416)
+from [trang1618/tpot-fss-ms@0f85860](https://github.com/trang1618/tpot-fss-ms/tree/0f85860394cbae7f193dbd4b7e68d8ae33b182f6)
 on May 15, 2019.
 </em></small>
 
@@ -139,7 +139,7 @@ By letting users specify a desired structure of the resulting machine learning p
 
 ## Methods
 We begin with descriptions of the two novel additions to TPOT, Feature Set Selector and Template.
-Then, we provide detail of a real-world RNA-Seq expression dataset and describe a simulation approach to generate data comparable to the expression data.
+Then, we provide detail of a real-world RNA-Seq RNA-Seq dataset and describe a simulation approach to generate data comparable to the RNA-Seq data.
 Finally, we discuss other methods and performance metrics for comparison.
 Detailed simulation and analysis code needed to reproduce the results has been made available on the GitHub repository [https://github.com/lelaboratoire/tpot-fss](https://github.com/lelaboratoire/tpot-fss).
 
@@ -173,16 +173,16 @@ With a Template defined, each node in the tree pipeline is assigned one of the f
 Moreover, besides the major operator types, each node can also be assigned more specifically as a method of an operator, such as decision trees for classifier. 
 An example Template is Feature set selector &rarr; Feature transform &rarr; Decision trees (Fig. {@fig:flow}).
 
-![Template's general workflow with TPOT-FSS and example pipelines. Final pipelines with optimized parameters are shown for simulated data (top, green) and real-world gene expression data (bottom, mauve). The specific operators selected in optimal pipelines include built-in TPOT’s operators (OneHotEncoder, FeatureSetSelector) and functions from the library of scikit-learn (ExtraTreesClassifier, Nystroem).](images/flow.png){#fig:flow width="90%"}
+![Template's general workflow with TPOT-FSS and example pipelines. Final pipelines with optimized parameters are shown for simulated data (top, green) and real-world RNA-Seq data (bottom, mauve). The specific operators selected in optimal pipelines include built-in TPOT’s operators (OneHotEncoder, FeatureSetSelector) and functions from the library of scikit-learn (ExtraTreesClassifier, Nystroem).](images/flow.png){#fig:flow width="90%"}
 
 
 ### Datasets
-We apply TPOT with the new FSS operator on both simulated datasets and a real world RNA-Seq gene expression dataset. 
+We apply TPOT with the new FSS operator on both simulated datasets and a real world RNA expression dataset. 
 With both real-world and simulated data, we hope to acquire a comprehensive view of the strengths and limitations of TPOT in the next generation sequencing domain.
 
 #### Simulation methods
 The simulated datasets were generated using the `R` package `privateEC`, which was designed to simulate realistic effects to be expected in gene expression or resting-state fMRI data. 
-In the current study, to be consistent with the real expression dataset (described below), we simulate interaction effect data with *m* = 200 individuals (100 cases and 100 controls) and *p* = 5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
+In the current study, to be consistent with the real RNA-Seq dataset (described below), we simulate interaction effect data with *m* = 200 individuals (100 cases and 100 controls) and *p* = 5,000 real-valued features with 4% functional (true positive association with outcome) for each training and testing set. 
 Full details of the simulation approach can be found in Refs. [@p7dAO241; @NKnMeQUs]. Briefly, the privateEC simulation induces a differential co-expression network of random normal expression levels and permutes the values of targeted features within the cases to generate interactions. 
 Further, by imposing a large number of background features (no association with outcome), we seek to assess TPOT-FSS’s performance in accommodating large numbers of non-predictive features.
 
@@ -243,7 +243,7 @@ This overfitting in the performance of these other two models is likely due to t
 
 ![Performance comparison of three models: tuned XGBoost, optimal pipeline from standard TPOT and optimal pipeline from TPOT-FSS. In both simulated and real-world expression datasets, TPOT-FSS optimal pipelines significantly outperform those of XGBoost and standard TPOT.](images/compareAcc.svg){#fig:compAcc width="90%"}
 
-Meanwhile, for the real-world expression data, the optimal TPOT-FSS pipeline yields an average holdout prediction accuracy of 0.68, while the standard TPOT without FSS and tuned XGBoost models produce average holdout accuracies of 0.60 and 0.59 respectively across all 100 model fits (Fig. {@fig:compAcc}).
+Meanwhile, for the real-world RNA-Seq data, the optimal TPOT-FSS pipeline yields an average holdout prediction accuracy of 0.68, while the standard TPOT without FSS and tuned XGBoost models produce average holdout accuracies of 0.60 and 0.59 respectively across all 100 model fits (Fig. {@fig:compAcc}).
 In summary, the optimal models from standard TPOT and XGBoost perform better in real-world data compared to simulated data but still worse than that of TPOT-FSS.
 In both datasets, separate Welch two-sample one-sided *t*-tests show TPOT-FSS optimal pipelines significantly outperform those of XGBoost and standard TPOT (all *p* values $<10^{-15}$).
 
@@ -256,16 +256,16 @@ According to Eq. {@eq:p_subset}, the earlier the subset, the more functional fea
 Therefore, our aim is to determine how well TPOT-FSS can identify the first subset ($S_1$) that contains the largest number of informative features.
 In 100 replications, TPOT-FSS correctly selects subset $S_1$ in 75 resulting pipelines (Fig. {@fig:simFSS}), with the highest average holdout accuracy (0.69 across all 75 pipelines).
 
-![TPOT-FSS’s holdout accuracy (vertical) with selected subset (horizontal) in 100 replications on the RNA-Seq expression data. Number of pipeline inclusions of each subset is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5, on average, produce higher MDD prediction accuracies in the holdout set.](images/real_100.svg){#fig:realFSS width="80%"}
+![TPOT-FSS’s holdout accuracy (vertical) with selected subset (horizontal) in 100 replications on the RNA-Seq data. Number of pipeline inclusions of each subset is displayed above the boxplots. Subsets DGM-5 and DGM-13 are the most frequent to be included in the final pipeline. Pipelines that include DGM-5, on average, produce higher MDD prediction accuracies in the holdout set.](images/real_100.svg){#fig:realFSS width="80%"}
 
-For the expression data, in 100 replications, TPOT-FSS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realFSS}), with the highest average holdout accuracy of 0.636 across 64 pipelines.
+For the RNA-Seq data, in 100 replications, TPOT-FSS selects DGM-5 (291 genes) 64 times to be the subset most predictive of the diagnosis status (Fig. {@fig:realFSS}), with the highest average holdout accuracy of 0.636 across 64 pipelines.
 In the previous study with a modular network approach, we showed that DGM-5 has statistically significant associations with depression severity measured by the Montgomery-Åsberg Depression Scale (MADRS).
 Although there is no direct link between the top genes of the module (Fig. {@fig:featImp}a) and MDD in the literature, many of these genes interact with other MDD-related genes.
 For example, NR2C2 interacts with FKBP5 gene whose association with MDD has been strongly suggested [@KXwvC8hd;@sxkRCGzQ;@rqdZ0HWl].
 Many of DGM-5's top genes, including FAM13A, NR2C2,PP7080 and OXR1, were previously shown to have significant association with the diagnosis phenotype using a Relief-based feature selection method [@rO22KppO].
 Further, with 82% overlap of DGM-5's genes in a separate dataset from the RNA-Seq study by Mostafavi et al. [@g454CrrS], this gene collection's enrichment score was also shown to be significantly associated with the diagnosis status in this independent dataset.
 
-![Permutation importance scores of the top twenty expression features in the optimal pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all expression features computed by permutation from the optimal pipelines are provided in Table S2.](images/importanceFeatures.svg){#fig:featImp width="100%"}
+![Permutation importance scores of the top twenty features in the optimal pipeline that selects DGM-5 and one that selects DGM-13. Comprehensive importance scores of the all features computed by permutation from the optimal pipelines are provided in Table S2.](images/importanceFeatures.svg){#fig:featImp width="100%"}
 
 After DGM-5, DGM-13 (134 genes) was selected by TPOT-FSS 30 times (Fig. {@fig:realFSS}), with an average holdout accuracy of 0.563 across 30 pipelines.
 The previous network approach did not find statistically significant association between this module's enrichment score and the MADRS.
@@ -274,7 +274,7 @@ The RGL4 gene, a Ral guanine nucleotide dissociation stimulator, was found to ha
 
 ### Computational expense
 For a dataset of the size simulated in our study (*m* = 200 samples and *p* = 5000 attributes), standard TPOT has a 18.5-hour runtime on a low performance computing machine with an Intel Xeon E5-2690 2.60GHz CPU, 28 cores and 256GB of RAM, whereas TPOT-FSS has a 65-minute runtime, approximately 17 times faster.
-On the same low performance computing machine, each replication of standard TPOT on the expression data takes on average 13.3 hours, whereas TPOT-FSS takes 40 minutes, approximately 20 times faster.
+On the same low performance computing machine, each replication of standard TPOT on the RNA-Seq data takes on average 13.3 hours, whereas TPOT-FSS takes 40 minutes, approximately 20 times faster.
 
 ## Discussion
 To our knowledge, TPOT-FSS is the first AutoML tool to offer the option of feature selection at the group level.

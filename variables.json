@@ -58,7 +58,7 @@
     "repo_slug": "trang1618/tpot-fss-ms",
     "repo_owner": "trang1618",
     "repo_name": "tpot-fss-ms",
-    "commit": "851b910f8aace078e707a27e1536b3ed4412d416"
+    "commit": "0f85860394cbae7f193dbd4b7e68d8ae33b182f6"
   },
   "manuscript_stats": {
     "reference_counts": {
@@ -70,6 +70,6 @@
       "url": 6,
       "total": 40
     },
-    "word_count": 5163
+    "word_count": 5158
   }
 }
