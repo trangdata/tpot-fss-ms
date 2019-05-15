@@ -3,14 +3,14 @@ author-meta:
 - Trang T. Le
 - Weixuan Fu
 - Jason H. Moore
-date-meta: '2019-05-14'
+date-meta: '2019-05-15'
 keywords:
 - tpot
 - automl
 - machine learning
 lang: en-US
 title: Scaling tree-based automated machine learning to biomedical big data with a
-  dataset selector
+  feature set selector
 ...
 
 
@@ -20,10 +20,10 @@ title: Scaling tree-based automated machine learning to biomedical big data with
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/tpot-fss-ms/v/7946213563ac2187a374c28321ad6e8b7d693d49/))
+([permalink](https://trang1618.github.io/tpot-fss-ms/v/851b910f8aace078e707a27e1536b3ed4412d416/))
 was automatically generated
-from [trang1618/tpot-fss-ms@7946213](https://github.com/trang1618/tpot-fss-ms/tree/7946213563ac2187a374c28321ad6e8b7d693d49)
-on May 14, 2019.
+from [trang1618/tpot-fss-ms@851b910](https://github.com/trang1618/tpot-fss-ms/tree/851b910f8aace078e707a27e1536b3ed4412d416)
+on May 15, 2019.
 </em></small>
 
 ## Authors
@@ -102,7 +102,7 @@ Supplementary data are available at Bioinformatics online.
 Big data have recently become prevalent in many fields including meteorology, complex physics simulations, large scale imaging, genomics, biomedical research, environmental research and more.
 TPOT is a Python Automated Machine Learning (AutoML) tool that uses genetic programming to optimize machine learning pipelines for analyzing biomedical data.
 However, like other AutoML tools, when analyzing big data, the early implementations of TPOT face the challenges of long runtime, high computational expense as well complex pipeline with low interpretability.
-Here, we develop two novel features for TPOT, Dataset Selector and Template, that leverage domain knowledge, greatly reduce the computational expense and flexibly extend TPOT's application to biomedical big data analysis.
+Here, we develop two novel features for TPOT, Feature Set Selector and Template, that leverage domain knowledge, greatly reduce the computational expense and flexibly extend TPOT's application to biomedical big data analysis.
 
 ## Introduction
 

@@ -1388,12 +1388,13 @@
     "publisher": "Springer",
     "publisher-place": "New York, NY",
     "number-of-pages": "745",
-    "edition": "2nd ed",
-    "source": "Library of Congress ISBN",
+    "edition": "Second edition, corrected at 12th printing 2017",
+    "source": "Gemeinsamer Bibliotheksverbund ISBN",
     "event-place": "New York, NY",
     "ISBN": "9780387848570",
-    "call-number": "Q325.5 .H39 2009",
+    "note": "OCLC: 995842694",
     "shortTitle": "The elements of statistical learning",
+    "language": "eng",
     "author": [
       {
         "family": "Hastie",
@@ -1405,13 +1406,13 @@
       },
       {
         "family": "Friedman",
-        "given": "J. H."
+        "given": "Jerome H."
       }
     ],
     "issued": {
       "date-parts": [
         [
-          "2009"
+          "2017"
         ]
       ]
     }
@@ -1688,7 +1689,7 @@
         [
           "2019",
           5,
-          14
+          15
         ]
       ]
     }
@@ -1739,7 +1740,7 @@
         [
           "2019",
           5,
-          14
+          15
         ]
       ]
     }
@@ -1790,7 +1791,7 @@
         [
           "2019",
           5,
-          14
+          15
         ]
       ]
     }
@@ -1845,7 +1846,7 @@
         [
           "2019",
           5,
-          14
+          15
         ]
       ]
     }
@@ -1938,7 +1939,7 @@
         [
           "2019",
           5,
-          14
+          15
         ]
       ]
     }
@@ -2012,7 +2013,7 @@
         [
           "2019",
           5,
-          14
+          15
         ]
       ]
     }
