@@ -86,7 +86,7 @@ if [ "$BUILD_DOCX" = "true" ]; then
     --bibliography=$BIBLIOGRAPHY_PATH \
     --csl=$CSL_PATH \
     --metadata link-citations=true \
-    --reference-doc=build/themes/default.docx \
+    --reference-doc=build/themes/bioinformatics.dotx \
     --resource-path=.:content \
     --output=output/manuscript.docx \
     $INPUT_PATH
