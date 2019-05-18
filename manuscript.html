@@ -24,7 +24,7 @@
 <header id="title-block-header">
 <h1 class="title">Scaling tree-based automated machine learning to biomedical big data with a feature set selector</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-fss-ms/v/4962d7ce3e49b7ed3050bb552993b134b9e0d6a8/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-fss-ms/tree/4962d7ce3e49b7ed3050bb552993b134b9e0d6a8">trang1618/tpot-fss-ms@4962d7c</a> on May 18, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://trang1618.github.io/tpot-fss-ms/v/6cf12c77843763f13168a16e9856a4f94a081c39/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/tpot-fss-ms/tree/6cf12c77843763f13168a16e9856a4f94a081c39">trang1618/tpot-fss-ms@6cf12c7</a> on May 18, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -262,17 +262,15 @@
         body {
             position: relative;
             box-sizing: border-box;
-            max-width: 8.5in;
             font-size: 12pt;
             line-height: 1.5;
+            max-width: 8.5in;
             margin: 20px auto;
             padding: 40px;
             border-radius: 5px;
             border: solid 1px #bdbdbd;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             background: #ffffff;
-            word-break: all;
-            word-break: break-word;
         }
     }
 
@@ -307,8 +305,7 @@
 
     /* biggest heading */
     h1 {
-        margin-top: 40px;
-        margin-bottom: 30px;
+        margin: 40px 0;
         text-align: center;
     }
 
@@ -331,7 +328,7 @@
     /* manuscript title caption text (ie "automatically generated on") */
     header + p {
         text-align: center;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     /* -------------------------------------------------- */
@@ -341,7 +338,12 @@
     /* links */
     a {
         color: #2196f3;
-        word-break: break-all;
+    }
+
+    /* normal links (not empty, not button link, not syntax highlighting link) */
+    a:not(:empty):not(.button):not(.sourceLine) {
+        padding-left: 1px;
+        padding-right: 1px;
     }
 
     /* superscripts and subscripts */
@@ -461,16 +463,14 @@
         border: solid 1px #bdbdbd;
         padding: 10px;
         /* squash table if too wide for page by forcing line breaks */
-        /* put line break break anywhere in text */
         word-break: break-all;
-        /* put line break between words. if not supported by browser, will fall back to break-all */
         word-break: break-word;
     }
 
     /* header row and even rows */
     th,
     tr:nth-child(2n) {
-        background-color: #f5f5f5;
+        background-color: #fafafa;
     }
 
     /* odd rows */
@@ -721,7 +721,7 @@
     @media print {
         @page {
             /* suggested printing margin */
-            margin: 0.75in;
+            margin: 0.5in;
         }
 
         /* document and "page" elements */
@@ -730,6 +730,64 @@
             padding: 0;
             width: 100%;
             height: 100%;
+        }
+
+        /* "page" element */
+        body {
+            font-size: 11pt !important;
+            line-height: 1.35;
+        }
+
+        /* all headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 15px 0;
+        }
+
+        /* heading 1 */
+        h1 {
+            font-size: 1.75em;
+        }
+
+        /* heading 2 */
+        h2 {
+            font-size: 1.25em;
+            margin-top: 0;
+        }
+
+        /* heading 3 */
+        h3 {
+            font-size: 1.10em;
+        }
+
+        /* figures and tables */
+        figure, table {
+            font-size: 0.85em;
+        }
+
+        /* table cells */
+        th,
+        td {
+            padding: 5px;
+        }
+
+        /* shrink font awesome icons */
+        i.fas,
+        i.fab,
+        i.far,
+        i.fal {
+            transform: scale(0.85);
+        }
+
+        /* decrease banner margins */
+        .banner {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
         }
 
         /* class for centering an element vertically on its own page */
@@ -742,11 +800,6 @@
             vertical-align: middle;
             break-before: page;
             break-after: page;
-        }
-
-        /* <h2> heading */
-        h2 {
-            margin-top: 0;
         }
 
         /* always insert a page break before the element */
@@ -959,7 +1012,6 @@
             border: solid 1px #bdbdbd;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             background: #ffffff;
-            word-break: all;
             word-break: break-word;
         }
 
@@ -1065,19 +1117,13 @@
     /* -------------------------------------------------- */
 
     @media only screen {
-        /* toc panel when open */
+        /* toc panel */
         #toc_panel {
             box-sizing: border-box;
             position: fixed;
             top: 0;
             left: 0;
-            min-width: 260px;
-            max-width: 480px;
-            /* keep panel edge consistent distance away from "page" edge */
-            width: calc(((100vw - 8.5in) / 2) - 30px - 40px);
-            bottom: 0;
             background: #ffffff;
-            border-right: solid 1px #bdbdbd;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             z-index: 2;
         }
@@ -1087,39 +1133,48 @@
             min-width: 60px;
             width: 60px;
             height: 60px;
+            border-right: solid 1px #bdbdbd;
             border-bottom: solid 1px #bdbdbd;
+        }
+
+        /* toc panel when open */
+        #toc_panel[data-open="true"] {
+            min-width: 260px;
+            max-width: 480px;
+            /* keep panel edge consistent distance away from "page" edge */
+            width: calc(((100vw - 8.5in) / 2) - 30px - 40px);
+            bottom: 0;
+            border-right: solid 1px #bdbdbd;
         }
 
         /* toc panel header */
-        #toc_panel > h3 {
+        #toc_header {
             box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             height: 60px;
             margin: 0;
             padding: 20px;
-            border-bottom: solid 1px #bdbdbd;
         }
 
-        /* toc panel when hovered */
-        #toc_panel > h3:hover {
+        /* toc panel header when hovered */
+        #toc_header:hover {
             cursor: pointer;
+        }
+
+        /* toc panel header when panel open */
+        #toc_panel[data-open="true"] > #toc_header {
+            border-bottom: solid 1px #bdbdbd;
         }
 
         /* toc open/close header button */
         #toc_button {
             margin-right: 20px;
-            vertical-align: top;
-        }
-
-        /* toc header text */
-        #toc_header_text {
-            vertical-align: top;
-            font-weight: 600;
-            position: relative;
-            top: -4px;
         }
 
         /* hide toc list and header text when closed */
-        #toc_panel[data-open="false"] #toc_header_text,
+        #toc_panel[data-open="false"] > #toc_header > *:not(#toc_button),
         #toc_panel[data-open="false"] > #toc_list {
             display: none;
         }
@@ -1692,6 +1747,7 @@
             // trigger any function listening for "onscroll" event
             window.dispatchEvent(new Event('scroll'));
             window.scrollTo(0, y);
+            document.activeElement.blur();
             element.focus();
         }
 
@@ -1897,9 +1953,6 @@
             // whether user must click off to close tooltip instead of just
             // un-hovering
             clickClose: 'false',
-            // whether to keep tooltip horizontal position when moving between
-            // prev/next occurrences
-            keepHorizontal: 'true',
             // delay (in ms) between opening and closing tooltip
             delay: '100',
             // whether plugin is on or not
@@ -1980,8 +2033,10 @@
             // regular link click (and navigation) on second tap
             if (event.target === document.activeElement)
                 event.target.click();
-            else
+            else {
+                document.activeElement.blur();
                 event.target.focus();
+            }
             if (event.cancelable)
                 event.preventDefault();
             event.stopPropagation();
@@ -1998,22 +2053,27 @@
             if (!event || !event.key)
                 return;
 
-            // trigger click of prev/next button
             switch (event.key) {
-            case 'ArrowLeft':
-                const prevButton = document.getElementById(
-                    'tooltip_prev_button'
-                );
-                if (prevButton)
-                    prevButton.click();
-                break;
-            case 'ArrowRight':
-                const nextButton = document.getElementById(
-                    'tooltip_next_button'
-                );
-                if (nextButton)
-                    nextButton.click();
-                break;
+                // trigger click of prev button
+                case 'ArrowLeft':
+                    const prevButton = document.getElementById(
+                        'tooltip_prev_button'
+                    );
+                    if (prevButton)
+                        prevButton.click();
+                    break;
+                // trigger click of next button
+                case 'ArrowRight':
+                    const nextButton = document.getElementById(
+                        'tooltip_next_button'
+                    );
+                    if (nextButton)
+                        nextButton.click();
+                    break;
+                // close on esc
+                case 'Escape':
+                    closeTooltip();
+                    break;
             }
         }
 
@@ -2055,12 +2115,8 @@
 
         // open tooltip
         function openTooltip(link) {
-            // if setting is on and already-open tooltip can be found, store
-            // original x position of tooltip
-            let prevX;
-            const prevTooltip = document.getElementById('tooltip');
-            if (options.keepHorizontal === 'true' && prevTooltip)
-                prevX = getRectInPage(prevTooltip).left;
+            // delete tooltip if it exists, start fresh
+            closeTooltip();
 
             // make tooltip element
             const tooltip = makeTooltip(link);
@@ -2079,7 +2135,7 @@
 
             // position tooltip
             const position = function() {
-                positionTooltip(link, prevX);
+                positionTooltip(link);
             };
             position();
 
@@ -2098,9 +2154,6 @@
 
         // make tooltip
         function makeTooltip(link) {
-            // delete tooltip if it exists, start fresh
-            closeTooltip();
-
             // get target element that link points to
             const source = getSource(link);
 
@@ -2295,7 +2348,7 @@
         // when prev/next arrow button is clicked
         function onPrevNextClick(link, prevNextLink) {
             if (link && prevNextLink)
-                goToElement(prevNextLink, getRectInView(link).top);
+                goToElement(prevNextLink, window.innerHeight * 0.5);
         }
 
         // scroll to and focus element
@@ -2309,6 +2362,7 @@
             // trigger any function listening for "onscroll" event
             window.dispatchEvent(new Event('scroll'));
             window.scrollTo(0, y);
+            document.activeElement.blur();
             element.focus();
         }
 
@@ -2663,6 +2717,7 @@
             // trigger any function listening for "onscroll" event
             window.dispatchEvent(new Event('scroll'));
             window.scrollTo(0, y);
+            document.activeElement.blur();
             element.focus();
         }
 
@@ -2811,7 +2866,7 @@
             const links = getLinks();
             for (const link of links) {
                 // attach mouse and focus listeners to link
-                link.addEventListener('mouseover', onLinkFocus);
+                link.addEventListener('mouseenter', onLinkFocus);
                 link.addEventListener('focus', onLinkFocus);
                 link.addEventListener('mouseleave', onLinkUnhover);
             }
@@ -2981,15 +3036,15 @@
             // which types of elements to add links for, in
             // "document.querySelector" format
             typesQuery: 'h1, h2, h3',
+            // whether default behavior is to be closed ('false'), open
+            // ('true'), or only open when screen wide enough to fit panel
+            // ('auto'). note: still always starts closed when page loads.
+            open: 'auto',
             // if list item is more than this many characters, text will be
             // truncated
             charLimit: '50',
             // whether or not to show bullets next to each toc item
             bullets: 'false',
-            // whether to always start closed ('false'), always start opened
-            // ('true'), or start open when screen wide enough to fit panel
-            // ('auto')
-            startOpen: 'false',
             // whether plugin is on or not
             enabled: 'true'
         };
@@ -3011,42 +3066,62 @@
             makeEntries(panel);
             document.body.insertBefore(panel, document.body.firstChild);
 
-            // start panel open/closed based on option
-            if (
-                options.startOpen === 'true' ||
-                (options.startOpen === 'auto' && isSmallScreen())
-            )
-                openPanel();
-            else
-                closePanel();
+            closePanel();
 
             // attach click, scroll, and hash change listeners to window
             window.addEventListener('click', onClick);
             window.addEventListener('touchstart', onClick);
             window.addEventListener('scroll', onScroll);
             window.addEventListener('hashchange', onScroll);
+            window.addEventListener('keyup', onKeyUp);
             onScroll();
 
             // add class to push document body down out of way of toc button
             document.body.classList.add('toc_body_nudge');
         }
 
-        // determine if on mobile-like device with small screen
+        // determine if screen wide enough to fit toc panel
         function isSmallScreen() {
-            const page = window.getComputedStyle(document.body);
-            const width =
-                parseInt(page.width) || parseInt(page.maxWidth) || 816;
-            return width + 320 < window.innerWidth;
+            // in default theme:
+            // 816px = 8.5in = width of "page" (<body>) element
+            // 260px = min width of toc panel (*2 for both sides of <body>)
+            return window.innerWidth < 816 + 260 * 2;
+        }
+
+        // open/close panel based on option and screen size
+        function openOrClosePanel() {
+            if (
+                options.open === 'true' ||
+                (options.open === 'auto' && !isSmallScreen())
+            )
+                openPanel();
+            else
+                closePanel();
         }
 
         // when mouse is clicked anywhere in window
         function onClick() {
-            closePanel();
+            const panel = document.getElementById('toc_panel');
+            if (!panel)
+                return;
+
+            if (panel.dataset.open === 'true')
+                openOrClosePanel();
         }
 
         // when window is scrolled or hash changed
         function onScroll() {
             highlightViewed();
+        }
+
+        // when key pressed
+        function onKeyUp(event) {
+            if (!event || !event.key)
+                return;
+
+            // close on esc
+            if (event.key === 'Escape')
+                closePanel();
         }
 
         // find entry of currently viewed document section in toc and highlight
@@ -3076,6 +3151,7 @@
                     elementsWithIds.push(element);
             }
 
+
             // get first or previous element in top half of view
             for (let i = 0; i < elementsWithIds.length; i++) {
                 const element = elementsWithIds[i];
@@ -3101,7 +3177,8 @@
                 panel.dataset.bullets = 'true';
 
             // create header
-            const header = document.createElement('h3');
+            const header = document.createElement('div');
+            header.id = 'toc_header';
 
             // create toc button
             const button = document.createElement('button');
@@ -3112,9 +3189,8 @@
             button.classList.add('icon_button');
 
             // create header text
-            const text = document.createElement('span');
+            const text = document.createElement('h3');
             text.innerHTML = 'Table of Contents';
-            text.id = 'toc_header_text';
 
             // create container for toc list
             const list = document.createElement('div');
@@ -3146,18 +3222,18 @@
                 const link = document.createElement('a');
                 link.classList.add('toc_link');
                 switch (element.tagName.toLowerCase()) {
-                case 'h1':
-                    link.dataset.level = '1';
-                    break;
-                case 'h2':
-                    link.dataset.level = '2';
-                    break;
-                case 'h3':
-                    link.dataset.level = '3';
-                    break;
-                case 'h4':
-                    link.dataset.level = '4';
-                    break;
+                    case 'h1':
+                        link.dataset.level = '1';
+                        break;
+                    case 'h2':
+                        link.dataset.level = '2';
+                        break;
+                    case 'h3':
+                        link.dataset.level = '3';
+                        break;
+                    case 'h4':
+                        link.dataset.level = '4';
+                        break;
                 }
                 link.title = element.innerText;
                 let text = element.innerText;
@@ -3192,8 +3268,7 @@
 
         // when link is clicked
         function onLinkClick() {
-            if (isSmallScreen())
-                closePanel();
+            openOrClosePanel();
         }
 
         // open panel if closed, close if opened
@@ -3281,6 +3356,9 @@
             // whether to fit image to view ('fit'), display at 100% and shrink
             // if necessary ('shrink'), or always display at 100% ('100')
             defaultZoom: 'fit',
+            // whether to zoom in/out toward center of view ('true') or mouse
+            // ('false')
+            centerZoom: 'false',
             // whether plugin is on or not
             enabled: 'true'
         };
@@ -3321,22 +3399,27 @@
             if (!event || !event.key)
                 return;
 
-            // trigger click of prev/next button
             switch (event.key) {
-            case 'ArrowLeft':
-                const prevButton = document.getElementById(
-                    'lightbox_prev_button'
-                );
-                if (prevButton)
-                    prevButton.click();
-                break;
-            case 'ArrowRight':
-                const nextButton = document.getElementById(
-                    'lightbox_next_button'
-                );
-                if (nextButton)
-                    nextButton.click();
-                break;
+                // trigger click of prev button
+                case 'ArrowLeft':
+                    const prevButton = document.getElementById(
+                        'lightbox_prev_button'
+                    );
+                    if (prevButton)
+                        prevButton.click();
+                    break;
+                // trigger click of next button
+                case 'ArrowRight':
+                    const nextButton = document.getElementById(
+                        'lightbox_next_button'
+                    );
+                    if (nextButton)
+                        nextButton.click();
+                    break;
+                // close on esc
+                case 'Escape':
+                    closeLightbox();
+                    break;
             }
         }
 
@@ -3563,8 +3646,11 @@
                 event.stopPropagation();
 
                 // point around which to scale img
-                const originX = window.mouseX;
-                const originY = window.mouseY;
+                const viewRect = container.getBoundingClientRect();
+                const viewX = (viewRect.left + viewRect.right) / 2;
+                const viewY = (viewRect.top + viewRect.bottom) / 2;
+                const originX = options.centerZoom === 'true' ? viewX : mouseX;
+                const originY = options.centerZoom === 'true' ? viewY : mouseY;
 
                 // get point on image under origin
                 const oldRect = img.getBoundingClientRect();
@@ -3593,7 +3679,7 @@
             };
 
             // when container is clicked
-            function onContainerClick() {
+            function onContainerClick(event) {
                 // if container itself is target of click, and not other
                 // element above it
                 if (event.target === this)
@@ -3639,6 +3725,10 @@
                 translateY = clickTranslateY + window.mouseY - clickMouseY;
                 updateTransform();
                 event.preventDefault();
+
+                // remove global listener if lightbox removed from document
+                if (!document.body.contains(container))
+                    window.removeEventListener('mousemove', onWindowMouseMove);
             };
 
             // when window is resized
@@ -3654,7 +3744,8 @@
             img.addEventListener('dblclick', fit);
             img.addEventListener('mousedown', onImageMouseDown);
             container.addEventListener('wheel', onContainerWheel);
-            container.addEventListener('click', onContainerClick);
+            container.addEventListener('mousedown', onContainerClick);
+            container.addEventListener('touchstart', onContainerClick);
             window.addEventListener('mouseup', onWindowMouseUp);
             window.addEventListener('mousemove', onWindowMouseMove);
             window.addEventListener('resize', onWindowResize);
