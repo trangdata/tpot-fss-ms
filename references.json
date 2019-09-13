@@ -385,7 +385,7 @@
     "id": "KXwvC8hd"
   },
   {
-    "publisher": "Springer Nature",
+    "publisher": "Springer Science and Business Media LLC",
     "issue": "4",
     "DOI": "10.1038/gene.2016.15",
     "type": "article-journal",
@@ -739,7 +739,7 @@
     "id": "rqdZ0HWl"
   },
   {
-    "publisher": "Springer Nature",
+    "publisher": "Springer Science and Business Media LLC",
     "issue": "1",
     "DOI": "10.1038/s41398-018-0234-3",
     "type": "article-journal",
@@ -921,6 +921,7 @@
       ]
     },
     "URL": "https://doi.org/gfbdwx",
+    "PMCID": "PMC6477983",
     "PMID": "30239600",
     "id": "rO22KppO"
   },
@@ -1388,12 +1389,13 @@
     "publisher": "Springer",
     "publisher-place": "New York, NY",
     "number-of-pages": "745",
-    "edition": "2nd ed",
-    "source": "Library of Congress ISBN",
+    "edition": "Second edition, corrected at 12th printing 2017",
+    "source": "Gemeinsamer Bibliotheksverbund ISBN",
     "event-place": "New York, NY",
     "ISBN": "9780387848570",
-    "call-number": "Q325.5 .H39 2009",
+    "note": "OCLC: 995842694",
     "shortTitle": "The elements of statistical learning",
+    "language": "eng",
     "author": [
       {
         "family": "Hastie",
@@ -1405,13 +1407,13 @@
       },
       {
         "family": "Friedman",
-        "given": "J. H."
+        "given": "Jerome H."
       }
     ],
     "issued": {
       "date-parts": [
         [
-          "2009"
+          "2017"
         ]
       ]
     }
@@ -1687,8 +1689,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          18
+          9,
+          13
         ]
       ]
     }
@@ -1738,8 +1740,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          18
+          9,
+          13
         ]
       ]
     }
@@ -1789,8 +1791,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          18
+          9,
+          13
         ]
       ]
     }
@@ -1835,8 +1837,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          14
+          9,
+          6
         ]
       ]
     },
@@ -1844,8 +1846,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          18
+          9,
+          13
         ]
       ]
     }
@@ -1937,8 +1939,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          18
+          9,
+          13
         ]
       ]
     }
@@ -2011,8 +2013,8 @@
       "date-parts": [
         [
           "2019",
-          6,
-          18
+          9,
+          13
         ]
       ]
     }
